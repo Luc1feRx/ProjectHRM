@@ -67,7 +67,7 @@ namespace QuanLyNhanSu
                             }
                             else
                             {
-                                if (textBoxMatKhauCu.Text != reader[1].ToString())// so sanh pass cu tu textbox voi pass cua trong database
+                                if (textBoxMatKhauCu.Text != reader[1].ToString())// so sanh pass cu tu textbox voi pass cu
                                 {
                                     MessageBox.Show("Bạn đã nhập sai mật khẩu cũ");
                                 }

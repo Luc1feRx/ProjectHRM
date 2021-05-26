@@ -37,7 +37,7 @@ namespace QuanLyNhanSu
             Disconnected();
         }
 
-        public bool CheckUsernameExitsted(string input, string query) //kiem tra username co bi trung lap hay khong
+        public bool Exitsted(string input, string query) //kiem tra trung lap hay khong
         {
             SqlConnection con = new SqlConnection(connections);
             con.Open();

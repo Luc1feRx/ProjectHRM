@@ -68,7 +68,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(668, 300);
+            this.groupBox1.Size = new System.Drawing.Size(677, 300);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng kí tài khoản";
@@ -221,6 +221,7 @@
             this.ClientSize = new System.Drawing.Size(1093, 616);
             this.Controls.Add(this.dataGridViewTaiKhoan);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmQLTK";
             this.Text = "Quản lý tài khoản";
             this.Load += new System.EventHandler(this.FrmQLTK_Load);

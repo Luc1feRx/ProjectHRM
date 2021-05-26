@@ -40,7 +40,7 @@ namespace QuanLyNhanSu
         {
             string input = textBoxTen.Text;
             string query = "SELECT * FROM tbUsers";
-            if(cn.CheckUsernameExitsted(input, query))
+            if(cn.Exitsted(input, query))
             {
                 MessageBox.Show("Tên tài khoản đã tồn tại, mời bạn nhập lại");
                 textBoxTen.Text = "";
