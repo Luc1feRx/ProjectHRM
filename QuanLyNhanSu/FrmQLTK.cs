@@ -1,0 +1,146 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace QuanLyNhanSu
+{
+    public partial class FrmQLTK : Form
+    {
+        Connect cn = new Connect();
+        public FrmQLTK()
+        {
+            InitializeComponent();
+            LoadComboBox();
+            LoadDataGridView();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonNhapLai_Click(object sender, EventArgs e)
+        {
+            textBoxTen.Text = "";
+            textBoxTenThat.Text = "";
+            textBoxMatKhau.Text = "";
+            comboBoxQuyen.Text = "";
+        }
+
+        private void buttonThem_Click(object sender, EventArgs e)
+        {
+            string input = textBoxTen.Text;
+            string query = "SELECT * FROM tbUsers";
+            if(cn.CheckUsernameExitsted(input, query))
+            {
+                MessageBox.Show("Tên tài khoản đã tồn tại, mời bạn nhập lại");
+                textBoxTen.Text = "";
+            }
+            else
+            {
+                string insert = "INSERT INTO tbUsers VALUES('" + textBoxTen.Text + "','" + textBoxMatKhau.Text + "', '" + comboBoxQuyen.Text + "', N'" + textBoxTenThat.Text + "')";
+                cn.makeConnected(insert);
+                LoadDataGridView();
+            }
+
+        }
+
+        
+
+        private void dataGridViewTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void FrmQLTK_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void LoadComboBox()
+        {
+            string queryQuyen = "SELECT * FROM tbQuyen";
+            DataTable dt = new DataTable();
+            dt = cn.GetDataTable(queryQuyen);
+            //gan hien thi gia tri cho combobox
+            comboBoxQuyen.DataSource = new BindingSource(dt, null);
+            comboBoxQuyen.DisplayMember = dt.Columns[1].ToString();
+            comboBoxQuyen.ValueMember = dt.Columns[0].ToString();
+        }
+
+        public void LoadDataGridView()
+        {
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QuanLyNhanSuConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            SqlConnection con = new SqlConnection(connections);
+            con.Open();
+            string query = "SELECT * FROM tbUsers";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            con.Close();
+            dataGridViewTaiKhoan.DataSource = dt;
+            dataGridViewTaiKhoan.Columns[0].HeaderText = "Username";
+            dataGridViewTaiKhoan.Columns[1].HeaderText = "Password";
+            dataGridViewTaiKhoan.Columns[2].HeaderText = "Quyền";
+            dataGridViewTaiKhoan.Columns[3].HeaderText = "Tên thật";
+        }
+
+
+        private void buttonTroVe_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "DELETE FROM tbUsers WhERE Username = '" + textBoxTen.Text + "'";
+                cn.makeConnected(query);
+                LoadDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void dataGridViewTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridViewTaiKhoan.Rows[e.RowIndex];
+                textBoxTen.Text = row.Cells[0].Value.ToString();
+                textBoxMatKhau.Text = row.Cells[1].Value.ToString();
+                comboBoxQuyen.Text = row.Cells[2].Value.ToString();
+                textBoxTenThat.Text = row.Cells[3].Value.ToString();
+            }
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "UPDATE tbUsers SET Username = '" + textBoxTen.Text + "', Pass = '" + textBoxMatKhau.Text + "', Quyen = '" + comboBoxQuyen.Text + "', Ten = '" + textBoxTenThat.Text +"' WHERE Username = '" + textBoxTen.Text + "'";
+                cn.makeConnected(query);
+                LoadDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+    }
+}
