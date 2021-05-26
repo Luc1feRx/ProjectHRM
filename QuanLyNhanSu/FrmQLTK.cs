@@ -108,8 +108,11 @@ namespace QuanLyNhanSu
             try
             {
                 string query = "DELETE FROM tbUsers WhERE Username = '" + textBoxTen.Text + "'";
-                cn.makeConnected(query);
-                LoadDataGridView();
+                if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    cn.makeConnected(query);
+                    LoadDataGridView();
+                } 
             }
             catch (Exception ex)
             {
