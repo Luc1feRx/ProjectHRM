@@ -1,4 +1,8 @@
-﻿use QuanLyNhanSu
+﻿CREATE DATABASE QuanLyNhanSu
+
+go
+
+USE QuanLyNhanSu
 
 GO
 
@@ -13,7 +17,6 @@ CREATE TABLE tbQuyen(
 	MaQuyen INT NOT NULL,
 	TenQuyen NVARCHAR(50) NOT NULL
 )
-
 
 INSERT INTO tbUsers
 (
@@ -30,17 +33,19 @@ VALUES
 )
 
 CREATE TABLE tbTTNVCoBan(
-	MaBoPhan char(10) NOT NULL,
-	MaPhong char(10) NOT NULL,
+	MaBoPhan nvarchar(10) NOT NULL,
+	MaPhong nvarchar(10) NOT NULL,
 	MaNV nvarchar(50) PRIMARY KEY NOT NULL,
 	HoTen nvarchar(50),
 	MaLuong nvarchar(50),
 	NgaySinh DATE,
 	GioiTinh nvarchar(5),
 	TTHonNhan nvarchar(50),
-	CCCD nvarchar(50),
+	CCCD INT,
 	NoiCap nvarchar(50),
+	MaCV INT NOT NULL,
 	ChucVu nvarchar(50),
+	MaHD INT NOT NULL,
 	LoaiHD nvarchar(50),
 	ThoiGian nvarchar(10),
 	NgayKy DATE,
@@ -63,6 +68,127 @@ CREATE TABLE tbTTCaNhan(
 	GhiChu nvarchar(MAX)
 )
 
+CREATE TABLE tbChucVu(
+	MaCV INT PRIMARY KEY NOT NULL,
+	ChucVu NVARCHAR(30) NOT NULL
+)
+
+CREATE TABLE tbLoaiHD(
+	MAHD INT PRIMARY KEY NOT NULL,
+	LoaiHD NVARCHAR(30) NOT NULL
+)
+
+CREATE TABLE tbThaiSan(
+	MaBoPhan NVARCHAR(10) NOT NULL,
+	MaPhong NVARCHAR(10) NOT NULL,
+	MaNV NVARCHAR(10) NOT NULL,
+	HoTen NVARCHAR(50),
+	NgaySinh DATETIME,
+	NgayVeSom DATETIME,
+	NgayNghiSinh DATETIME,
+	NgayLamTroLai DATETIME,
+	TroCapCTY INT,
+	GhiChu nvarchar(MAX)
+)
+
+CREATE TABLE tbTangLuong(
+	MaNV NVARCHAR(10) NOT NULL,
+	HoTen NVARCHAR(50),
+	GioiTinh nvarchar(5),
+	ChucVu nvarchar(50),
+	MaLuongCu NVARCHAR(10),
+	MaLuongMoi NVARCHAR(10),
+	NgayTang DATETIME,
+	LyDo nvarchar(MAX)
+)
+
+CREATE TABLE tbBangLuongCTY(
+	MaLuong NVARCHAR(10) PRIMARY KEY NOT NULL,
+	LCB INT,
+	PCChucVu INT,
+	NgayNhap DATETIME,
+	LCBMoi INT,
+	NgaySua DATETIME,
+	LyDo NVARCHAR(MAX),
+	PCCVuMoi INT,
+	NgaySuaPC DATETIME,
+	GhiChu NVARCHAR(MAX)
+)
+
+
+CREATE TABLE tbBH(
+	MaNV NVARCHAR(10) NOT NULL,
+	MaLuong NVARCHAR(10) NOT NULL,
+	MaSoBH NVARCHAR(10) NOT NULL,
+	NgayCapSo DATETIME,
+	NoiCapSo NVARCHAR(50),
+	GhiChu NVARCHAR(MAX)
+)
+
+CREATE TABLE tbPhongBan(
+	MaBoPhan NVARCHAR(10) NOT NULL,
+	MaPhong NVARCHAR(10) PRIMARY KEY NOT NULL,
+	TenPhong NVARCHAR(50),
+	NgayThanhLap DATETIME,
+	GhiChu NVARCHAR(MAX)
+)
+
+CREATE TABLE tbNVThoiViec(
+	HoTen NVARCHAR(50),
+	CCCD INT PRIMARY KEY NOT NULL,
+	NgayThoiViec DATETIME,
+	LyDo nvarchar(MAX)
+)
+
+CREATE TABLE tbHoSoThuViec(
+	MaPhong NVARCHAR(10) NOT NULL,
+	MaNVTV NVARCHAR(10) NOT NULL,
+	HoTen nvarchar(50),
+	NgaySinh DATE,
+	GioiTinh nvarchar(5),
+	DiaChi NVARCHAR(30),
+	HocVan NVARCHAR(30),
+	ViTriThuViec NVARCHAR(30),
+	NgayTV DATETIME,
+	GhiChu NVARCHAR(MAX)
+)
+
 CREATE TABLE tbBoPhan(
-	MaBoPhan char(10) PRIMARY KEY NOT NULL,
-	TenBoPhan nchar(10) 
+	MaBoPhan NVARCHAR(10) PRIMARY KEY NOT NULL,
+	TenBoPhan NVARCHAR(30),
+	NgayThanhLap DATETIME,
+	GhiChu NVARCHAR(MAX)
+)
+
+CREATE TABLE tbBangCongThuViec(
+	TenBoPhan NVARCHAR(30),
+	TenPhong NVARCHAR(50),
+	MaNVTV NVARCHAR(10) NOT NULL,
+	LuongThuViec INT,
+	Thang NVARCHAR(10),
+	Nam NVARCHAR(10),
+	SoNgayCong INT,
+	SoNgayNghi INT,
+	SoGioLamThem INT,
+	Luong FLOAT,
+	GhiChu NVARCHAR(MAX)
+)
+
+CREATE TABLE tbBangCongNhanVienCTY(
+	MaNV NVARCHAR(10) NOT NULL,
+	TenPhong NVARCHAR(50),
+	HoTen nvarchar(50),
+	MaLuong NVARCHAR(10),
+	LCB INT,
+	PCChucVu INT,
+	PhuCapKhac INT,
+	Thuong NVARCHAR(50),
+	KyLuat NVARCHAR(50),
+	Thang NVARCHAR(10),
+	Nam NVARCHAR(20),
+	SoNgayCong INT,
+	SoNgayNghi INT,
+	SoGioLamThem INT,
+	Luong INT,
+	GhiChu NVARCHAR(MAX)
+)

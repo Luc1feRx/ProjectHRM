@@ -664,8 +664,9 @@ namespace QLNS
             x.Show();
         }
 
-       
+        private void menuItem2_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

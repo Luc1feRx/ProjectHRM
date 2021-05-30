@@ -246,5 +246,10 @@ namespace QLNS
         {
 
         }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

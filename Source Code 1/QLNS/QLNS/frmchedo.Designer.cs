@@ -595,6 +595,7 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "các thông tin về chế độ bảo hiểm";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // comboBox2
             // 
