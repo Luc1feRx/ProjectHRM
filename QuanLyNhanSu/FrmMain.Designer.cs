@@ -115,6 +115,7 @@
             // 
             // MenuQLTK
             // 
+            this.MenuQLTK.Enabled = false;
             this.MenuQLTK.Image = global::QuanLyNhanSu.Properties.Resources.d2678io_4c8877cf_9c0a_4914_adca_b6b4d037be10;
             this.MenuQLTK.Name = "MenuQLTK";
             this.MenuQLTK.Size = new System.Drawing.Size(259, 28);
@@ -123,6 +124,7 @@
             // 
             // MenuDanhMuc
             // 
+            this.MenuDanhMuc.CheckOnClick = true;
             this.MenuDanhMuc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.undoToolStripMenuItem,
             this.redoToolStripMenuItem,
@@ -132,6 +134,7 @@
             this.pasteToolStripMenuItem,
             this.toolStripSeparator7,
             this.selectAllToolStripMenuItem});
+            this.MenuDanhMuc.Enabled = false;
             this.MenuDanhMuc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuDanhMuc.Name = "MenuDanhMuc";
             this.MenuDanhMuc.Size = new System.Drawing.Size(103, 27);
@@ -204,6 +207,7 @@
             this.MenuChucNang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolBarToolStripMenuItem,
             this.statusBarToolStripMenuItem});
+            this.MenuChucNang.Enabled = false;
             this.MenuChucNang.Name = "MenuChucNang";
             this.MenuChucNang.Size = new System.Drawing.Size(93, 27);
             this.MenuChucNang.Text = "&Chức năng";
@@ -233,6 +237,7 @@
             // 
             this.MenuQuanLy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optionsToolStripMenuItem});
+            this.MenuQuanLy.Enabled = false;
             this.MenuQuanLy.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuQuanLy.Name = "MenuQuanLy";
             this.MenuQuanLy.Size = new System.Drawing.Size(83, 27);
@@ -252,6 +257,7 @@
             this.searchToolStripMenuItem,
             this.toolStripSeparator8,
             this.aboutToolStripMenuItem});
+            this.MenuTroGiup.Enabled = false;
             this.MenuTroGiup.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuTroGiup.Name = "MenuTroGiup";
             this.MenuTroGiup.Size = new System.Drawing.Size(87, 27);

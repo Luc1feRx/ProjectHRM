@@ -52,7 +52,6 @@ namespace QuanLyNhanSu
                     FrmMain frm = new FrmMain();
                     frm.ShowDialog();
                     cmd.Dispose();
-                    reader.Close();
                     reader.Dispose();
                 }
                 else
@@ -71,7 +70,6 @@ namespace QuanLyNhanSu
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.Close();
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
         }

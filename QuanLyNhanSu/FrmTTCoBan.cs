@@ -27,11 +27,11 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string query = "INSERT INTO tbTTNVCoBan ";
-                if (cn.Exitsted())
-                {
+                //string query = "INSERT INTO tbTTNVCoBan ";
+                //if (cn.Exitsted())
+                //{
 
-                }
+                //}
             }
             catch
             {

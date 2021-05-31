@@ -194,7 +194,6 @@ namespace QLNS
         private void cmd_dangnhap_Click(object sender, EventArgs e)
         {
 
-
             this.Hide();
             frmdangnhap f1 = new frmdangnhap();
             f1.ShowDialog();
@@ -665,6 +664,11 @@ namespace QLNS
         }
 
         private void menuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItem3_Click(object sender, EventArgs e)
         {
 
         }

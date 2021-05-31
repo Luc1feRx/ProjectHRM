@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.panel_show);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1248, 690);
             this.panel1.TabIndex = 17;
@@ -122,7 +122,7 @@
             this.panel_show.BackgroundImage = global::QLNS.Properties.Resources.afsadfdafdfaf;
             this.panel_show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_show.Location = new System.Drawing.Point(180, 207);
-            this.panel_show.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_show.Margin = new System.Windows.Forms.Padding(4);
             this.panel_show.Name = "panel_show";
             this.panel_show.Size = new System.Drawing.Size(1009, 473);
             this.panel_show.TabIndex = 18;
@@ -236,11 +236,12 @@
             this.menuItem3.Name = "menuItem3";
             this.menuItem3.Size = new System.Drawing.Size(107, 26);
             this.menuItem3.Text = "&Chức năng";
+            this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
             // 
             // menuItem11
             // 
             this.menuItem11.Name = "menuItem11";
-            this.menuItem11.Size = new System.Drawing.Size(163, 26);
+            this.menuItem11.Size = new System.Drawing.Size(224, 26);
             this.menuItem11.Text = "Tra cứu";
             this.menuItem11.Click += new System.EventHandler(this.menuItem11_Click);
             // 
@@ -250,7 +251,7 @@
             this.menuItem19,
             this.menuItem20});
             this.menuItem12.Name = "menuItem12";
-            this.menuItem12.Size = new System.Drawing.Size(163, 26);
+            this.menuItem12.Size = new System.Drawing.Size(224, 26);
             this.menuItem12.Text = "Báo Cáo";
             // 
             // menuItem19
@@ -270,7 +271,7 @@
             // menuItem13
             // 
             this.menuItem13.Name = "menuItem13";
-            this.menuItem13.Size = new System.Drawing.Size(163, 26);
+            this.menuItem13.Size = new System.Drawing.Size(224, 26);
             this.menuItem13.Text = "T&rợ giúp";
             this.menuItem13.Click += new System.EventHandler(this.menuItem13_Click);
             // 
@@ -327,7 +328,7 @@
             this.cmd_exit.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmd_exit.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.cmd_exit.Location = new System.Drawing.Point(1213, 635);
-            this.cmd_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmd_exit.Margin = new System.Windows.Forms.Padding(4);
             this.cmd_exit.Name = "cmd_exit";
             this.cmd_exit.Size = new System.Drawing.Size(100, 28);
             this.cmd_exit.TabIndex = 15;
@@ -399,7 +400,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmd_exit);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
             this.Text = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);

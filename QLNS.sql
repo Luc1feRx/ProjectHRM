@@ -35,7 +35,7 @@ VALUES
 CREATE TABLE tbTTNVCoBan(
 	MaBoPhan nvarchar(10) NOT NULL,
 	MaPhong nvarchar(10) NOT NULL,
-	MaNV nvarchar(50) PRIMARY KEY NOT NULL,
+	MaNV nvarchar(10) PRIMARY KEY NOT NULL,
 	HoTen nvarchar(50),
 	MaLuong nvarchar(50),
 	NgaySinh DATE,
@@ -54,7 +54,7 @@ CREATE TABLE tbTTNVCoBan(
 )
 
 CREATE TABLE tbTTCaNhan(
-	MaNV nvarchar(50) NOT NULL,
+	MaNV nvarchar(10) NOT NULL,
 	HoTen nvarchar(50),
 	NgaySinh DATE,
 	NguyenQuan nvarchar(50),
@@ -134,6 +134,7 @@ CREATE TABLE tbPhongBan(
 )
 
 CREATE TABLE tbNVThoiViec(
+	MaNV nvarchar(10) NOT NULL,
 	HoTen NVARCHAR(50),
 	CCCD INT PRIMARY KEY NOT NULL,
 	NgayThoiViec DATETIME,
