@@ -53,8 +53,6 @@ namespace QuanLyNhanSu
                 MenuQuanLy.Enabled = true;
                 MenuTroGiup.Enabled = true;
                 MenuQLTK.Enabled = true;
-                DangXuatToolStripMenuItem.Enabled = true;
-                MenuDangNhap.Enabled = false;
             }
             else if (Quyen == "User")
             {
@@ -63,8 +61,6 @@ namespace QuanLyNhanSu
                 MenuQuanLy.Enabled = true;
                 MenuTroGiup.Enabled = true;
                 MenuQLTK.Enabled = false;
-                DangXuatToolStripMenuItem.Enabled = true;
-                MenuDangNhap.Enabled = false;
             }
         }
 
@@ -80,20 +76,11 @@ namespace QuanLyNhanSu
 
         }
 
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thôngTinNhânSựToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Đăng xuất thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
-            {
-                MenuDanhMuc.Enabled = false;
-                MenuChucNang.Enabled = false;
-                MenuQuanLy.Enabled = false;
-                MenuTroGiup.Enabled = false;
-                MenuQLTK.Enabled = false;
-                DangXuatToolStripMenuItem.Enabled = false;
-                MenuDangNhap.Enabled = true;
-            }
-
-
+            this.Hide();
+            FrmTTCoBan frmTTCoBan = new FrmTTCoBan();
+            frmTTCoBan.ShowDialog();
         }
     }
 }

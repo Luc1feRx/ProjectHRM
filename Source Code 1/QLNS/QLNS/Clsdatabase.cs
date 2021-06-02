@@ -34,7 +34,7 @@ namespace QLNS
         {
             ketnoi();
             sqlcom = new SqlCommand(strsql, sqlcon);
-             sqlcom.ExecuteNonQuery();
+            sqlcom.ExecuteNonQuery();
             ngatketnoi();
            
         }

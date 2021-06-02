@@ -56,7 +56,7 @@ CREATE TABLE tbTTNVCoBan(
 CREATE TABLE tbTTCaNhan(
 	MaNV nvarchar(10) NOT NULL,
 	HoTen nvarchar(50),
-	NgaySinh DATE,
+	NoiSinh nvarchar(50),
 	NguyenQuan nvarchar(50),
 	DCThuongChu nvarchar(100),
 	DCTamChu nvarchar(100),
@@ -131,10 +131,10 @@ CREATE TABLE tbPhongBan(
 	TenPhong NVARCHAR(50),
 	NgayThanhLap DATETIME,
 	GhiChu NVARCHAR(MAX)
+
 )
 
 CREATE TABLE tbNVThoiViec(
-	MaNV nvarchar(10) NOT NULL,
 	HoTen NVARCHAR(50),
 	CCCD INT PRIMARY KEY NOT NULL,
 	NgayThoiViec DATETIME,
@@ -193,3 +193,7 @@ CREATE TABLE tbBangCongNhanVienCTY(
 	Luong INT,
 	GhiChu NVARCHAR(MAX)
 )
+
+
+
+ update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'kt01      ' group by TenPhong) where MaNV='078'

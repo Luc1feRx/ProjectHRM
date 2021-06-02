@@ -32,5 +32,15 @@ namespace QuanLyNhanSu.Properties {
                 return ((string)(this["QuanLyNhanSuConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123")]
+        public string QLNSConnectionString {
+            get {
+                return ((string)(this["QLNSConnectionString"]));
+            }
+        }
     }
 }

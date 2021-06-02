@@ -113,9 +113,6 @@ namespace QLNS
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-           
-          
             //try
             //{
                 
@@ -159,7 +156,7 @@ namespace QLNS
             }
             else
                 MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            string ins = "insert into TblCongKhoiDieuhanh(MaNV,HoTen,MaLuong) select MaNV,HoTen,MaLuong from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
+            string ins = "insert into TblCongKhoiDieuHanh(MaNV,HoTen,MaLuong) select MaNV,HoTen,MaLuong from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
             if ((!cls.kttrungkhoa(textBox3.Text, "select MaNV from TblCongKhoiDieuHanh")))
             {
                 if (textBox3.Text != "")
@@ -171,7 +168,7 @@ namespace QLNS
             }
             else
                 MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            string updata = " update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'"+comboBox3.Text+"' group by TenPhong) where MaNV='" + textBox3.Text + "'";
+            string updata = " update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'" + comboBox3.Text+"' group by TenPhong) where MaNV='" + textBox3.Text + "'";
             
                     cls.thucthiketnoi(updata);
                     dataGridView1.Refresh();
@@ -239,7 +236,7 @@ namespace QLNS
    
         private void button3_Click(object sender, EventArgs e)
         {
-            string insert = "insert into TblNVThoiViec(HoTen,CMTND,LyDo) select HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
+            string insert = "insert into TblNVThoiViec(HoTen,CCCD,LyDo) select HoTen,CCCD,GhiChu from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
             {
                 cls.thucthiketnoi(insert);
                 cls.loaddatagridview(dataGridView1, "select * from TblTTNVCoBan");

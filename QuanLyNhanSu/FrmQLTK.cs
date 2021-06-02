@@ -39,7 +39,7 @@ namespace QuanLyNhanSu
         private void buttonThem_Click(object sender, EventArgs e)
         {
             string input = textBoxTen.Text;
-            string query = "SELECT * FROM tbUsers";
+            string query = "SELECT * FROM tbuser";
             if(cn.Exitsted(input, query))
             {
                 MessageBox.Show("Tên tài khoản đã tồn tại, mời bạn nhập lại");
@@ -79,10 +79,10 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QuanLyNhanSuConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
-            string query = "SELECT * FROM tbUsers";
+            string query = "SELECT * FROM tbuser";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -107,7 +107,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string query = "DELETE FROM tbUsers WhERE Username = '" + textBoxTen.Text + "'";
+                string query = "DELETE FROM tbuser WhERE Username = '" + textBoxTen.Text + "'";
                 if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     cn.makeConnected(query);
@@ -136,7 +136,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string query = "UPDATE tbUsers SET Username = '" + textBoxTen.Text + "', Pass = '" + textBoxMatKhau.Text + "', Quyen = '" + comboBoxQuyen.Text + "', Ten = '" + textBoxTenThat.Text +"' WHERE Username = '" + textBoxTen.Text + "'";
+                string query = "UPDATE tbuser SET Username = '" + textBoxTen.Text + "', Pass = '" + textBoxMatKhau.Text + "', Quyen = '" + comboBoxQuyen.Text + "', Ten = '" + textBoxTenThat.Text +"' WHERE Username = '" + textBoxTen.Text + "'";
                 cn.makeConnected(query);
                 LoadDataGridView();
             }
