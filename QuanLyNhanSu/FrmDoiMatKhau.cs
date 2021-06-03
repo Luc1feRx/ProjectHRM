@@ -35,10 +35,10 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QuanLyNhanSuConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);//khoi tao bien con de ket noi database su dung thu vien sqlClient
             con.Open();
-            string query = "SELECT * FROM tbUsers WHERE Username = '" + textboxTenTruycap.Text + "'";//chon ra Username ma ban muon doi pass
+            string query = "SELECT * FROM tbuser WHERE Username = '" + textboxTenTruycap.Text + "'";//chon ra Username ma ban muon doi pass
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();//doc du lieu tu bang database
             if (reader.Read())
@@ -75,7 +75,7 @@ namespace QuanLyNhanSu
                                 {
                                     if (textBoxMKMoi.Text == textBoxNhapLaiMK.Text)
                                     {
-                                        string query2 = "UPDATE tbUsers SET Pass = '" + textBoxMKMoi.Text + "' WHERE(Username = '" + textboxTenTruycap.Text + "' AND Pass = '" + textBoxMatKhauCu.Text + "')";
+                                        string query2 = "UPDATE tbuser SET Pass = '" + textBoxMKMoi.Text + "' WHERE(Username = '" + textboxTenTruycap.Text + "' AND Pass = '" + textBoxMatKhauCu.Text + "')";
                                         SqlCommand cmd2 = new SqlCommand(query2, con);//xac dinh thao tac can xu ly doi voi data
                                         Connect cn = new Connect();
                                         cn.makeConnected(query2);

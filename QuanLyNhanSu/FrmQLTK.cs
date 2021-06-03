@@ -19,8 +19,6 @@ namespace QuanLyNhanSu
         public FrmQLTK()
         {
             InitializeComponent();
-            LoadComboBox();
-            LoadDataGridView();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -63,19 +61,10 @@ namespace QuanLyNhanSu
 
         private void FrmQLTK_Load(object sender, EventArgs e)
         {
-            
+            LoadDataGridView();
+            cn.loadcombobox(comboBoxQuyen, "select TenQuyen from tblQuyen", 0);
         }
 
-        public void LoadComboBox()
-        {
-            string queryQuyen = "SELECT * FROM tbQuyen";
-            DataTable dt = new DataTable();
-            dt = cn.GetDataTable(queryQuyen);
-            //gan hien thi gia tri cho combobox
-            comboBoxQuyen.DataSource = new BindingSource(dt, null);
-            comboBoxQuyen.DisplayMember = dt.Columns[1].ToString();
-            comboBoxQuyen.ValueMember = dt.Columns[0].ToString();
-        }
 
         public void LoadDataGridView()
         {

@@ -82,5 +82,15 @@ namespace QuanLyNhanSu
             FrmTTCoBan frmTTCoBan = new FrmTTCoBan();
             frmTTCoBan.ShowDialog();
         }
+
+        private void lươngNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lươngNhânViênToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

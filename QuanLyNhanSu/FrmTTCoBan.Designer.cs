@@ -198,6 +198,7 @@
             this.comboBoxHopDong.Name = "comboBoxHopDong";
             this.comboBoxHopDong.Size = new System.Drawing.Size(137, 25);
             this.comboBoxHopDong.TabIndex = 35;
+            this.comboBoxHopDong.SelectedIndexChanged += new System.EventHandler(this.comboBoxHopDong_SelectedIndexChanged);
             // 
             // comboBoxChucVu
             // 
@@ -211,8 +212,6 @@
             // 
             this.comboBoxMaLuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaLuong.FormattingEnabled = true;
-            this.comboBoxMaLuong.Items.AddRange(new object[] {
-            "ml3"});
             this.comboBoxMaLuong.Location = new System.Drawing.Point(105, 180);
             this.comboBoxMaLuong.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxMaLuong.Name = "comboBoxMaLuong";
@@ -328,6 +327,8 @@
             this.textBoxCMTND.Name = "textBoxCMTND";
             this.textBoxCMTND.Size = new System.Drawing.Size(129, 25);
             this.textBoxCMTND.TabIndex = 9;
+            this.textBoxCMTND.TextChanged += new System.EventHandler(this.textBoxCMTND_TextChanged);
+            this.textBoxCMTND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCMTND_KeyPress);
             // 
             // txtHonNhan
             // 

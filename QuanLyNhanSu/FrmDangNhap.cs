@@ -24,12 +24,12 @@ namespace QuanLyNhanSu
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QuanLyNhanSuConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);//khoi tao bien con de ket noi database su dung thu vien sqlClient
             try
             {
                 con.Open();// mo ket noi den database
-                string query = "SELECT * FROM tbUsers WHERE Username = '" + textBoxUsername.Text + "' AND Pass = '" + textBoxPass.Text + "'";
+                string query = "SELECT * FROM tbuser WHERE Username = '" + textBoxUsername.Text + "' AND Pass = '" + textBoxPass.Text + "'";
                 SqlCommand cmd = new SqlCommand(query, con);//xac dinh thao tac can xu ly doi voi data
                 SqlDataReader reader = cmd.ExecuteReader();//doc du lieu tu database
                 if (reader.HasRows)//rows > 0
@@ -56,9 +56,16 @@ namespace QuanLyNhanSu
                 }
                 else
                 {
-                    MessageBox.Show("Tên đăng nhập hoặc Mật khẩu không đúng ", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    textBoxUsername.Text = "";
-                    textBoxPass.Text = "";
+                    if (textBoxUsername.Text == "" && textBoxPass.Text == "")
+                    {
+                        MessageBox.Show("Bạn phải nhập đầy đủ Username và Password", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tên đăng nhập hoặc Mật khẩu không đúng ", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textBoxUsername.Text = "";
+                        textBoxPass.Text = "";
+                    }
                 }
             }
             catch (Exception ex)

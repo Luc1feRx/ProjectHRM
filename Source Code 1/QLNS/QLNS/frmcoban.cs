@@ -236,7 +236,7 @@ namespace QLNS
    
         private void button3_Click(object sender, EventArgs e)
         {
-            string insert = "insert into TblNVThoiViec(HoTen,CCCD,LyDo) select HoTen,CCCD,GhiChu from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
+            string insert = "insert into TblNVThoiViec(HoTen,CMTND,LyDo) select HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
             {
                 cls.thucthiketnoi(insert);
                 cls.loaddatagridview(dataGridView1, "select * from TblTTNVCoBan");
@@ -302,6 +302,11 @@ namespace QLNS
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

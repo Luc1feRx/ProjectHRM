@@ -197,3 +197,9 @@ CREATE TABLE tbBangCongNhanVienCTY(
 
 
  update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'kt01      ' group by TenPhong) where MaNV='078'
+
+ insert into TblThoiViec(MaNV,HoTen,CMTND,LyDo) select MaNV,HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='120'
+
+INSERT INTO TblTTNVCoBan VALUES(N'mb01      ',N'kt02      ',N'010',N'Nguyễn Mai Anh',N'ml2       ',CONVERT(NVARCHAR(30),'09/14/1991', 103), N'Nữ',N'rồi',N'13092423',N'Bắc Ninh',N'Nhân Viên',N'kinh tế',N'36 tháng','07/01/2018','07/01/2021',N'')
+
+select ChucVu from tblChucVu

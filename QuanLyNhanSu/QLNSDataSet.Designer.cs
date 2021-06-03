@@ -38,8 +38,6 @@ namespace QuanLyNhanSu {
         
         private tblLoaiHDDataTable tabletblLoaiHD;
         
-        private TblNVThoiViecDataTable tableTblNVThoiViec;
-        
         private TblPhongBanDataTable tableTblPhongBan;
         
         private tblQuyenDataTable tabletblQuyen;
@@ -122,9 +120,6 @@ namespace QuanLyNhanSu {
                 }
                 if ((ds.Tables["tblLoaiHD"] != null)) {
                     base.Tables.Add(new tblLoaiHDDataTable(ds.Tables["tblLoaiHD"]));
-                }
-                if ((ds.Tables["TblNVThoiViec"] != null)) {
-                    base.Tables.Add(new TblNVThoiViecDataTable(ds.Tables["TblNVThoiViec"]));
                 }
                 if ((ds.Tables["TblPhongBan"] != null)) {
                     base.Tables.Add(new TblPhongBanDataTable(ds.Tables["TblPhongBan"]));
@@ -238,16 +233,6 @@ namespace QuanLyNhanSu {
         public tblLoaiHDDataTable tblLoaiHD {
             get {
                 return this.tabletblLoaiHD;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TblNVThoiViecDataTable TblNVThoiViec {
-            get {
-                return this.tableTblNVThoiViec;
             }
         }
         
@@ -429,9 +414,6 @@ namespace QuanLyNhanSu {
                 if ((ds.Tables["tblLoaiHD"] != null)) {
                     base.Tables.Add(new tblLoaiHDDataTable(ds.Tables["tblLoaiHD"]));
                 }
-                if ((ds.Tables["TblNVThoiViec"] != null)) {
-                    base.Tables.Add(new TblNVThoiViecDataTable(ds.Tables["TblNVThoiViec"]));
-                }
                 if ((ds.Tables["TblPhongBan"] != null)) {
                     base.Tables.Add(new TblPhongBanDataTable(ds.Tables["TblPhongBan"]));
                 }
@@ -534,12 +516,6 @@ namespace QuanLyNhanSu {
                     this.tabletblLoaiHD.InitVars();
                 }
             }
-            this.tableTblNVThoiViec = ((TblNVThoiViecDataTable)(base.Tables["TblNVThoiViec"]));
-            if ((initTable == true)) {
-                if ((this.tableTblNVThoiViec != null)) {
-                    this.tableTblNVThoiViec.InitVars();
-                }
-            }
             this.tableTblPhongBan = ((TblPhongBanDataTable)(base.Tables["TblPhongBan"]));
             if ((initTable == true)) {
                 if ((this.tableTblPhongBan != null)) {
@@ -626,8 +602,6 @@ namespace QuanLyNhanSu {
             base.Tables.Add(this.tableTblHoSoThuViec);
             this.tabletblLoaiHD = new tblLoaiHDDataTable();
             base.Tables.Add(this.tabletblLoaiHD);
-            this.tableTblNVThoiViec = new TblNVThoiViecDataTable();
-            base.Tables.Add(this.tableTblNVThoiViec);
             this.tableTblPhongBan = new TblPhongBanDataTable();
             base.Tables.Add(this.tableTblPhongBan);
             this.tabletblQuyen = new tblQuyenDataTable();
@@ -719,12 +693,6 @@ namespace QuanLyNhanSu {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializetblLoaiHD() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeTblNVThoiViec() {
             return false;
         }
         
@@ -857,9 +825,6 @@ namespace QuanLyNhanSu {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void tblLoaiHDRowChangeEventHandler(object sender, tblLoaiHDRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void TblNVThoiViecRowChangeEventHandler(object sender, TblNVThoiViecRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void TblPhongBanRowChangeEventHandler(object sender, TblPhongBanRowChangeEvent e);
@@ -3362,299 +3327,6 @@ namespace QuanLyNhanSu {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "tblLoaiHDDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TblNVThoiViecDataTable : global::System.Data.TypedTableBase<TblNVThoiViecRow> {
-            
-            private global::System.Data.DataColumn columnHoTen;
-            
-            private global::System.Data.DataColumn columnCMTND;
-            
-            private global::System.Data.DataColumn columnNgayThoiViec;
-            
-            private global::System.Data.DataColumn columnLyDo;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TblNVThoiViecDataTable() {
-                this.TableName = "TblNVThoiViec";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal TblNVThoiViecDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected TblNVThoiViecDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn HoTenColumn {
-                get {
-                    return this.columnHoTen;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CMTNDColumn {
-                get {
-                    return this.columnCMTND;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NgayThoiViecColumn {
-                get {
-                    return this.columnNgayThoiViec;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn LyDoColumn {
-                get {
-                    return this.columnLyDo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TblNVThoiViecRow this[int index] {
-                get {
-                    return ((TblNVThoiViecRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TblNVThoiViecRowChangeEventHandler TblNVThoiViecRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TblNVThoiViecRowChangeEventHandler TblNVThoiViecRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TblNVThoiViecRowChangeEventHandler TblNVThoiViecRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event TblNVThoiViecRowChangeEventHandler TblNVThoiViecRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddTblNVThoiViecRow(TblNVThoiViecRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TblNVThoiViecRow AddTblNVThoiViecRow(string HoTen, string CMTND, System.DateTime NgayThoiViec, string LyDo) {
-                TblNVThoiViecRow rowTblNVThoiViecRow = ((TblNVThoiViecRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        HoTen,
-                        CMTND,
-                        NgayThoiViec,
-                        LyDo};
-                rowTblNVThoiViecRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTblNVThoiViecRow);
-                return rowTblNVThoiViecRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                TblNVThoiViecDataTable cln = ((TblNVThoiViecDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new TblNVThoiViecDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal void InitVars() {
-                this.columnHoTen = base.Columns["HoTen"];
-                this.columnCMTND = base.Columns["CMTND"];
-                this.columnNgayThoiViec = base.Columns["NgayThoiViec"];
-                this.columnLyDo = base.Columns["LyDo"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            private void InitClass() {
-                this.columnHoTen = new global::System.Data.DataColumn("HoTen", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHoTen);
-                this.columnCMTND = new global::System.Data.DataColumn("CMTND", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCMTND);
-                this.columnNgayThoiViec = new global::System.Data.DataColumn("NgayThoiViec", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNgayThoiViec);
-                this.columnLyDo = new global::System.Data.DataColumn("LyDo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLyDo);
-                this.columnHoTen.MaxLength = 50;
-                this.columnCMTND.AllowDBNull = false;
-                this.columnCMTND.MaxLength = 50;
-                this.columnLyDo.MaxLength = 50;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TblNVThoiViecRow NewTblNVThoiViecRow() {
-                return ((TblNVThoiViecRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TblNVThoiViecRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(TblNVThoiViecRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.TblNVThoiViecRowChanged != null)) {
-                    this.TblNVThoiViecRowChanged(this, new TblNVThoiViecRowChangeEvent(((TblNVThoiViecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.TblNVThoiViecRowChanging != null)) {
-                    this.TblNVThoiViecRowChanging(this, new TblNVThoiViecRowChangeEvent(((TblNVThoiViecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.TblNVThoiViecRowDeleted != null)) {
-                    this.TblNVThoiViecRowDeleted(this, new TblNVThoiViecRowChangeEvent(((TblNVThoiViecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.TblNVThoiViecRowDeleting != null)) {
-                    this.TblNVThoiViecRowDeleting(this, new TblNVThoiViecRowChangeEvent(((TblNVThoiViecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveTblNVThoiViecRow(TblNVThoiViecRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QLNSDataSet ds = new QLNSDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TblNVThoiViecDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -8491,116 +8163,6 @@ namespace QuanLyNhanSu {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TblNVThoiViecRow : global::System.Data.DataRow {
-            
-            private TblNVThoiViecDataTable tableTblNVThoiViec;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal TblNVThoiViecRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableTblNVThoiViec = ((TblNVThoiViecDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string HoTen {
-                get {
-                    try {
-                        return ((string)(this[this.tableTblNVThoiViec.HoTenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HoTen\' in table \'TblNVThoiViec\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTblNVThoiViec.HoTenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CMTND {
-                get {
-                    return ((string)(this[this.tableTblNVThoiViec.CMTNDColumn]));
-                }
-                set {
-                    this[this.tableTblNVThoiViec.CMTNDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime NgayThoiViec {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableTblNVThoiViec.NgayThoiViecColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NgayThoiViec\' in table \'TblNVThoiViec\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTblNVThoiViec.NgayThoiViecColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string LyDo {
-                get {
-                    try {
-                        return ((string)(this[this.tableTblNVThoiViec.LyDoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LyDo\' in table \'TblNVThoiViec\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTblNVThoiViec.LyDoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsHoTenNull() {
-                return this.IsNull(this.tableTblNVThoiViec.HoTenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetHoTenNull() {
-                this[this.tableTblNVThoiViec.HoTenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNgayThoiViecNull() {
-                return this.IsNull(this.tableTblNVThoiViec.NgayThoiViecColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNgayThoiViecNull() {
-                this[this.tableTblNVThoiViec.NgayThoiViecColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsLyDoNull() {
-                return this.IsNull(this.tableTblNVThoiViec.LyDoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetLyDoNull() {
-                this[this.tableTblNVThoiViec.LyDoColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class TblPhongBanRow : global::System.Data.DataRow {
             
             private TblPhongBanDataTable tableTblPhongBan;
@@ -10727,40 +10289,6 @@ namespace QuanLyNhanSu {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tblLoaiHDRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class TblNVThoiViecRowChangeEvent : global::System.EventArgs {
-            
-            private TblNVThoiViecRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TblNVThoiViecRowChangeEvent(TblNVThoiViecRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TblNVThoiViecRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -13610,259 +13138,6 @@ SELECT MaBoPhan, TenBoPhan, NgayThanhLap, GhiChu FROM TblBoPhan WHERE (MaBoPhan 
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(LoaiHD));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TblNVThoiViecTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public TblNVThoiViecTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "TblNVThoiViec";
-            tableMapping.ColumnMappings.Add("HoTen", "HoTen");
-            tableMapping.ColumnMappings.Add("CMTND", "CMTND");
-            tableMapping.ColumnMappings.Add("NgayThoiViec", "NgayThoiViec");
-            tableMapping.ColumnMappings.Add("LyDo", "LyDo");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TblNVThoiViec] ([HoTen], [CMTND], [NgayThoiViec], [LyDo]) VALU" +
-                "ES (@HoTen, @CMTND, @NgayThoiViec, @LyDo)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HoTen", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HoTen", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CMTND", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CMTND", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NgayThoiViec", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NgayThoiViec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LyDo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LyDo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT HoTen, CMTND, NgayThoiViec, LyDo FROM dbo.TblNVThoiViec";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QLNSDataSet.TblNVThoiViecDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QLNSDataSet.TblNVThoiViecDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            QLNSDataSet.TblNVThoiViecDataTable dataTable = new QLNSDataSet.TblNVThoiViecDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QLNSDataSet.TblNVThoiViecDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QLNSDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "TblNVThoiViec");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string HoTen, string CMTND, global::System.Nullable<global::System.DateTime> NgayThoiViec, string LyDo) {
-            if ((HoTen == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(HoTen));
-            }
-            if ((CMTND == null)) {
-                throw new global::System.ArgumentNullException("CMTND");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CMTND));
-            }
-            if ((NgayThoiViec.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(NgayThoiViec.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((LyDo == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(LyDo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -17210,8 +16485,6 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
         
         private tblLoaiHDTableAdapter _tblLoaiHDTableAdapter;
         
-        private TblNVThoiViecTableAdapter _tblNVThoiViecTableAdapter;
-        
         private TblPhongBanTableAdapter _tblPhongBanTableAdapter;
         
         private tblQuyenTableAdapter _tblQuyenTableAdapter;
@@ -17340,20 +16613,6 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
             }
             set {
                 this._tblLoaiHDTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public TblNVThoiViecTableAdapter TblNVThoiViecTableAdapter {
-            get {
-                return this._tblNVThoiViecTableAdapter;
-            }
-            set {
-                this._tblNVThoiViecTableAdapter = value;
             }
         }
         
@@ -17530,10 +16789,6 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                             && (this._tblLoaiHDTableAdapter.Connection != null))) {
                     return this._tblLoaiHDTableAdapter.Connection;
                 }
-                if (((this._tblNVThoiViecTableAdapter != null) 
-                            && (this._tblNVThoiViecTableAdapter.Connection != null))) {
-                    return this._tblNVThoiViecTableAdapter.Connection;
-                }
                 if (((this._tblPhongBanTableAdapter != null) 
                             && (this._tblPhongBanTableAdapter.Connection != null))) {
                     return this._tblPhongBanTableAdapter.Connection;
@@ -17602,9 +16857,6 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                     count = (count + 1);
                 }
                 if ((this._tblLoaiHDTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._tblNVThoiViecTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._tblPhongBanTableAdapter != null)) {
@@ -17681,93 +16933,12 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tblTTCaNhanTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TblTTCaNhan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblTTCaNhanTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblThoiViecTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblThoiViec.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblThoiViecTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblThaiSanTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TblThaiSan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblThaiSanTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblTangLuongTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TblTangLuong.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblTangLuongTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblSoBHTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TblSoBH.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblSoBHTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tblBangCongThuViecTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.TblBangCongThuViec.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tblBangCongThuViecTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblNVThoiViecTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TblNVThoiViec.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblNVThoiViecTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblLoaiHDTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblLoaiHD.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblLoaiHDTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblHoSoThuViecTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TblHoSoThuViec.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblHoSoThuViecTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblCongKhoiDieuHanhTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TblCongKhoiDieuHanh.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblCongKhoiDieuHanhTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17780,12 +16951,84 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._tblCongKhoiDieuHanhTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblCongKhoiDieuHanh.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblCongKhoiDieuHanhTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblHoSoThuViecTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblHoSoThuViec.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblHoSoThuViecTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblLoaiHDTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblLoaiHD.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblLoaiHDTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._tblQuyenTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tblQuyen.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tblQuyenTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblSoBHTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblSoBH.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblSoBHTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblTangLuongTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblTangLuong.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblTangLuongTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblThaiSanTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblThaiSan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblThaiSanTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblThoiViecTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblThoiViec.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblThoiViecTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblTTCaNhanTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblTTCaNhan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblTTCaNhanTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17840,83 +17083,11 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tblTTCaNhanTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TblTTCaNhan.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblTTCaNhanTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblThoiViecTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblThoiViec.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblThoiViecTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblThaiSanTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TblThaiSan.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblThaiSanTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblTangLuongTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TblTangLuong.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblTangLuongTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblSoBHTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TblSoBH.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblSoBHTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tblBangCongThuViecTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.TblBangCongThuViec.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tblBangCongThuViecTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblNVThoiViecTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TblNVThoiViec.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblNVThoiViecTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblLoaiHDTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblLoaiHD.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblLoaiHDTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblHoSoThuViecTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TblHoSoThuViec.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblHoSoThuViecTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblCongKhoiDieuHanhTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TblCongKhoiDieuHanh.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblCongKhoiDieuHanhTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -17928,11 +17099,75 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._tblCongKhoiDieuHanhTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblCongKhoiDieuHanh.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblCongKhoiDieuHanhTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblHoSoThuViecTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblHoSoThuViec.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblHoSoThuViecTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblLoaiHDTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblLoaiHD.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblLoaiHDTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._tblQuyenTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tblQuyen.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tblQuyenTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblSoBHTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblSoBH.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblSoBHTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblTangLuongTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblTangLuong.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblTangLuongTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblThaiSanTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblThaiSan.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblThaiSanTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblThoiViecTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblThoiViec.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblThoiViecTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblTTCaNhanTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblTTCaNhan.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblTTCaNhanTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -17962,83 +17197,11 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tblQuyenTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblQuyen.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblTTCaNhanTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblTTCaNhan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tblQuyenTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblChucVuTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblChucVu.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblChucVuTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblCongKhoiDieuHanhTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblCongKhoiDieuHanh.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblCongKhoiDieuHanhTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblHoSoThuViecTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblHoSoThuViec.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblHoSoThuViecTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblLoaiHDTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblLoaiHD.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblLoaiHDTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblNVThoiViecTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblNVThoiViec.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblNVThoiViecTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblBangCongThuViecTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblBangCongThuViec.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblBangCongThuViecTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblSoBHTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblSoBH.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblSoBHTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblTangLuongTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblTangLuong.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblTangLuongTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblThaiSanTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblThaiSan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblThaiSanTableAdapter.Update(deletedRows));
+                    result = (result + this._tblTTCaNhanTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -18050,11 +17213,75 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tblTTCaNhanTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblTTCaNhan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblThaiSanTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblThaiSan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tblTTCaNhanTableAdapter.Update(deletedRows));
+                    result = (result + this._tblThaiSanTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblTangLuongTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblTangLuong.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblTangLuongTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblSoBHTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblSoBH.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblSoBHTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblQuyenTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblQuyen.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblQuyenTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblLoaiHDTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblLoaiHD.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblLoaiHDTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblHoSoThuViecTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblHoSoThuViec.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblHoSoThuViecTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblCongKhoiDieuHanhTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblCongKhoiDieuHanh.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblCongKhoiDieuHanhTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblChucVuTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblChucVu.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblChucVuTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblBangCongThuViecTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblBangCongThuViec.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblBangCongThuViecTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -18161,11 +17388,6 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
             }
             if (((this._tblLoaiHDTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._tblLoaiHDTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._tblNVThoiViecTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tblNVThoiViecTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -18307,15 +17529,6 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                     if (this._tblLoaiHDTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._tblLoaiHDTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tblLoaiHDTableAdapter.Adapter);
-                    }
-                }
-                if ((this._tblNVThoiViecTableAdapter != null)) {
-                    revertConnections.Add(this._tblNVThoiViecTableAdapter, this._tblNVThoiViecTableAdapter.Connection);
-                    this._tblNVThoiViecTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tblNVThoiViecTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tblNVThoiViecTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tblNVThoiViecTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblNVThoiViecTableAdapter.Adapter);
                     }
                 }
                 if ((this._tblPhongBanTableAdapter != null)) {
@@ -18484,10 +17697,6 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
                 if ((this._tblLoaiHDTableAdapter != null)) {
                     this._tblLoaiHDTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblLoaiHDTableAdapter]));
                     this._tblLoaiHDTableAdapter.Transaction = null;
-                }
-                if ((this._tblNVThoiViecTableAdapter != null)) {
-                    this._tblNVThoiViecTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblNVThoiViecTableAdapter]));
-                    this._tblNVThoiViecTableAdapter.Transaction = null;
                 }
                 if ((this._tblPhongBanTableAdapter != null)) {
                     this._tblPhongBanTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblPhongBanTableAdapter]));

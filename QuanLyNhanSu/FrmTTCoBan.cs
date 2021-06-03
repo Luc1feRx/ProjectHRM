@@ -23,7 +23,8 @@ namespace QuanLyNhanSu
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             FillCombobox("SELECT MaPhong FROM TblPhongBan", comboBoxMaPhong, "MaPhong", "MaPhong");
-            
+            comboBoxMaPhong.DisplayMember = "MaPhong";
+            comboBoxMaPhong.ValueMember = "MaPhong";
         }
 
         public void LoadDataGridView()
@@ -46,7 +47,7 @@ namespace QuanLyNhanSu
             dataGridViewTTCoBan.Columns[5].HeaderText = "Ngày sinh";
             dataGridViewTTCoBan.Columns[6].HeaderText = "Giới tính";
             dataGridViewTTCoBan.Columns[7].HeaderText = "TTHôn nhân";
-            dataGridViewTTCoBan.Columns[8].HeaderText = "CCCD";
+            dataGridViewTTCoBan.Columns[8].HeaderText = "CMTND";
             dataGridViewTTCoBan.Columns[9].HeaderText = "Nơi cấp";
             dataGridViewTTCoBan.Columns[10].HeaderText = "Chức vụ";
             dataGridViewTTCoBan.Columns[11].HeaderText = "Loại HĐ";
@@ -61,8 +62,8 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string queryinsert = "INSERT INTO TblTTNVCoBan VALUES(N'" + comboBoxMaBoPhan.Text + "',N'" + comboBoxMaPhong.Text + "',N'" + textBoxMaNV.Text + "',N'" + textBoxHoTen.Text + "',N'" + comboBoxMaLuong.Text + "',N'" + dateTimeNgaySinh.Text + "',N'" + comboBoxGioiTinh.Text + "',N'" + txtHonNhan.Text + "',N'" + textBoxCMTND.Text + "',N'" + textBoxNoiCap.Text + "',N'" + comboBoxChucVu.Text + "',N'" + comboBoxHopDong.Text + "',N'" + textBoxThoiGian.Text + "',N'" + dateBoxThoiGiaNgayKy.Text + "',N'" + dateTimePickerNgayHetHan.Text + "',N'" + textBoxGhiChu.Text + "')";
-                if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && !cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND FROM tblThoiViec") && !cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM tblThoiViec"))
+                string queryinsert = "INSERT INTO TblTTNVCoBan VALUES(N'" + comboBoxMaBoPhan.Text + "',N'" + comboBoxMaPhong.Text + "',N'" + textBoxMaNV.Text + "',N'" + textBoxHoTen.Text + "',N'" + comboBoxMaLuong.Text + "',CONVERT(datetime,'" + dateTimeNgaySinh.Text + "', 103), N'" + comboBoxGioiTinh.Text + "',N'" + txtHonNhan.Text + "',N'" + textBoxCMTND.Text + "',N'" + textBoxNoiCap.Text + "',N'" + comboBoxChucVu.Text + "',N'" + comboBoxHopDong.Text + "',N'" + textBoxThoiGian.Text + "',CONVERT(datetime,'" + dateBoxThoiGiaNgayKy.Text + "', 103),CONVERT(datetime,'" + dateTimePickerNgayHetHan.Text + "', 103),N'" + textBoxGhiChu.Text + "')";
+                if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && !cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND FROM tblThoiViec"))
                 {
                     //kiem tra nguoi dung da nhap hay chua
                     if(textBoxMaNV.Text != "" && textBoxCMTND.Text != "" && textBoxNoiCap.Text != "" && comboBoxChucVu.Text != "" && comboBoxHopDong.Text != "" && textBoxHoTen.Text != "")
@@ -80,7 +81,7 @@ namespace QuanLyNhanSu
                     else if (comboBoxChucVu.Text == "") MessageBox.Show("Bạn chưa nhập chức vụ");
                     else if (comboBoxHopDong.Text == "") MessageBox.Show("Bạn chưa nhập loại hợp đồng");
                 }
-                else if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND tblThoiViec") && cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM tblThoiViec"))
+                else if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND FROM tblThoiViec"))
                 {
                     //them nhan vien da xoa hoac khong
                     if (MessageBox.Show("Nhân viên này đã từng làm ở công ty, bạn có chắc muốn thêm?", "Thêm thất bại", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -105,10 +106,8 @@ namespace QuanLyNhanSu
                         dataGridViewTTCoBan.Refresh();
                     }
                 }
-                else
-                    MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                string queryins = "insert into TblCongKhoiDieuHanh(MaNV,HoTen,MaLuong) select MaNV,HoTen,MaLuong from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
+                /*string queryins = "insert into TblCongKhoiDieuHanh(MaNV,HoTen,MaLuong) select MaNV,HoTen,MaLuong from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
                 if ((!cn.Exitsted(textBoxMaNV.Text, "select MaNV from TblCongKhoiDieuHanh")))
                 {
                     if (textBoxMaNV.Text != "")
@@ -116,10 +115,7 @@ namespace QuanLyNhanSu
                         cn.makeConnected(queryins);
                         dataGridViewTTCoBan.Refresh();
                     }
-                }
-                string update = " update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'" + comboBoxMaPhong.Text + "' group by TenPhong) where MaNV='" + textBoxMaNV.Text + "'";
-                cn.makeConnected(update);
-                dataGridViewTTCoBan.Refresh();
+                }*/
             }
             catch (Exception ex)
             {
@@ -149,7 +145,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string update = "update TblTTNVCoBan set MaBoPhan=N'" + comboBoxMaBoPhan.Text + "',MaPhong=N'" + comboBoxMaPhong.Text + "',HoTen=N'" + textBoxHoTen.Text + "',MaLuong=N'" + comboBoxMaLuong.Text + "',NgaySinh='" + dateTimeNgaySinh.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',TTHonNhan=N'" + txtHonNhan.Text + "',CMTND=N'" + textBoxCMTND.Text + "',NoiCap=N'" + textBoxNoiCap.Text + "',ChucVu=N'" + comboBoxChucVu.Text + "',LoaiHD=N'" + comboBoxHopDong.Text + "',ThoiGian=N'" + textBoxThoiGian.Text + "',NgayKy='" + dateBoxThoiGiaNgayKy.Text + "',NgayHetHan='" + dateTimePickerNgayHetHan.Text + "',GhiChu=N'" + textBoxGhiChu.Text + "' where MaNV=N'" + textBoxMaNV.Text + "'";
+                string update = "update TblTTNVCoBan set MaBoPhan=N'" + comboBoxMaBoPhan.Text + "',MaPhong=N'" + comboBoxMaPhong.Text + "',HoTen=N'" + textBoxHoTen.Text + "',MaLuong=N'" + comboBoxMaLuong.Text + "',NgaySinh= CONVERT(datetime,'" + dateTimeNgaySinh.Text + "', 103)" +  ",GioiTinh=N'" + comboBoxGioiTinh.Text + "',TTHonNhan=N'" + txtHonNhan.Text + "',CMTND=N'" + textBoxCMTND.Text + "',NoiCap=N'" + textBoxNoiCap.Text + "',ChucVu=N'" + comboBoxChucVu.Text + "',LoaiHD=N'" + comboBoxHopDong.Text + "',ThoiGian=N'" + textBoxThoiGian.Text + "',NgayKy= CONVERT(datetime,'" + dateBoxThoiGiaNgayKy.Text + "', 103)" + ",NgayHetHan= CONVERT(datetime,'" + dateTimePickerNgayHetHan.Text + "', 103)" + ",GhiChu=N'" + textBoxGhiChu.Text + "' where MaNV=N'" + textBoxMaNV.Text + "'";
                 cn.makeConnected(update);
                 dataGridViewTTCoBan.Refresh();
                 LoadDataGridView();
@@ -160,30 +156,29 @@ namespace QuanLyNhanSu
                 MessageBox.Show("Sửa thất bại");
             }
 
+            /*
             string update2 = "update TblCongKhoiDieuHanh set HoTen=N'" + textBoxHoTen.Text + "',MaLuong=N'" + comboBoxMaLuong.Text + "' where MaNV=N'" + textBoxMaNV.Text + "'";
             cn.makeConnected(update2);
             LoadDataGridView();
             string update3 = "update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'" + comboBoxMaPhong.Text + "' group by TenPhong) where MaNV='" + textBoxMaNV.Text + "'";
             cn.makeConnected(update3);
             dataGridViewTTCoBan.Refresh();
+            */
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
+            string insTV = "insert into tblThoiViec(MaNV,HoTen,CMTND,LyDo) select MaNV,HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
+            cn.makeConnected(insTV);
+            LoadDataGridView();
+
             string delete = "delete from TblTTNVCoBan where MaNV=N'" + textBoxMaNV.Text + "'";
             if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 cn.makeConnected(delete);
                 LoadDataGridView();
+                MessageBox.Show("Đã xóa dữ liệu");
             }
-            MessageBox.Show("Đã xóa dữ liệu");
-
-            string insTV = "insert into TblThoiViec(HoTen,CMTND,LyDo) select HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
-            {
-                cn.makeConnected(insTV);
-                LoadDataGridView();
-            }
-            MessageBox.Show("Nhân viên đã được thêm vào phần thôi việc");
         }
 
         private void dataGridViewTTCoBan_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -218,8 +213,19 @@ namespace QuanLyNhanSu
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             FillCombobox("SELECT MaBoPhan FROM TblBoPhan", comboBoxMaBoPhan, "MaBoPhan", "MaBoPhan");
-            comboBoxMaBoPhan.SelectedIndex = -1; //set index = -1
+            comboBoxMaBoPhan.SelectedIndex = -1; //set index = -1 de ko hien ma bo phan khi load form
             LoadDataGridView();
+            cn.loadcombobox(comboBoxMaLuong, "Select MaLuong from TblBangLuongCTy", 0);
+            cn.loadcombobox(comboBoxChucVu, "select ChucVu from tblChucVu", 0);
+            cn.loadcombobox(comboBoxHopDong, "select LoaiHD from tblLoaiHD", 0);
+            //FillCombobox("SELECT MaChucVu FROM tblChucVu", comboBoxChucVu, "MaChucVu", "MaChucVu");
+            //comboBoxChucVu.DisplayMember = "MaChucVu";
+            //comboBoxChucVu.ValueMember = "MaChucVu";
+
+
+            dateTimeNgaySinh.CustomFormat = "dd/MM/yyyy";
+            dateBoxThoiGiaNgayKy.CustomFormat = "dd/MM/yyyy";
+            dateTimePickerNgayHetHan.CustomFormat = "dd/MM/yyyy";
         }
 
         public static void FillCombobox(string query, ComboBox cb, string ma, string ten) // do du lieu vao combobox
@@ -238,6 +244,31 @@ namespace QuanLyNhanSu
         private void comboBoxMaPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxCMTND_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCMTND_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void comboBoxHopDong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxHopDong.Text == "Không thời hạn")
+            {
+                dateTimePickerNgayHetHan.Enabled = false;
+                dateTimePickerNgayHetHan.CustomFormat = " ";
+            }
+            else
+            {
+                dateTimePickerNgayHetHan.Enabled = true;
+                dateTimePickerNgayHetHan.CustomFormat = "dd/MM/yyyy";
+            }
         }
     }
 }

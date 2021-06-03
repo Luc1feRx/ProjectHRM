@@ -16,21 +16,22 @@ namespace QuanLyNhanSu
         SqlCommand cmd;
         SqlDataReader reader;
         SqlDataAdapter sda;
+        SqlConnection con;
 
         public void Connected()//de ket noi database
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             con.Open();
         }
         public void Disconnected()//ngat database
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             con.Close();
         }
 
         public void makeConnected(string queryC)//thuc thi ket noi
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             con.Open();
             cmd = new SqlCommand(queryC, con);
             cmd.ExecuteNonQuery();
@@ -39,7 +40,7 @@ namespace QuanLyNhanSu
 
         public bool Exitsted(string input, string query) //kiem tra trung lap hay khong
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             con.Open();
             cmd = new SqlCommand(query, con);
             reader = cmd.ExecuteReader();
@@ -58,7 +59,7 @@ namespace QuanLyNhanSu
 
         public DataTable GetDataTable(string queryGet)
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             DataTable dt = new DataTable();
             cmd = new SqlCommand(queryGet, con);
             try
@@ -80,6 +81,18 @@ namespace QuanLyNhanSu
                 Disconnected();
             }
             return dt;
+        }
+
+        public void loadcombobox(ComboBox cb, string strselect, int cot)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cb.Items.Add(reader[cot].ToString());
+            }
+            Disconnected();
         }
     }
 }
