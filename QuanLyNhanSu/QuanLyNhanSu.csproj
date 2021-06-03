@@ -91,6 +91,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyNhanSuDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmBH.resx">
+      <DependentUpon>FrmBH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>

@@ -12,3 +12,15 @@ C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmDoiMatKhau.resources
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmQLTK.resources
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmTTCoBan.resources
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.AssemblyReference.cache
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBH.resources
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmDangNhap.resources
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmDoiMatKhau.resources
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmMain.resources
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmQLTK.resources
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmTTCoBan.resources
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+C:\Users\taihd\OneDrive\Desktop\ProjectHRM\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb

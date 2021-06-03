@@ -65,4 +65,5 @@ CREATE TABLE tbTTCaNhan(
 
 CREATE TABLE tbBoPhan(
 	MaBoPhan char(10) PRIMARY KEY NOT NULL,
-	TenBoPhan nchar(10) 
+	TenBoPhan nchar(10),
+)
