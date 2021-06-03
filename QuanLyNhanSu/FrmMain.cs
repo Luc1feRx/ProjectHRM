@@ -45,12 +45,7 @@ namespace QuanLyNhanSu
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
-        {
-            MenuDanhMuc.Enabled = false;
-            MenuChucNang.Enabled = false;
-            MenuQuanLy.Enabled = false;
-            MenuTroGiup.Enabled = false;
-            MenuQLTK.Enabled = false;
+        { 
             if (Quyen == "Admin")
             {
                 MenuDanhMuc.Enabled = true;
@@ -59,7 +54,7 @@ namespace QuanLyNhanSu
                 MenuTroGiup.Enabled = true;
                 MenuQLTK.Enabled = true;
             }
-            else if (Quyen == "user")
+            else if (Quyen == "User")
             {
                 MenuDanhMuc.Enabled = true;
                 MenuChucNang.Enabled = true;
@@ -79,6 +74,13 @@ namespace QuanLyNhanSu
         private void MenuTaiKhoan_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void thôngTinNhânSựToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmTTCoBan frmTTCoBan = new FrmTTCoBan();
+            frmTTCoBan.ShowDialog();
         }
     }
 }

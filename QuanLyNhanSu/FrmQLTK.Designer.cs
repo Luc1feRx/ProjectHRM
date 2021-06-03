@@ -63,7 +63,7 @@
             this.groupBox1.Controls.Add(this.textBoxTenThat);
             this.groupBox1.Controls.Add(this.textBoxMatKhau);
             this.groupBox1.Controls.Add(this.textBoxTen);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(209, 42);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -180,7 +180,7 @@
             this.textBoxTenThat.Location = new System.Drawing.Point(226, 127);
             this.textBoxTenThat.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTenThat.Name = "textBoxTenThat";
-            this.textBoxTenThat.Size = new System.Drawing.Size(302, 26);
+            this.textBoxTenThat.Size = new System.Drawing.Size(302, 27);
             this.textBoxTenThat.TabIndex = 3;
             // 
             // textBoxMatKhau
@@ -189,7 +189,7 @@
             this.textBoxMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMatKhau.Name = "textBoxMatKhau";
             this.textBoxMatKhau.PasswordChar = '*';
-            this.textBoxMatKhau.Size = new System.Drawing.Size(302, 26);
+            this.textBoxMatKhau.Size = new System.Drawing.Size(302, 27);
             this.textBoxMatKhau.TabIndex = 2;
             // 
             // textBoxTen
@@ -197,7 +197,7 @@
             this.textBoxTen.Location = new System.Drawing.Point(226, 46);
             this.textBoxTen.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTen.Name = "textBoxTen";
-            this.textBoxTen.Size = new System.Drawing.Size(302, 26);
+            this.textBoxTen.Size = new System.Drawing.Size(302, 27);
             this.textBoxTen.TabIndex = 1;
             this.textBoxTen.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
