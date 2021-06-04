@@ -284,5 +284,10 @@ namespace QLNS
             txtMaBHXH.Text = "BH" + txtMaNV.Text;
             txtMaThue.Text = "T" + txtMaNV.Text;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

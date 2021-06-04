@@ -21,7 +21,7 @@ namespace QLNS
 
         public static void openConnection()
         {
-            source = @"Data Source=DESKTOP-KA710V7\SQLEXPRESS;Initial Catalog=QuanLiNhanSu;Integrated Security=True";
+            source = @"Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLyNhanSu;User ID=sa;Password=123";
             cnn = new SqlConnection(source);
             try
             {

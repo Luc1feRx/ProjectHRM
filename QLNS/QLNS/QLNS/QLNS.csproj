@@ -184,10 +184,10 @@
     <Compile Include="frmThueTNCN.Designer.cs">
       <DependentUpon>frmThueTNCN.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLiNhanSuDataSet.Designer.cs">
+    <Compile Include="QLyNhanSuDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
+      <DependentUpon>QLyNhanSuDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -272,16 +272,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLiNhanSuDataSet.xsc">
-      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
+    <None Include="QLyNhanSuDataSet.xsc">
+      <DependentUpon>QLyNhanSuDataSet.xsd</DependentUpon>
     </None>
-    <None Include="QuanLiNhanSuDataSet.xsd">
+    <None Include="QLyNhanSuDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLiNhanSuDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>QLyNhanSuDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="QuanLiNhanSuDataSet.xss">
-      <DependentUpon>QuanLiNhanSuDataSet.xsd</DependentUpon>
+    <None Include="QLyNhanSuDataSet.xss">
+      <DependentUpon>QLyNhanSuDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +337,35 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

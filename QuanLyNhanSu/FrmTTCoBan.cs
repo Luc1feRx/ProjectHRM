@@ -22,9 +22,7 @@ namespace QuanLyNhanSu
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FillCombobox("SELECT MaPhong FROM TblPhongBan", comboBoxMaPhong, "MaPhong", "MaPhong");
-            comboBoxMaPhong.DisplayMember = "MaPhong";
-            comboBoxMaPhong.ValueMember = "MaPhong";
+            FillCombobox("select p.MaPhong from TblBoPhan b,TblPhongBan p where b.MaBoPhan=p.MaBoPhan and p.MaBoPhan=N'" + comboBoxMaBoPhan.SelectedValue + "'", comboBoxMaPhong, "MaPhong", "MaPhong");
         }
 
         public void LoadDataGridView()
@@ -62,7 +60,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string queryinsert = "INSERT INTO TblTTNVCoBan VALUES(N'" + comboBoxMaBoPhan.Text + "',N'" + comboBoxMaPhong.Text + "',N'" + textBoxMaNV.Text + "',N'" + textBoxHoTen.Text + "',N'" + comboBoxMaLuong.Text + "',CONVERT(datetime,'" + dateTimeNgaySinh.Text + "', 103), N'" + comboBoxGioiTinh.Text + "',N'" + txtHonNhan.Text + "',N'" + textBoxCMTND.Text + "',N'" + textBoxNoiCap.Text + "',N'" + comboBoxChucVu.Text + "',N'" + comboBoxHopDong.Text + "',N'" + textBoxThoiGian.Text + "',CONVERT(datetime,'" + dateBoxThoiGiaNgayKy.Text + "', 103),CONVERT(datetime,'" + dateTimePickerNgayHetHan.Text + "', 103),N'" + textBoxGhiChu.Text + "')";
+                string queryinsert = "INSERT INTO TblTTNVCoBan VALUES(N'" + comboBoxMaBoPhan.Text + "',N'" + comboBoxMaPhong.Text + "',N'" + textBoxMaNV.Text + "',N'" + textBoxHoTen.Text + "',N'" + comboBoxMaLuong.Text + "',CONVERT(datetime,'" + dateTimeNgaySinh.Text + "', 103), N'" + comboBoxGioiTinh.Text + "',N'" + comboBoxTTHonNhan.Text + "',N'" + textBoxCMTND.Text + "',N'" + textBoxNoiCap.Text + "',N'" + comboBoxChucVu.Text + "',N'" + comboBoxHopDong.Text + "',N'" + textBoxThoiGian.Text + "',CONVERT(datetime,'" + dateBoxThoiGiaNgayKy.Text + "', 103),CONVERT(datetime,'" + dateTimePickerNgayHetHan.Text + "', 103),N'" + textBoxGhiChu.Text + "')";
                 if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && !cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND FROM tblThoiViec"))
                 {
                     //kiem tra nguoi dung da nhap hay chua
@@ -145,7 +143,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string update = "update TblTTNVCoBan set MaBoPhan=N'" + comboBoxMaBoPhan.Text + "',MaPhong=N'" + comboBoxMaPhong.Text + "',HoTen=N'" + textBoxHoTen.Text + "',MaLuong=N'" + comboBoxMaLuong.Text + "',NgaySinh= CONVERT(datetime,'" + dateTimeNgaySinh.Text + "', 103)" +  ",GioiTinh=N'" + comboBoxGioiTinh.Text + "',TTHonNhan=N'" + txtHonNhan.Text + "',CMTND=N'" + textBoxCMTND.Text + "',NoiCap=N'" + textBoxNoiCap.Text + "',ChucVu=N'" + comboBoxChucVu.Text + "',LoaiHD=N'" + comboBoxHopDong.Text + "',ThoiGian=N'" + textBoxThoiGian.Text + "',NgayKy= CONVERT(datetime,'" + dateBoxThoiGiaNgayKy.Text + "', 103)" + ",NgayHetHan= CONVERT(datetime,'" + dateTimePickerNgayHetHan.Text + "', 103)" + ",GhiChu=N'" + textBoxGhiChu.Text + "' where MaNV=N'" + textBoxMaNV.Text + "'";
+                string update = "update TblTTNVCoBan set MaBoPhan=N'" + comboBoxMaBoPhan.Text + "',MaPhong=N'" + comboBoxMaPhong.Text + "',HoTen=N'" + textBoxHoTen.Text + "',MaLuong=N'" + comboBoxMaLuong.Text + "',NgaySinh= CONVERT(datetime,'" + dateTimeNgaySinh.Text + "', 103)" +  ",GioiTinh=N'" + comboBoxGioiTinh.Text + "',TTHonNhan=N'" + comboBoxTTHonNhan.Text + "',CMTND=N'" + textBoxCMTND.Text + "',NoiCap=N'" + textBoxNoiCap.Text + "',ChucVu=N'" + comboBoxChucVu.Text + "',LoaiHD=N'" + comboBoxHopDong.Text + "',ThoiGian=N'" + textBoxThoiGian.Text + "',NgayKy= CONVERT(datetime,'" + dateBoxThoiGiaNgayKy.Text + "', 103)" + ",NgayHetHan= CONVERT(datetime,'" + dateTimePickerNgayHetHan.Text + "', 103)" + ",GhiChu=N'" + textBoxGhiChu.Text + "' where MaNV=N'" + textBoxMaNV.Text + "'";
                 cn.makeConnected(update);
                 dataGridViewTTCoBan.Refresh();
                 LoadDataGridView();
@@ -196,7 +194,7 @@ namespace QuanLyNhanSu
             comboBoxMaLuong.Text = dataGridViewTTCoBan.Rows[i].Cells[4].Value.ToString();
             dateTimeNgaySinh.Text = dataGridViewTTCoBan.Rows[i].Cells[5].Value.ToString();
             comboBoxGioiTinh.Text = dataGridViewTTCoBan.Rows[i].Cells[6].Value.ToString();
-            txtHonNhan.Text = dataGridViewTTCoBan.Rows[i].Cells[7].Value.ToString();
+            comboBoxTTHonNhan.Text = dataGridViewTTCoBan.Rows[i].Cells[7].Value.ToString();
             textBoxCMTND.Text = dataGridViewTTCoBan.Rows[i].Cells[8].Value.ToString();
             textBoxNoiCap.Text = dataGridViewTTCoBan.Rows[i].Cells[9].Value.ToString();
             comboBoxChucVu.Text = dataGridViewTTCoBan.Rows[i].Cells[10].Value.ToString();
@@ -218,6 +216,8 @@ namespace QuanLyNhanSu
             cn.loadcombobox(comboBoxMaLuong, "Select MaLuong from TblBangLuongCTy", 0);
             cn.loadcombobox(comboBoxChucVu, "select ChucVu from tblChucVu", 0);
             cn.loadcombobox(comboBoxHopDong, "select LoaiHD from tblLoaiHD", 0);
+
+
             //FillCombobox("SELECT MaChucVu FROM tblChucVu", comboBoxChucVu, "MaChucVu", "MaChucVu");
             //comboBoxChucVu.DisplayMember = "MaChucVu";
             //comboBoxChucVu.ValueMember = "MaChucVu";
@@ -243,7 +243,7 @@ namespace QuanLyNhanSu
 
         private void comboBoxMaPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBoxCMTND_TextChanged(object sender, EventArgs e)
@@ -263,11 +263,14 @@ namespace QuanLyNhanSu
             {
                 dateTimePickerNgayHetHan.Enabled = false;
                 dateTimePickerNgayHetHan.CustomFormat = " ";
+                textBoxThoiGian.Text = "";
+                textBoxThoiGian.Enabled = false;
             }
             else
             {
                 dateTimePickerNgayHetHan.Enabled = true;
                 dateTimePickerNgayHetHan.CustomFormat = "dd/MM/yyyy";
+                textBoxThoiGian.Enabled = true;
             }
         }
     }

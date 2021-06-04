@@ -39,7 +39,6 @@
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -70,10 +69,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBoxAnhNV = new System.Windows.Forms.PictureBox();
+            this.buttonDoiAnh = new System.Windows.Forms.Button();
+            this.textBox19 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhNV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,6 +92,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.buttonDoiAnh);
+            this.groupBox1.Controls.Add(this.pictureBoxAnhNV);
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.comboBox3);
@@ -126,7 +131,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(995, 225);
+            this.groupBox1.Size = new System.Drawing.Size(1214, 224);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cơ bản";
@@ -216,15 +221,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(128, 25);
             this.dateTimePicker1.TabIndex = 6;
             // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(848, 21);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(137, 175);
-            this.textBox19.TabIndex = 18;
-            // 
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(600, 98);
@@ -295,7 +291,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(780, 34);
+            this.label19.Location = new System.Drawing.Point(959, 22);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(53, 17);
@@ -586,6 +582,44 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // pictureBoxAnhNV
+            // 
+            this.pictureBoxAnhNV.Location = new System.Drawing.Point(767, 9);
+            this.pictureBoxAnhNV.Name = "pictureBoxAnhNV";
+            this.pictureBoxAnhNV.Size = new System.Drawing.Size(185, 162);
+            this.pictureBoxAnhNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAnhNV.TabIndex = 34;
+            this.pictureBoxAnhNV.TabStop = false;
+            // 
+            // buttonDoiAnh
+            // 
+            this.buttonDoiAnh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonDoiAnh.BackgroundImage")));
+            this.buttonDoiAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDoiAnh.FlatAppearance.BorderSize = 0;
+            this.buttonDoiAnh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonDoiAnh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonDoiAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDoiAnh.Image = global::QLNS.Properties.Resources.add_user;
+            this.buttonDoiAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDoiAnh.Location = new System.Drawing.Point(810, 180);
+            this.buttonDoiAnh.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDoiAnh.Name = "buttonDoiAnh";
+            this.buttonDoiAnh.Size = new System.Drawing.Size(107, 41);
+            this.buttonDoiAnh.TabIndex = 4;
+            this.buttonDoiAnh.Text = "Đổi ảnh";
+            this.buttonDoiAnh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDoiAnh.UseVisualStyleBackColor = true;
+            this.buttonDoiAnh.Click += new System.EventHandler(this.buttonDoiAnh_Click);
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(1034, 17);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox19.Multiline = true;
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(137, 73);
+            this.textBox19.TabIndex = 18;
+            // 
             // frmcoban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -594,7 +628,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::QLNS.Properties.Resources.afsadfdafdfaf;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1027, 492);
+            this.ClientSize = new System.Drawing.Size(1296, 492);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -610,6 +644,7 @@
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhNV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -634,7 +669,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox12;
@@ -657,5 +691,8 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button buttonDoiAnh;
+        private System.Windows.Forms.PictureBox pictureBoxAnhNV;
+        private System.Windows.Forms.TextBox textBox19;
     }
 }

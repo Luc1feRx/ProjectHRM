@@ -52,7 +52,7 @@ namespace QLNS
             {
                 //Connect to DB
                 SqlConnection connect;
-                string con = @"Data Source=DESKTOP-KA710V7\SQLEXPRESS;Initial Catalog=QuanLiNhanSu;Integrated Security=True";
+                string con = @"Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLyNhanSu;User ID=sa;Password=123";
                 connect = new SqlConnection(con);
                 connect.Open();
                 //----------------------------------------------------------------------------------------------------
@@ -275,6 +275,16 @@ namespace QLNS
         }
 
         private void thuếThuNhậpCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bảoHiểmXãHộiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trợGiúpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }

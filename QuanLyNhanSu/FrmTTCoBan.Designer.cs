@@ -49,7 +49,6 @@
             this.textBoxThoiGian = new System.Windows.Forms.TextBox();
             this.textBoxNoiCap = new System.Windows.Forms.TextBox();
             this.textBoxCMTND = new System.Windows.Forms.TextBox();
-            this.txtHonNhan = new System.Windows.Forms.TextBox();
             this.textBoxHoTen = new System.Windows.Forms.TextBox();
             this.textBoxMaNV = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -68,6 +67,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTTCoBan = new System.Windows.Forms.DataGridView();
+            this.comboBoxTTHonNhan = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBoxTTCB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTTCoBan)).BeginInit();
@@ -149,6 +149,7 @@
             // groupBoxTTCB
             // 
             this.groupBoxTTCB.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxTTCB.Controls.Add(this.comboBoxTTHonNhan);
             this.groupBoxTTCB.Controls.Add(this.comboBoxHopDong);
             this.groupBoxTTCB.Controls.Add(this.comboBoxChucVu);
             this.groupBoxTTCB.Controls.Add(this.comboBoxMaLuong);
@@ -163,7 +164,6 @@
             this.groupBoxTTCB.Controls.Add(this.textBoxThoiGian);
             this.groupBoxTTCB.Controls.Add(this.textBoxNoiCap);
             this.groupBoxTTCB.Controls.Add(this.textBoxCMTND);
-            this.groupBoxTTCB.Controls.Add(this.txtHonNhan);
             this.groupBoxTTCB.Controls.Add(this.textBoxHoTen);
             this.groupBoxTTCB.Controls.Add(this.textBoxMaNV);
             this.groupBoxTTCB.Controls.Add(this.label19);
@@ -329,14 +329,6 @@
             this.textBoxCMTND.TabIndex = 9;
             this.textBoxCMTND.TextChanged += new System.EventHandler(this.textBoxCMTND_TextChanged);
             this.textBoxCMTND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCMTND_KeyPress);
-            // 
-            // txtHonNhan
-            // 
-            this.txtHonNhan.Location = new System.Drawing.Point(364, 108);
-            this.txtHonNhan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHonNhan.Name = "txtHonNhan";
-            this.txtHonNhan.Size = new System.Drawing.Size(129, 25);
-            this.txtHonNhan.TabIndex = 8;
             // 
             // textBoxHoTen
             // 
@@ -516,6 +508,17 @@
             this.dataGridViewTTCoBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTTCoBan_CellClick);
             this.dataGridViewTTCoBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTTCoBan_CellContentClick);
             // 
+            // comboBoxTTHonNhan
+            // 
+            this.comboBoxTTHonNhan.FormattingEnabled = true;
+            this.comboBoxTTHonNhan.Items.AddRange(new object[] {
+            "Đã kết hôn",
+            "Chưa kết hôn"});
+            this.comboBoxTTHonNhan.Location = new System.Drawing.Point(365, 107);
+            this.comboBoxTTHonNhan.Name = "comboBoxTTHonNhan";
+            this.comboBoxTTHonNhan.Size = new System.Drawing.Size(128, 25);
+            this.comboBoxTTHonNhan.TabIndex = 36;
+            // 
             // FrmTTCoBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -552,7 +555,6 @@
         private System.Windows.Forms.TextBox textBoxThoiGian;
         private System.Windows.Forms.TextBox textBoxNoiCap;
         private System.Windows.Forms.TextBox textBoxCMTND;
-        private System.Windows.Forms.TextBox txtHonNhan;
         private System.Windows.Forms.TextBox textBoxHoTen;
         private System.Windows.Forms.TextBox textBoxMaNV;
         private System.Windows.Forms.Label label19;
@@ -578,5 +580,6 @@
         private System.Windows.Forms.Button buttonLamMoi;
         private System.Windows.Forms.ComboBox comboBoxChucVu;
         private System.Windows.Forms.ComboBox comboBoxHopDong;
+        private System.Windows.Forms.ComboBox comboBoxTTHonNhan;
     }
 }

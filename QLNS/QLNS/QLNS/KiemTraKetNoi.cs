@@ -13,7 +13,7 @@ namespace QLNS
         static SqlConnection conn = new SqlConnection();
         static public void KetNoi()
         {
-            string connstring = @"Data Source=DESKTOP-KA710V7\SQLEXPRESS;Initial Catalog=QuanLiNhanSu;Integrated Security=True";
+            string connstring = @"Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLyNhanSu;User ID=sa;Password=123";
             conn.ConnectionString = connstring;
             try
             {

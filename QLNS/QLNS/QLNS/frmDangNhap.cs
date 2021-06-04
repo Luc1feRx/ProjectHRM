@@ -113,6 +113,11 @@ namespace QLNS
             this.Height = 435;
             txtID.Focus();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

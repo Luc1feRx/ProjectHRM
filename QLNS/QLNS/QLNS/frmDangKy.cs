@@ -57,5 +57,10 @@ namespace QLNS
 
 
         }
+
+        private void frmDangKy_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

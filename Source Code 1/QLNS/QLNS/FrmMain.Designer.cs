@@ -162,7 +162,7 @@
             // menuItem4
             // 
             this.menuItem4.Name = "menuItem4";
-            this.menuItem4.Size = new System.Drawing.Size(203, 26);
+            this.menuItem4.Size = new System.Drawing.Size(224, 26);
             this.menuItem4.Text = "Đăng Nhập";
             this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
             // 
@@ -170,14 +170,14 @@
             // 
             this.menuItem5.Enabled = false;
             this.menuItem5.Name = "menuItem5";
-            this.menuItem5.Size = new System.Drawing.Size(203, 26);
+            this.menuItem5.Size = new System.Drawing.Size(224, 26);
             this.menuItem5.Text = "QLy tài khoản";
             this.menuItem5.Click += new System.EventHandler(this.menuItem5_Click);
             // 
             // menuItemdmk
             // 
             this.menuItemdmk.Name = "menuItemdmk";
-            this.menuItemdmk.Size = new System.Drawing.Size(203, 26);
+            this.menuItemdmk.Size = new System.Drawing.Size(224, 26);
             this.menuItemdmk.Text = "Đổi mật khẩu";
             this.menuItemdmk.Click += new System.EventHandler(this.menuItemdmk_Click_1);
             // 

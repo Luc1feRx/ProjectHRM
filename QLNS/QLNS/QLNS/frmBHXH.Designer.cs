@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBHXH));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.dateNgayCap = new System.Windows.Forms.DateTimePicker();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,8 +59,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataBaoHiem)).BeginInit();
@@ -85,6 +85,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1171, 244);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
+            this.label7.Location = new System.Drawing.Point(420, 108);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 17);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "(*)";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.DarkRed;
+            this.label20.Location = new System.Drawing.Point(420, 35);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(26, 17);
+            this.label20.TabIndex = 22;
+            this.label20.Text = "(*)";
             // 
             // dateNgayCap
             // 
@@ -297,6 +320,7 @@
             this.dataBaoHiem.Location = new System.Drawing.Point(12, 384);
             this.dataBaoHiem.Name = "dataBaoHiem";
             this.dataBaoHiem.ReadOnly = true;
+            this.dataBaoHiem.RowHeadersWidth = 51;
             this.dataBaoHiem.RowTemplate.Height = 24;
             this.dataBaoHiem.Size = new System.Drawing.Size(1171, 348);
             this.dataBaoHiem.TabIndex = 2;
@@ -306,6 +330,7 @@
             // 
             this.Column1.DataPropertyName = "MaNV";
             this.Column1.HeaderText = "Mã NV";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 150;
@@ -314,6 +339,7 @@
             // 
             this.Column2.DataPropertyName = "MaSoBH";
             this.Column2.HeaderText = "Mã Số BH";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 150;
@@ -322,6 +348,7 @@
             // 
             this.Column3.DataPropertyName = "NgayCap";
             this.Column3.HeaderText = "Ngày Cấp";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 150;
@@ -330,6 +357,7 @@
             // 
             this.Column4.DataPropertyName = "NoiCap";
             this.Column4.HeaderText = "Nơi Cấp";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 150;
@@ -338,6 +366,7 @@
             // 
             this.Column5.DataPropertyName = "NoiDKKCB";
             this.Column5.HeaderText = "Nơi ĐK Khám CB";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Width = 250;
@@ -346,31 +375,10 @@
             // 
             this.Column6.DataPropertyName = "GhiChu";
             this.Column6.HeaderText = "Ghi Chú";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Width = 278;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.DarkRed;
-            this.label20.Location = new System.Drawing.Point(420, 35);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(26, 17);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "(*)";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(420, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 17);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "(*)";
             // 
             // frmBHXH
             // 

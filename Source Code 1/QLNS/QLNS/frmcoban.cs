@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Media;
 using System.Data.SqlClient;
-
+using System.IO;
 
 namespace QLNS
 {
@@ -111,14 +111,22 @@ namespace QLNS
             this.Close();
         }
 
+
+        private byte[] ConvertImageToBytes(Image img)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            img.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
+            return memoryStream.ToArray();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             //try
             //{
-                
-                string insert = "insert into TblTTNVCoBan values(N'" + comboBox2.Text + "',N'" + comboBox3.Text + "',N'" + textBox3.Text + "',N'" + textBox4.Text + "',N'" + comboBox4.Text + "',N'" + dateTimePicker1.Text + "',N'" + comboBox1.Text + "',N'" + textBox8.Text + "',N'" + textBox9.Text + "',N'" + textBox11.Text + "',N'" + textBox12.Text + "',N'" + textBox14.Text + "',N'" + textBox15.Text + "',N'" + dateTimePicker3.Text + "',N'" + dateTimePicker4.Text + "',N'" + textBox19.Text + "')";
 
-                if ((!cls.kttrungkhoa(textBox3.Text, "select MaNV from TblTTNVCoBan")) && (!cls.kttrungkhoa(textBox9.Text, "select CMTND from TblNVThoiViec")))
+            string insert = "insert into TblTTNVCoBan values('" + ConvertImageToBytes(pictureBoxAnhNV.Image) + "',N'" + comboBox2.Text + "',N'" + comboBox3.Text + "',N'" + textBox3.Text + "',N'" + textBox4.Text + "',N'" + comboBox4.Text + "',N'" + dateTimePicker1.Text + "',N'" + comboBox1.Text + "',N'" + textBox8.Text + "',N'" + textBox9.Text + "',N'" + textBox11.Text + "',N'" + textBox12.Text + "',N'" + textBox14.Text + "',N'" + textBox15.Text + "',N'" + dateTimePicker3.Text + "',N'" + dateTimePicker4.Text + "',N'" + textBox19.Text + "')";
+
+                if ((!cls.kttrungkhoa(textBox3.Text, "select MaNV from TblTTNVCoBan")) && (!cls.kttrungkhoa(textBox9.Text, "select CMTND from tblThoiViec")))
                 {
                     if (textBox3.Text != "" && textBox9.Text != "")
                     {
@@ -130,18 +138,18 @@ namespace QLNS
                     else if (textBox3.Text == "") MessageBox.Show("Bạn chưa nhập Mã nhân viên");
                     else if (textBox9.Text == "") MessageBox.Show("Bạn chưa nhập số CMTND");
                 }
-                else if ((!cls.kttrungkhoa(textBox3.Text, "select MaNV from TblTTNVCoBan")) && (cls.kttrungkhoa(textBox9.Text, "select CMTND from TblNVThoiViec")))
+                else if ((!cls.kttrungkhoa(textBox3.Text, "select MaNV from TblTTNVCoBan")) && (cls.kttrungkhoa(textBox9.Text, "select CMTND from tblThoiViec")))
                 {
                     if (MessageBox.Show("Nhân viên này đã từng làm ở công ty, bạn có chắc muốn thêm?", "Thêm thất bại", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         cls.thucthiketnoi(insert);
                         cls.loaddatagridview(dataGridView1, "select * from TblTTNVCoBan");
                         MessageBox.Show("Thêm thành công");
-                        string delete = "delete from TblNVThoiViec where CMTND='" + textBox9.Text + "'";
+                        string delete = "delete from tblThoiViec where CMTND='" + textBox9.Text + "'";
                         cls.thucthiketnoi(delete);
                     }
                 }
-                else if ((cls.kttrungkhoa(textBox3.Text, "select MaNV from TblTTNVCoBan")) && (!cls.kttrungkhoa(textBox9.Text, "select CMTND from TblNVThoiViec")))
+                else if ((cls.kttrungkhoa(textBox3.Text, "select MaNV from TblTTNVCoBan")) && (!cls.kttrungkhoa(textBox9.Text, "select CMTND from tblThoiViec")))
                     MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
             string ine = "insert into TblTTCaNhan(MaNV,HoTen) select MaNV,HoTen from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
@@ -198,6 +206,7 @@ namespace QLNS
                 dateTimePicker3.Text = dataGridView1.Rows[hang].Cells[13].Value.ToString();
                 dateTimePicker4.Text = dataGridView1.Rows[hang].Cells[14].Value.ToString();
                 textBox19.Text = dataGridView1.Rows[hang].Cells[15].Value.ToString();
+                
             }
             catch (Exception)
             {
@@ -229,14 +238,13 @@ namespace QLNS
             dataGridView1.Refresh();
               
         }
-
         
         
             
    
         private void button3_Click(object sender, EventArgs e)
         {
-            string insert = "insert into TblNVThoiViec(HoTen,CMTND,LyDo) select HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
+            string insert = "insert into tblThoiViec(MaNV,HoTen,CMTND,LyDo) select MaNV,HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBox3.Text + "'";
             {
                 cls.thucthiketnoi(insert);
                 cls.loaddatagridview(dataGridView1, "select * from TblTTNVCoBan");
@@ -309,6 +317,19 @@ namespace QLNS
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonDoiAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "JPG files (*.jpg|*.jpg|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = -1;
+            openFileDialog.RestoreDirectory = true;
+
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxAnhNV.ImageLocation = openFileDialog.FileName;
+            }
         }
     }
 }

@@ -54,6 +54,7 @@
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
             this.cboxMaDV = new System.Windows.Forms.ComboBox();
             this.cboxQuocTich = new System.Windows.Forms.ComboBox();
             this.cboxTonGiao = new System.Windows.Forms.ComboBox();
@@ -103,7 +104,6 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -163,6 +163,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataNhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataNhanVien.RowHeadersWidth = 51;
             this.dataNhanVien.RowTemplate.Height = 24;
             this.dataNhanVien.Size = new System.Drawing.Size(1203, 345);
             this.dataNhanVien.TabIndex = 0;
@@ -172,13 +173,16 @@
             // 
             this.Column1.DataPropertyName = "MaNV";
             this.Column1.HeaderText = "Mã NV";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "HoTen";
             this.Column2.HeaderText = "Họ tên NV";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 150;
@@ -187,90 +191,115 @@
             // 
             this.Column3.DataPropertyName = "NgaySinh";
             this.Column3.HeaderText = "Ngày Sinh";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "GioiTinh";
             this.Column4.HeaderText = "Giới Tính";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
             // 
             // Column5
             // 
             this.Column5.DataPropertyName = "CMND";
             this.Column5.HeaderText = "CMND";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "NoiSinh";
             this.Column6.HeaderText = "Nơi Sinh";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 125;
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "DiaChi";
             this.Column7.HeaderText = "ĐỊa Chỉ";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 125;
             // 
             // Column8
             // 
             this.Column8.DataPropertyName = "SDT";
             this.Column8.HeaderText = "SĐT";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 125;
             // 
             // Column9
             // 
             this.Column9.DataPropertyName = "TDHV";
             this.Column9.HeaderText = "Trình Độ Học Vấn";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
+            this.Column9.Width = 125;
             // 
             // Column10
             // 
             this.Column10.DataPropertyName = "MaBHXH";
             this.Column10.HeaderText = "Mã BHXH";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
+            this.Column10.Width = 125;
             // 
             // Column11
             // 
             this.Column11.DataPropertyName = "MaLuong";
             this.Column11.HeaderText = "Mã Lương";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
+            this.Column11.Width = 125;
             // 
             // Column12
             // 
             this.Column12.DataPropertyName = "MaDonVi";
             this.Column12.HeaderText = "Mã Đơn Vị";
+            this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
+            this.Column12.Width = 125;
             // 
             // Column13
             // 
             this.Column13.DataPropertyName = "MaThue";
             this.Column13.HeaderText = "Mã Thuế";
+            this.Column13.MinimumWidth = 6;
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
+            this.Column13.Width = 125;
             // 
             // Column14
             // 
             this.Column14.DataPropertyName = "ChuyenMon";
             this.Column14.HeaderText = "Chuyên Môn";
+            this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
             this.Column14.ReadOnly = true;
+            this.Column14.Width = 125;
             // 
             // Column15
             // 
             this.Column15.DataPropertyName = "Email";
             this.Column15.HeaderText = "Email";
+            this.Column15.MinimumWidth = 6;
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             this.Column15.Width = 150;
@@ -279,6 +308,7 @@
             // 
             this.Column16.DataPropertyName = "GhiChu";
             this.Column16.HeaderText = "Ghi Chú";
+            this.Column16.MinimumWidth = 6;
             this.Column16.Name = "Column16";
             this.Column16.ReadOnly = true;
             this.Column16.Width = 150;
@@ -287,22 +317,28 @@
             // 
             this.Column18.DataPropertyName = "DanToc";
             this.Column18.HeaderText = "Dân Tộc";
+            this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
             this.Column18.ReadOnly = true;
+            this.Column18.Width = 125;
             // 
             // Column19
             // 
             this.Column19.DataPropertyName = "TonGiao";
             this.Column19.HeaderText = "Tôn Giáo";
+            this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
+            this.Column19.Width = 125;
             // 
             // Column20
             // 
             this.Column20.DataPropertyName = "QuocTich";
             this.Column20.HeaderText = "Quốc Tịch";
+            this.Column20.MinimumWidth = 6;
             this.Column20.Name = "Column20";
             this.Column20.ReadOnly = true;
+            this.Column20.Width = 125;
             // 
             // panel1
             // 
@@ -351,6 +387,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1203, 308);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.DarkRed;
+            this.label20.Location = new System.Drawing.Point(313, 24);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(26, 17);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "(*)";
             // 
             // cboxMaDV
             // 
@@ -931,17 +979,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1203, 115);
             this.panel2.TabIndex = 10;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.DarkRed;
-            this.label20.Location = new System.Drawing.Point(313, 24);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(26, 17);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "(*)";
             // 
             // frmTTNhanVien
             // 

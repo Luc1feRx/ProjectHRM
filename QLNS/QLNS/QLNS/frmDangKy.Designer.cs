@@ -33,14 +33,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnDangKi = new System.Windows.Forms.Button();
+            this.txtRePass = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtRePass = new System.Windows.Forms.TextBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,13 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "1460546187_tick.ico");
+            this.imageList1.Images.SetKeyName(1, "1460546211_DeleteRed.ico");
+            // 
             // btnDangKi
             // 
             this.btnDangKi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,6 +106,23 @@
             this.btnDangKi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDangKi.UseVisualStyleBackColor = true;
             this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
+            // 
+            // txtRePass
+            // 
+            this.txtRePass.Location = new System.Drawing.Point(113, 152);
+            this.txtRePass.Name = "txtRePass";
+            this.txtRePass.PasswordChar = '*';
+            this.txtRePass.Size = new System.Drawing.Size(279, 30);
+            this.txtRePass.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nhập Lại:";
             // 
             // txtPass
             // 
@@ -133,30 +157,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài Khoản:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nhập Lại:";
-            // 
-            // txtRePass
-            // 
-            this.txtRePass.Location = new System.Drawing.Point(113, 152);
-            this.txtRePass.Name = "txtRePass";
-            this.txtRePass.PasswordChar = '*';
-            this.txtRePass.Size = new System.Drawing.Size(279, 30);
-            this.txtRePass.TabIndex = 3;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "1460546187_tick.ico");
-            this.imageList1.Images.SetKeyName(1, "1460546211_DeleteRed.ico");
-            // 
             // frmDangKy
             // 
             this.AcceptButton = this.btnDangKi;
@@ -170,6 +170,7 @@
             this.Name = "frmDangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Kí";
+            this.Load += new System.EventHandler(this.frmDangKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
