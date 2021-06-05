@@ -203,3 +203,5 @@ CREATE TABLE tbBangCongNhanVienCTY(
 INSERT INTO TblTTNVCoBan VALUES(N'mb01      ',N'kt02      ',N'010',N'Nguyễn Mai Anh',N'ml2       ',CONVERT(NVARCHAR(30),'09/14/1991', 103), N'Nữ',N'rồi',N'13092423',N'Bắc Ninh',N'Nhân Viên',N'kinh tế',N'36 tháng','07/01/2018','07/01/2021',N'')
 
 select ChucVu from tblChucVu
+
+insert into TblTTNVCoBan values('System.Byte[]',N'mb01      ',N'kt02      ',N'035',N'Tus',N'ml1       ',N' 06 / 04 / 2021 ',N'Nam',N'qrqt',N'32523623',N'qwr',N'wtw',N'ey',N'eue',N' 06 / 04 / 2021 ',N' 06 / 04 / 2021 ',N'')

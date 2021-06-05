@@ -72,7 +72,7 @@ namespace QLNS
         {
             Con = new SqlConnection();
             Con.ConnectionString = @"Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
-            dateTimePicker1.CustomFormat = " MM / dd / yyyy ";
+            c.CustomFormat = " MM / dd / yyyy ";
             dateTimePicker3.CustomFormat = " MM / dd / yyyy ";
             dateTimePicker4.CustomFormat = " MM / dd / yyyy ";
             cls.loadcombobox(comboBox4, "select MaLuong from TblBangLuongCTy", 0);
@@ -112,25 +112,57 @@ namespace QLNS
         }
 
 
-        private byte[] ConvertImageToBytes(Image img)
+        byte[] ConvertImageToBytes(Image img)
         {
             MemoryStream memoryStream = new MemoryStream();
             img.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
             return memoryStream.ToArray();
         }
 
+        Image ByteToImage(byte[] b)
+        {
+            MemoryStream ms = new MemoryStream(b);
+            return Image.FromStream(ms);
+        }
+
+        byte[] PathToByteArray(string path)
+        {
+            return File.ReadAllBytes(path);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             //try
             //{
-
-            string insert = "insert into TblTTNVCoBan values('" + ConvertImageToBytes(pictureBoxAnhNV.Image) + "',N'" + comboBox2.Text + "',N'" + comboBox3.Text + "',N'" + textBox3.Text + "',N'" + textBox4.Text + "',N'" + comboBox4.Text + "',N'" + dateTimePicker1.Text + "',N'" + comboBox1.Text + "',N'" + textBox8.Text + "',N'" + textBox9.Text + "',N'" + textBox11.Text + "',N'" + textBox12.Text + "',N'" + textBox14.Text + "',N'" + textBox15.Text + "',N'" + dateTimePicker3.Text + "',N'" + dateTimePicker4.Text + "',N'" + textBox19.Text + "')";
-
+            string strconnect = "Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
+            SqlConnection sqlcon = new SqlConnection(strconnect);
+            byte[] b = ConvertImageToBytes(pictureBoxAnhNV.Image);
+            string insert = "insert into TblTTNVCoBan values(@MaBoPhan, @MaPhong, @MaNV, @HoTen, @MaLuong, @NgaySinh, @GioiTinh, @TTHonNhan, @CMTND, @NoiCap, @ChucVu, @LoaiHD, @ThoiGian, @NgayKy, @NgayHetHan, @GhiChu, @AnhNV)";
                 if ((!cls.kttrungkhoa(textBox3.Text, "select MaNV from TblTTNVCoBan")) && (!cls.kttrungkhoa(textBox9.Text, "select CMTND from tblThoiViec")))
                 {
                     if (textBox3.Text != "" && textBox9.Text != "")
                     {
-                        cls.thucthiketnoi(insert);
+                    sqlcon.Open();
+                    SqlCommand cmd = new SqlCommand(insert, sqlcon);
+                    cmd.Parameters.Add("@MaBoPhan", comboBox2.Text);
+                    cmd.Parameters.Add("@MaPhong", comboBox3.Text);
+                    cmd.Parameters.Add("@MaNV", textBox3.Text);
+                    cmd.Parameters.Add("@HoTen", textBox4.Text);
+                    cmd.Parameters.Add("@MaLuong", comboBox4.Text);
+                    cmd.Parameters.Add("@NgaySinh", c.Text);
+                    cmd.Parameters.Add("@GioiTinh", comboBox1.Text);
+                    cmd.Parameters.Add("@TTHonNhan", textBox8.Text);
+                    cmd.Parameters.Add("@CMTND", textBox9.Text);
+                    cmd.Parameters.Add("@NoiCap", textBox11.Text);
+                    cmd.Parameters.Add("@ChucVu", textBox12.Text);
+                    cmd.Parameters.Add("@LoaiHD", textBox14.Text);
+                    cmd.Parameters.Add("@ThoiGian", textBox15.Text);
+                    cmd.Parameters.Add("@NgayKy", dateTimePicker3.Text);
+                    cmd.Parameters.Add("@NgayHetHan", dateTimePicker4.Text);
+                    cmd.Parameters.Add("@GhiChu", textBox19.Text);
+                    cmd.Parameters.Add("@AnhNV", b);
+                    cmd.ExecuteNonQuery();
+                    sqlcon.Close();
                         dataGridView1.Refresh();
                         cls.loaddatagridview(dataGridView1, "select * from TblTTNVCoBan");
                         MessageBox.Show("Thêm thành công");
@@ -142,8 +174,28 @@ namespace QLNS
                 {
                     if (MessageBox.Show("Nhân viên này đã từng làm ở công ty, bạn có chắc muốn thêm?", "Thêm thất bại", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        cls.thucthiketnoi(insert);
-                        cls.loaddatagridview(dataGridView1, "select * from TblTTNVCoBan");
+                    sqlcon.Open();
+                    SqlCommand cmd = new SqlCommand(insert, sqlcon);
+                    cmd.Parameters.Add("@MaBoPhan", comboBox2.Text);
+                    cmd.Parameters.Add("@MaPhong", comboBox3.Text);
+                    cmd.Parameters.Add("@MaNV", textBox3.Text);
+                    cmd.Parameters.Add("@HoTen", textBox4.Text);
+                    cmd.Parameters.Add("@MaLuong", comboBox4.Text);
+                    cmd.Parameters.Add("@NgaySinh", c.Text);
+                    cmd.Parameters.Add("@GioiTinh", comboBox1.Text);
+                    cmd.Parameters.Add("@TTHonNhan", textBox8.Text);
+                    cmd.Parameters.Add("@CMTND", textBox9.Text);
+                    cmd.Parameters.Add("@NoiCap", textBox11.Text);
+                    cmd.Parameters.Add("@ChucVu", textBox12.Text);
+                    cmd.Parameters.Add("@LoaiHD", textBox14.Text);
+                    cmd.Parameters.Add("@ThoiGian", textBox15.Text);
+                    cmd.Parameters.Add("@NgayKy", dateTimePicker3.Text);
+                    cmd.Parameters.Add("@NgayHetHan", dateTimePicker4.Text);
+                    cmd.Parameters.Add("@GhiChu", textBox19.Text);
+                    cmd.Parameters.Add("@AnhNV", b);
+                    cmd.ExecuteNonQuery();
+                    sqlcon.Close();
+                    cls.loaddatagridview(dataGridView1, "select * from TblTTNVCoBan");
                         MessageBox.Show("Thêm thành công");
                         string delete = "delete from tblThoiViec where CMTND='" + textBox9.Text + "'";
                         cls.thucthiketnoi(delete);
@@ -194,8 +246,7 @@ namespace QLNS
                 textBox3.Text = dataGridView1.Rows[hang].Cells[2].Value.ToString();
                 textBox4.Text = dataGridView1.Rows[hang].Cells[3].Value.ToString();
                 comboBox4.Text = dataGridView1.Rows[hang].Cells[4].Value.ToString();
-                
-                dateTimePicker1.Text = dataGridView1.Rows[hang].Cells[5].Value.ToString();
+                c.Text = dataGridView1.Rows[hang].Cells[5].Value.ToString();
                 comboBox1.Text = dataGridView1.Rows[hang].Cells[6].Value.ToString();
                 textBox8.Text = dataGridView1.Rows[hang].Cells[7].Value.ToString();
                 textBox9.Text = dataGridView1.Rows[hang].Cells[8].Value.ToString();
@@ -206,11 +257,12 @@ namespace QLNS
                 dateTimePicker3.Text = dataGridView1.Rows[hang].Cells[13].Value.ToString();
                 dateTimePicker4.Text = dataGridView1.Rows[hang].Cells[14].Value.ToString();
                 textBox19.Text = dataGridView1.Rows[hang].Cells[15].Value.ToString();
-                
+                byte[] b = (byte[]) dataGridView1.Rows[hang].Cells[16].Value;
+                pictureBoxAnhNV.Image = ByteToImage(b);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("");
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -218,9 +270,32 @@ namespace QLNS
         {
             //try
             //{
-                string update = "update TblTTNVCoBan set MaBoPhan=N'" + comboBox2.Text + "',MaPhong=N'" + comboBox3.Text + "',HoTen=N'" + textBox4.Text + "',MaLuong=N'" + comboBox4.Text + "',NgaySinh='" + dateTimePicker1.Text + "',GioiTinh=N'" + comboBox1.Text + "',TTHonNhan=N'" + textBox8.Text + "',CMTND=N'" + textBox9.Text + "',NoiCap=N'" + textBox11.Text + "',ChucVu=N'" + textBox12.Text + "',LoaiHD=N'" + textBox14.Text + "',ThoiGian=N'" + textBox15.Text + "',NgayKy='" + dateTimePicker3.Text + "',NgayHetHan='" + dateTimePicker4.Text + "',GhiChu=N'" + textBox19.Text + "' where MaNV=N'" + textBox3.Text + "'";
-                cls.thucthiketnoi(update);
-                dataGridView1.Refresh();
+            string strconnect = "Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
+            SqlConnection sqlcon = new SqlConnection(strconnect);
+            byte[] b = ConvertImageToBytes(pictureBoxAnhNV.Image);
+            string update = "update TblTTNVCoBan set MaBoPhan=@MaBoPhan,MaPhong=@MaPhong,HoTen=@HoTen,MaLuong=@MaLuong,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,TTHonNhan=@TTHonNhan,CMTND=@CMTND,NoiCap=@NoiCap,ChucVu=@ChucVu,LoaiHD=@LoaiHD,ThoiGian=@ThoiGian,NgayKy=@NgayKy,NgayHetHan=NgayHetHan,GhiChu=@GhiChu,AnhNV=@AnhNV where MaNV=@MaNV";
+            sqlcon.Open();
+            SqlCommand cmd = new SqlCommand(update, sqlcon);
+            cmd.Parameters.Add("@MaBoPhan", comboBox2.Text);
+            cmd.Parameters.Add("@MaPhong", comboBox3.Text);
+            cmd.Parameters.Add("@MaNV", textBox3.Text);
+            cmd.Parameters.Add("@HoTen", textBox4.Text);
+            cmd.Parameters.Add("@MaLuong", comboBox4.Text);
+            cmd.Parameters.Add("@NgaySinh", c.Text);
+            cmd.Parameters.Add("@GioiTinh", comboBox1.Text);
+            cmd.Parameters.Add("@TTHonNhan", textBox8.Text);
+            cmd.Parameters.Add("@CMTND", textBox9.Text);
+            cmd.Parameters.Add("@NoiCap", textBox11.Text);
+            cmd.Parameters.Add("@ChucVu", textBox12.Text);
+            cmd.Parameters.Add("@LoaiHD", textBox14.Text);
+            cmd.Parameters.Add("@ThoiGian", textBox15.Text);
+            cmd.Parameters.Add("@NgayKy", dateTimePicker3.Text);
+            cmd.Parameters.Add("@NgayHetHan", dateTimePicker4.Text);
+            cmd.Parameters.Add("@GhiChu", textBox19.Text);
+            cmd.Parameters.Add("@AnhNV", b);
+            cmd.ExecuteNonQuery();
+            sqlcon.Close();
+            dataGridView1.Refresh();
                 cls.loaddatagridview(dataGridView1, "select * from TblTTNVCoBan");
                 MessageBox.Show("Sửa thảnh công");
             //}
@@ -322,13 +397,14 @@ namespace QLNS
         private void buttonDoiAnh_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "JPG files (*.jpg|*.jpg|All files (*.*)|*.*";
+            openFileDialog.Filter = "PNG files(*.png)|*.png|JPG files (*.jpg|*.jpg|All files (*.*)|*.*";
             openFileDialog.FilterIndex = -1;
             openFileDialog.RestoreDirectory = true;
 
             if(openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxAnhNV.ImageLocation = openFileDialog.FileName;
+                this.Text = openFileDialog.FileName;
             }
         }
     }

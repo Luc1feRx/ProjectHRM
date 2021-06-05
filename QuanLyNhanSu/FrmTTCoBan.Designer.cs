@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonLamMoi = new System.Windows.Forms.Button();
-            this.buttonThoat = new System.Windows.Forms.Button();
-            this.buttonXoa = new System.Windows.Forms.Button();
-            this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonThem = new System.Windows.Forms.Button();
             this.groupBoxTTCB = new System.Windows.Forms.GroupBox();
             this.comboBoxHopDong = new System.Windows.Forms.ComboBox();
             this.comboBoxChucVu = new System.Windows.Forms.ComboBox();
@@ -68,6 +63,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTTCoBan = new System.Windows.Forms.DataGridView();
             this.comboBoxTTHonNhan = new System.Windows.Forms.ComboBox();
+            this.buttonLamMoi = new System.Windows.Forms.Button();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBoxTTCB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTTCoBan)).BeginInit();
@@ -82,7 +83,7 @@
             this.groupBox2.Controls.Add(this.buttonSua);
             this.groupBox2.Controls.Add(this.buttonThem);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(13, 245);
+            this.groupBox2.Location = new System.Drawing.Point(13, 350);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -90,61 +91,6 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các chức năng";
-            // 
-            // buttonLamMoi
-            // 
-            this.buttonLamMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLamMoi.Location = new System.Drawing.Point(133, 15);
-            this.buttonLamMoi.Name = "buttonLamMoi";
-            this.buttonLamMoi.Size = new System.Drawing.Size(104, 56);
-            this.buttonLamMoi.TabIndex = 4;
-            this.buttonLamMoi.Text = "Làm mới";
-            this.buttonLamMoi.UseVisualStyleBackColor = true;
-            this.buttonLamMoi.Click += new System.EventHandler(this.buttonLamMoi_Click);
-            // 
-            // buttonThoat
-            // 
-            this.buttonThoat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThoat.Location = new System.Drawing.Point(821, 15);
-            this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(104, 56);
-            this.buttonThoat.TabIndex = 3;
-            this.buttonThoat.Text = "Thoát";
-            this.buttonThoat.UseVisualStyleBackColor = true;
-            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
-            // 
-            // buttonXoa
-            // 
-            this.buttonXoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoa.Location = new System.Drawing.Point(643, 15);
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(104, 56);
-            this.buttonXoa.TabIndex = 2;
-            this.buttonXoa.Text = "Xóa";
-            this.buttonXoa.UseVisualStyleBackColor = true;
-            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
-            // 
-            // buttonSua
-            // 
-            this.buttonSua.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSua.Location = new System.Drawing.Point(469, 15);
-            this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(104, 56);
-            this.buttonSua.TabIndex = 1;
-            this.buttonSua.Text = "Sửa";
-            this.buttonSua.UseVisualStyleBackColor = true;
-            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
-            // 
-            // buttonThem
-            // 
-            this.buttonThem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonThem.Location = new System.Drawing.Point(304, 15);
-            this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(104, 56);
-            this.buttonThem.TabIndex = 0;
-            this.buttonThem.Text = "Thêm";
-            this.buttonThem.UseVisualStyleBackColor = true;
-            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
             // groupBoxTTCB
             // 
@@ -182,7 +128,7 @@
             this.groupBoxTTCB.Controls.Add(this.label2);
             this.groupBoxTTCB.Controls.Add(this.label1);
             this.groupBoxTTCB.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxTTCB.Location = new System.Drawing.Point(13, 13);
+            this.groupBoxTTCB.Location = new System.Drawing.Point(13, 108);
             this.groupBoxTTCB.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxTTCB.Name = "groupBoxTTCB";
             this.groupBoxTTCB.Padding = new System.Windows.Forms.Padding(4);
@@ -499,11 +445,11 @@
             // dataGridViewTTCoBan
             // 
             this.dataGridViewTTCoBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTTCoBan.Location = new System.Drawing.Point(13, 340);
+            this.dataGridViewTTCoBan.Location = new System.Drawing.Point(3, 444);
             this.dataGridViewTTCoBan.Name = "dataGridViewTTCoBan";
             this.dataGridViewTTCoBan.RowHeadersWidth = 51;
             this.dataGridViewTTCoBan.RowTemplate.Height = 24;
-            this.dataGridViewTTCoBan.Size = new System.Drawing.Size(993, 191);
+            this.dataGridViewTTCoBan.Size = new System.Drawing.Size(1003, 191);
             this.dataGridViewTTCoBan.TabIndex = 4;
             this.dataGridViewTTCoBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTTCoBan_CellClick);
             this.dataGridViewTTCoBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTTCoBan_CellContentClick);
@@ -519,11 +465,95 @@
             this.comboBoxTTHonNhan.Size = new System.Drawing.Size(128, 25);
             this.comboBoxTTHonNhan.TabIndex = 36;
             // 
+            // buttonLamMoi
+            // 
+            this.buttonLamMoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLamMoi.Image = global::QuanLyNhanSu.Properties.Resources.Document_icon;
+            this.buttonLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLamMoi.Location = new System.Drawing.Point(107, 15);
+            this.buttonLamMoi.Name = "buttonLamMoi";
+            this.buttonLamMoi.Size = new System.Drawing.Size(130, 56);
+            this.buttonLamMoi.TabIndex = 4;
+            this.buttonLamMoi.Text = "Làm mới";
+            this.buttonLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonLamMoi.UseVisualStyleBackColor = true;
+            this.buttonLamMoi.Click += new System.EventHandler(this.buttonLamMoi_Click);
+            // 
+            // buttonThoat
+            // 
+            this.buttonThoat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThoat.Image = global::QuanLyNhanSu.Properties.Resources.Folders_OS_Exit_Full_Screen_Metro_icon;
+            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThoat.Location = new System.Drawing.Point(830, 15);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Padding = new System.Windows.Forms.Padding(5);
+            this.buttonThoat.Size = new System.Drawing.Size(118, 56);
+            this.buttonThoat.TabIndex = 3;
+            this.buttonThoat.Text = "       Thoát";
+            this.buttonThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.Image = global::QuanLyNhanSu.Properties.Resources.Button_Close_icon;
+            this.buttonXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonXoa.Location = new System.Drawing.Point(659, 15);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Padding = new System.Windows.Forms.Padding(6);
+            this.buttonXoa.Size = new System.Drawing.Size(112, 56);
+            this.buttonXoa.TabIndex = 2;
+            this.buttonXoa.Text = "      Xóa";
+            this.buttonXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            // 
+            // buttonSua
+            // 
+            this.buttonSua.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSua.Image = global::QuanLyNhanSu.Properties.Resources.Text_Edit_icon1;
+            this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSua.Location = new System.Drawing.Point(472, 15);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Padding = new System.Windows.Forms.Padding(6);
+            this.buttonSua.Size = new System.Drawing.Size(114, 56);
+            this.buttonSua.TabIndex = 1;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSua.UseVisualStyleBackColor = true;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
+            // 
+            // buttonThem
+            // 
+            this.buttonThem.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.Image = global::QuanLyNhanSu.Properties.Resources.Button_Add_icon;
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(292, 15);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Padding = new System.Windows.Forms.Padding(6);
+            this.buttonThem.Size = new System.Drawing.Size(121, 56);
+            this.buttonThem.TabIndex = 0;
+            this.buttonThem.Text = "         Thêm";
+            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(8, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(1000, 82);
+            this.label10.TabIndex = 5;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // FrmTTCoBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 543);
+            this.ClientSize = new System.Drawing.Size(1018, 648);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridViewTTCoBan);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxTTCB);
@@ -581,5 +611,6 @@
         private System.Windows.Forms.ComboBox comboBoxChucVu;
         private System.Windows.Forms.ComboBox comboBoxHopDong;
         private System.Windows.Forms.ComboBox comboBoxTTHonNhan;
+        private System.Windows.Forms.Label label10;
     }
 }

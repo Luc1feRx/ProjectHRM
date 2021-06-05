@@ -46,7 +46,7 @@ namespace QuanLyNhanSu
 
         private void FrmMain_Load(object sender, EventArgs e)
         { 
-            if (Quyen == "Admin")
+            if (Quyen == "Admin     ")
             {
                 MenuDanhMuc.Enabled = true;
                 MenuChucNang.Enabled = true;
@@ -54,7 +54,7 @@ namespace QuanLyNhanSu
                 MenuTroGiup.Enabled = true;
                 MenuQLTK.Enabled = true;
             }
-            else if (Quyen == "User")
+            else if (Quyen == "User      ")
             {
                 MenuDanhMuc.Enabled = true;
                 MenuChucNang.Enabled = true;

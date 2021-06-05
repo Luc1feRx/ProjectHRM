@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmcoban));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonDoiAnh = new System.Windows.Forms.Button();
+            this.pictureBoxAnhNV = new System.Windows.Forms.PictureBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -38,7 +40,8 @@
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.c = new System.Windows.Forms.DateTimePicker();
+            this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -69,14 +72,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBoxAnhNV = new System.Windows.Forms.PictureBox();
-            this.buttonDoiAnh = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhNV)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -101,7 +103,7 @@
             this.groupBox1.Controls.Add(this.dateTimePicker4);
             this.groupBox1.Controls.Add(this.dateTimePicker3);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.c);
             this.groupBox1.Controls.Add(this.textBox19);
             this.groupBox1.Controls.Add(this.textBox15);
             this.groupBox1.Controls.Add(this.textBox14);
@@ -136,6 +138,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cơ bản";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // buttonDoiAnh
+            // 
+            this.buttonDoiAnh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonDoiAnh.BackgroundImage")));
+            this.buttonDoiAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDoiAnh.FlatAppearance.BorderSize = 0;
+            this.buttonDoiAnh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonDoiAnh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonDoiAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDoiAnh.Image = global::QLNS.Properties.Resources.add_user;
+            this.buttonDoiAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDoiAnh.Location = new System.Drawing.Point(810, 180);
+            this.buttonDoiAnh.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDoiAnh.Name = "buttonDoiAnh";
+            this.buttonDoiAnh.Size = new System.Drawing.Size(107, 41);
+            this.buttonDoiAnh.TabIndex = 4;
+            this.buttonDoiAnh.Text = "Đổi ảnh";
+            this.buttonDoiAnh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDoiAnh.UseVisualStyleBackColor = true;
+            this.buttonDoiAnh.Click += new System.EventHandler(this.buttonDoiAnh_Click);
+            // 
+            // pictureBoxAnhNV
+            // 
+            this.pictureBoxAnhNV.Location = new System.Drawing.Point(767, 9);
+            this.pictureBoxAnhNV.Name = "pictureBoxAnhNV";
+            this.pictureBoxAnhNV.Size = new System.Drawing.Size(185, 162);
+            this.pictureBoxAnhNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAnhNV.TabIndex = 34;
+            this.pictureBoxAnhNV.TabStop = false;
             // 
             // comboBox4
             // 
@@ -211,15 +242,24 @@
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // dateTimePicker1
+            // c
             // 
-            this.dateTimePicker1.CustomFormat = "dd/mm/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(365, 36);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 25);
-            this.dateTimePicker1.TabIndex = 6;
+            this.c.CustomFormat = "dd/mm/yyyy";
+            this.c.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.c.Location = new System.Drawing.Point(365, 36);
+            this.c.Margin = new System.Windows.Forms.Padding(4);
+            this.c.Name = "c";
+            this.c.Size = new System.Drawing.Size(128, 25);
+            this.c.TabIndex = 6;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(1034, 17);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox19.Multiline = true;
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(137, 73);
+            this.textBox19.TabIndex = 18;
             // 
             // textBox15
             // 
@@ -582,43 +622,13 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // pictureBoxAnhNV
+            // pictureBox1
             // 
-            this.pictureBoxAnhNV.Location = new System.Drawing.Point(767, 9);
-            this.pictureBoxAnhNV.Name = "pictureBoxAnhNV";
-            this.pictureBoxAnhNV.Size = new System.Drawing.Size(185, 162);
-            this.pictureBoxAnhNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAnhNV.TabIndex = 34;
-            this.pictureBoxAnhNV.TabStop = false;
-            // 
-            // buttonDoiAnh
-            // 
-            this.buttonDoiAnh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonDoiAnh.BackgroundImage")));
-            this.buttonDoiAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDoiAnh.FlatAppearance.BorderSize = 0;
-            this.buttonDoiAnh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonDoiAnh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonDoiAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDoiAnh.Image = global::QLNS.Properties.Resources.add_user;
-            this.buttonDoiAnh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDoiAnh.Location = new System.Drawing.Point(810, 180);
-            this.buttonDoiAnh.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonDoiAnh.Name = "buttonDoiAnh";
-            this.buttonDoiAnh.Size = new System.Drawing.Size(107, 41);
-            this.buttonDoiAnh.TabIndex = 4;
-            this.buttonDoiAnh.Text = "Đổi ảnh";
-            this.buttonDoiAnh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDoiAnh.UseVisualStyleBackColor = true;
-            this.buttonDoiAnh.Click += new System.EventHandler(this.buttonDoiAnh_Click);
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(1034, 17);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(137, 73);
-            this.textBox19.TabIndex = 18;
+            this.pictureBox1.Location = new System.Drawing.Point(974, 169);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(132, 142);
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
             // 
             // frmcoban
             // 
@@ -629,6 +639,7 @@
             this.BackgroundImage = global::QLNS.Properties.Resources.afsadfdafdfaf;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1296, 492);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -641,10 +652,11 @@
             this.Load += new System.EventHandler(this.frmcoban_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhNV)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -678,7 +690,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker c;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Button button6;
@@ -694,5 +706,6 @@
         private System.Windows.Forms.Button buttonDoiAnh;
         private System.Windows.Forms.PictureBox pictureBoxAnhNV;
         private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

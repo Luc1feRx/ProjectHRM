@@ -39,13 +39,13 @@ namespace QuanLyNhanSu
                     if(LoaiDN == "Admin     ")
                     {
                         MessageBox.Show("Đăng nhập thành công!!! (Admin)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmMain.Quyen = "Admin";
+                        FrmMain.Quyen = "Admin     ";
                         this.Hide();
                         this.Close();
                     }else if (LoaiDN == "User      ")
                     {
                         MessageBox.Show("Đăng nhập thành công!!! (User)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmMain.Quyen = "User";
+                        FrmMain.Quyen = "User      ";
                         this.Hide();
                         this.Close();
                     }

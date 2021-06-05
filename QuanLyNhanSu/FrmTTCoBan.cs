@@ -273,5 +273,10 @@ namespace QuanLyNhanSu
                 textBoxThoiGian.Enabled = true;
             }
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
