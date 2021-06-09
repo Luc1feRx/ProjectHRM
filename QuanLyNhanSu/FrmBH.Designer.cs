@@ -49,6 +49,7 @@ namespace QuanLyNhanSu
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@ namespace QuanLyNhanSu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 75);
+            this.label2.Location = new System.Drawing.Point(48, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 2;
@@ -80,7 +81,7 @@ namespace QuanLyNhanSu
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 68);
+            this.textBox2.Location = new System.Drawing.Point(121, 77);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 20);
             this.textBox2.TabIndex = 3;
@@ -94,7 +95,7 @@ namespace QuanLyNhanSu
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(493, 68);
+            this.textBox5.Location = new System.Drawing.Point(493, 77);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 6;
@@ -102,7 +103,7 @@ namespace QuanLyNhanSu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 114);
+            this.label3.Location = new System.Drawing.Point(48, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 8;
@@ -120,7 +121,7 @@ namespace QuanLyNhanSu
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(422, 75);
+            this.label6.Location = new System.Drawing.Point(422, 84);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 11;
@@ -128,7 +129,7 @@ namespace QuanLyNhanSu
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(121, 108);
+            this.dateTimePicker1.Location = new System.Drawing.Point(121, 127);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 12;
@@ -144,7 +145,7 @@ namespace QuanLyNhanSu
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(204, 214);
+            this.button2.Location = new System.Drawing.Point(162, 214);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 53);
             this.button2.TabIndex = 14;
@@ -154,7 +155,7 @@ namespace QuanLyNhanSu
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(359, 214);
+            this.button3.Location = new System.Drawing.Point(280, 214);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 53);
             this.button3.TabIndex = 15;
@@ -164,7 +165,7 @@ namespace QuanLyNhanSu
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(513, 214);
+            this.button4.Location = new System.Drawing.Point(400, 214);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(80, 53);
             this.button4.TabIndex = 16;
@@ -212,11 +213,22 @@ namespace QuanLyNhanSu
             this.Column5.HeaderText = "Ghi Chú";
             this.Column5.Name = "Column5";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(513, 214);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 53);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Thoát";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // FrmBH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1243, 677);
+            this.ClientSize = new System.Drawing.Size(645, 559);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -263,5 +275,6 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button button5;
     }
 }

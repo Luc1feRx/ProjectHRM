@@ -99,5 +99,10 @@ namespace QuanLyNhanSu
         {
             textBox2.Text = "BH" + textBox1.Text;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
