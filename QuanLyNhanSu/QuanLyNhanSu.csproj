@@ -78,6 +78,12 @@
     <Compile Include="FrmQLTK.Designer.cs">
       <DependentUpon>FrmQLTK.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThaiSan.Designer.cs">
+      <DependentUpon>FrmThaiSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTTCoBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQLTK.resx">
       <DependentUpon>FrmQLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThaiSan.resx">
+      <DependentUpon>FrmThaiSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTTCoBan.resx">
       <DependentUpon>FrmTTCoBan.cs</DependentUpon>

@@ -349,3 +349,33 @@ C:\Users\tu\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.csproj.Cor
 C:\Users\tu\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.csproj.CopyComplete
 C:\Users\tu\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.exe
 C:\Users\tu\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.pdb
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\bin\Debug\QLNS.exe.config
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\bin\Debug\QLNS.exe
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\bin\Debug\QLNS.pdb
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\bin\Debug\Interop.WMPLib.dll
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.csproj.AssemblyReference.cache
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\Interop.WMPLib.dll
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.csproj.ResolveComReference.cache
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmdangki.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmbangcong.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmbophan.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmchedo.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmcoban.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmdangnhap.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmdoimatkhau.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmhosothuviec.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmluong.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.FrmMain.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmthongtincanhan.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmtienluong.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmtimkiem.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmtrogiup.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.Properties.Resources.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.frmphongban.resources
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.csproj.GenerateResource.cache
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.csproj.CoreCompileInputs.cache
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.csproj.CopyComplete
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.exe
+C:\Users\Hoàng Vinh\Desktop\ProjectHRM\Source Code 1\QLNS\QLNS\obj\Debug\QLNS.pdb

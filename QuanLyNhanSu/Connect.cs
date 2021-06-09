@@ -38,6 +38,11 @@ namespace QuanLyNhanSu
             Disconnected();
         }
 
+        internal static bool kttrungkhoa(string text, string v)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Exitsted(string input, string query) //kiem tra trung lap hay khong
         {
             con = new SqlConnection(connections);
@@ -55,6 +60,16 @@ namespace QuanLyNhanSu
             reader.Close();
             Disconnected();
             return check;
+        }
+
+        internal static void loaddatagridview(DataGridView dataGridView2, string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void thucthiketnoi(string insert)
+        {
+            throw new NotImplementedException();
         }
 
         public DataTable GetDataTable(string queryGet)
