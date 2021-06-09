@@ -54,10 +54,10 @@ namespace QuanLyNhanSu
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox4.SuspendLayout();
@@ -283,10 +283,10 @@ namespace QuanLyNhanSu
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.button7);
             this.groupBox3.Controls.Add(this.button8);
             this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Controls.Add(this.button12);
             this.groupBox3.Location = new System.Drawing.Point(13, 192);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -296,6 +296,25 @@ namespace QuanLyNhanSu
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Các chức năng";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(583, 30);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 37);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Xoa";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button7
             // 
@@ -354,25 +373,6 @@ namespace QuanLyNhanSu
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button10
-            // 
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button10.Location = new System.Drawing.Point(584, 25);
-            this.button10.Margin = new System.Windows.Forms.Padding(4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(108, 37);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "Xóa   ";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // button12
             // 
             this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
@@ -420,18 +420,6 @@ namespace QuanLyNhanSu
 
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-            string delete = "delete from TblBangLuongCTy where MaLuong=N'" + txt5.Text + "'";
-            string delete1 = "delete from TblSoBH where MaLuong=N'" + txt6.Text + "'";
-            if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                cls.thucthiketnoi(delete1);
-                cls.thucthiketnoi(delete);
-                cls.loaddatagridview(dataGridView2, "select * from TblBangLuongCTy");
-            }
-        }
 
         #endregion
 
@@ -460,8 +448,8 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button1;
     }
 }

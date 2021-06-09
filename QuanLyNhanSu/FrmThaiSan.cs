@@ -33,14 +33,14 @@ namespace QuanLyNhanSu
             try
             {
 
-                string insert = "insert into FrmThaiSan values(N'" + txt5.Text + "',N'" + txt6.Text + "',N'"+ comboBox2.Text + "',N'" + txt7.Text + "',N'" + dt2.Text + "',N'" + dt3.Text + "',N'" + dt4.Text + "',N'" + dt5.Text + "',N'" + txt8.Text + "',N'" + txt9.Text "')";
-                if (!cls.kttrungkhoa(comboBox2.Text, "select Mã nhân viên from FrmThaiSan"))
+                string insert = "insert into FrmThaiSan values(N'" + txt5.Text + "',N'" + txt6.Text + "',N'"+ comboBox2.Text + "',N'" + txt7.Text + "',N'" + dt2.Text + "',N'" + dt3.Text + "',N'" + dt4.Text + "',N'" + dt5.Text + "',N'" + txt8.Text + "',N'" + txt9.Text +"')";
+                if (Connect.kttrungkhoa(comboBox2.Text, "select Mã nhân viên from FrmThaiSan"))
                 {
                     if (comboBox2.Text != "")
                     {
-                        cls.thucthiketnoi(insert);
+                        Connect.thucthiketnoi(insert);
                         dataGridView2.Refresh();
-                        cls.loaddatagridview(dataGridView2, "select * from FrmThaiSan");
+                        Connect.loaddatagridview(dataGridView2, "select * from FrmThaiSan");
                         MessageBox.Show("Thêm thành công");
                     }
                     else MessageBox.Show("Bạn chưa nhập Mã Nhân Viên");
@@ -58,9 +58,9 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string update = "update FrmThaiSan set LCB=N'" + txt4.Text + "',PCChucVu=N'" + txt5.Text + "',NgayNhap='" + dateTimePicker1.Text + "',LCBMoi=N'" + txt6.Text + "',NgaySua=N'" + dateTimePicker2.Text + "',LyDo=N'" + txt7.Text + "',PCCVuMoi='" + txt8.Text + "',NgaySuaPC=N'" + dateTimePicker3.Text + "',GhiChu=N'" + txt9.Text + "' where MaLuong=N'" + txt1.Text + "'";
-                cls.thucthiketnoi(update);
-                cls.loaddatagridview(dataGridView2, "select * from TblBangLuongCTy");
+                string update = "update FrmThaiSan set MaBP=N'" + txt5.Text + "',MaP=N'" + txt6.Text + "',MaNV=N'" + comboBox2.Text + "',HoTen=N'" + txt7.Text + "',NgSinh=N'" + dt2.Text + "',NgayVeSom=N'" + dt3.Text + "',NgVeSinh=N'" + dt4.Text + "',NgLamTL=N'" + dt5.Text + "',TroCap=N'" + txt8.Text + "' GhiChu=N'" + txt9.Text + "'";
+                Connect.thucthiketnoi(update);
+                Connect.loaddatagridview(dataGridView2, "select * from TblBangLuongCTy");
                 MessageBox.Show("Sửa thành công");
             }
             catch
@@ -71,7 +71,17 @@ namespace QuanLyNhanSu
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult thongbao;
+            thongbao = (MessageBox.Show("Bạn có muốn thoát ?", "chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning));
+            if (thongbao == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
