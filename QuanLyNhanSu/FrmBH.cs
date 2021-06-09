@@ -102,7 +102,12 @@ namespace QuanLyNhanSu
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult thongbao;
+            thongbao = (MessageBox.Show("Bạn có muốn thoát ?", "chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning));
+            if (thongbao == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
