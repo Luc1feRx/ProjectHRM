@@ -26,7 +26,7 @@ namespace QuanLyNhanSu
             Load_data();
             textBox1.Text = "";
             textBox2.Text = "BH";
-            dateTimePicker1.Text = "1/1/2016";
+            dateTimePicker1.Text = "31/05/2001";
             textBox4.Text = "";
             textBox5.Text = "";
             textBox1.Enabled = true;
@@ -67,7 +67,7 @@ namespace QuanLyNhanSu
 
         private void Load_data()
         {
-            throw new NotImplementedException();
+           //throw new NotImplementedException();
         }
 
         private void button3_Click(object sender, EventArgs e)
