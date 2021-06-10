@@ -57,31 +57,31 @@ namespace QuanLyNhanSu
             return check;
         }
 
-        public DataTable GetDataTable(string queryGet)
-        {
-            con = new SqlConnection(connections);
-            DataTable dt = new DataTable();
-            cmd = new SqlCommand(queryGet, con);
-            try
-            {
-                con.Open();
-                reader = cmd.ExecuteReader();
-                dt.Load(reader, LoadOption.OverwriteChanges);
-                if(dt.Rows.Count == 0)
-                {
-                    return null;
-                }
-            }
-            catch
-            {
+        //public DataTable GetDataTable(string queryGet)
+        //{
+        //    con = new SqlConnection(connections);
+        //    DataTable dt = new DataTable();
+        //    cmd = new SqlCommand(queryGet, con);
+        //    try
+        //    {
+        //        con.Open();
+        //        reader = cmd.ExecuteReader();
+        //        dt.Load(reader, LoadOption.OverwriteChanges);
+        //        if(dt.Rows.Count == 0)
+        //        {
+        //            return null;
+        //        }
+        //    }
+        //    catch
+        //    {
 
-            }
-            finally
-            {
-                Disconnected();
-            }
-            return dt;
-        }
+        //    }
+        //    finally
+        //    {
+        //        Disconnected();
+        //    }
+        //    return dt;
+        //}
 
         public void loadcombobox(ComboBox cb, string strselect, int cot)
         {
@@ -91,6 +91,18 @@ namespace QuanLyNhanSu
             while (reader.Read())
             {
                 cb.Items.Add(reader[cot].ToString());
+            }
+            Disconnected();
+        }
+
+        public void loadtextbox(TextBox cb, string strselect, int cot)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cb.Text = reader[cot].ToString();
             }
             Disconnected();
         }

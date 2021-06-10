@@ -49,7 +49,6 @@ namespace QuanLyNhanSu
             if (Quyen == "Admin     ")
             {
                 MenuDanhMuc.Enabled = true;
-                MenuChucNang.Enabled = true;
                 MenuQuanLy.Enabled = true;
                 MenuTroGiup.Enabled = true;
                 MenuQLTK.Enabled = true;
@@ -57,7 +56,6 @@ namespace QuanLyNhanSu
             else if (Quyen == "User      ")
             {
                 MenuDanhMuc.Enabled = true;
-                MenuChucNang.Enabled = true;
                 MenuQuanLy.Enabled = true;
                 MenuTroGiup.Enabled = true;
                 MenuQLTK.Enabled = false;
@@ -96,6 +94,67 @@ namespace QuanLyNhanSu
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void tìmKiếmToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmTimKiem frmTimKiem = new FrmTimKiem();
+            frmTimKiem.ShowDialog();
+        }
+
+        private void chứcVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmChucVu frmChucVu = new FrmChucVu();
+            frmChucVu.ShowDialog();
+        }
+
+        private void bộPhậnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmBoPhan frmBoPhan = new FrmBoPhan();
+            frmBoPhan.ShowDialog();
+        }
+
+        private void phòngBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmPhongBan frmPhongBan = new FrmPhongBan();
+            frmPhongBan.ShowDialog();
+        }
+
+        private void lươngCôngTyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLuong frmLuong = new FrmLuong();
+            frmLuong.ShowDialog();
+        }
+
+        private void lươngThửViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmBangLuongTV frmBangLuongTV = new FrmBangLuongTV();
+            frmBangLuongTV.ShowDialog();
+        }
+
+        private void chếĐộToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lươngNhânViênĐiềuHànhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmBangLuongNVCT frm = new FrmBangLuongNVCT();
+            frm.ShowDialog();
+        }
+
+        private void hồSơXinViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormHoSoThuViec frmHS = new FormHoSoThuViec();
+            frmHS.ShowDialog();
         }
     }
 }

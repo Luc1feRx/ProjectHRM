@@ -205,3 +205,9 @@ INSERT INTO TblTTNVCoBan VALUES(N'mb01      ',N'kt02      ',N'010',N'Nguyễn Ma
 select ChucVu from tblChucVu
 
 insert into TblTTNVCoBan values('System.Byte[]',N'mb01      ',N'kt02      ',N'035',N'Tus',N'ml1       ',N' 06 / 04 / 2021 ',N'Nam',N'qrqt',N'32523623',N'qwr',N'wtw',N'ey',N'eue',N' 06 / 04 / 2021 ',N' 06 / 04 / 2021 ',N'')
+
+insert into TblBoPhan values(N'mb06 ',N'qe',Convert(NVARCHAR(20), '6/23/2021',103),N'      wer    ')
+
+select * from TblPhongBan b,TblHoSoThuViec a where a.MaPhong=b.MaPhong and MaNVTV='002       '
+
+UPDATE TblPhongBan set MaBoPhan=N'mb05      ', MaPhongBan=N'ktt01     ', TenPhong=N'Kinh te',NgayThanhLap=convert(datetime,' 30 / 06 / 2021 ',103),GhiChu=N'qrq' where MaPhong=N'ktt01     '

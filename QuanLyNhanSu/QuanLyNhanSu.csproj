@@ -48,11 +48,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connect.cs" />
+    <Compile Include="FormHoSoThuViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHoSoThuViec.Designer.cs">
+      <DependentUpon>FormHoSoThuViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBangLuongNVCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBangLuongNVCT.Designer.cs">
+      <DependentUpon>FrmBangLuongNVCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBangLuongTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBangLuongTV.Designer.cs">
+      <DependentUpon>FrmBangLuongTV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBH.Designer.cs">
       <DependentUpon>FrmBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBoPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBoPhan.Designer.cs">
+      <DependentUpon>FrmBoPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChucVu.Designer.cs">
+      <DependentUpon>FrmChucVu.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDangNhap.cs">
       <SubType>Form</SubType>
@@ -66,17 +96,35 @@
     <Compile Include="FrmDoiMatKhau.Designer.cs">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLuong.Designer.cs">
+      <DependentUpon>FrmLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhongBan.Designer.cs">
+      <DependentUpon>FrmPhongBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQLTK.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmQLTK.Designer.cs">
       <DependentUpon>FrmQLTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTimKiem.Designer.cs">
+      <DependentUpon>FrmTimKiem.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTTCoBan.cs">
       <SubType>Form</SubType>
@@ -91,17 +139,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNSDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormHoSoThuViec.resx">
+      <DependentUpon>FormHoSoThuViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBangLuongNVCT.resx">
+      <DependentUpon>FrmBangLuongNVCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBangLuongTV.resx">
+      <DependentUpon>FrmBangLuongTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBoPhan.resx">
+      <DependentUpon>FrmBoPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChucVu.resx">
+      <DependentUpon>FrmChucVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLuong.resx">
+      <DependentUpon>FrmLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhongBan.resx">
+      <DependentUpon>FrmPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmQLTK.resx">
       <DependentUpon>FrmQLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTimKiem.resx">
+      <DependentUpon>FrmTimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTTCoBan.resx">
       <DependentUpon>FrmTTCoBan.cs</DependentUpon>
@@ -172,6 +244,38 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Folders-OS-Exit-Full-Screen-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

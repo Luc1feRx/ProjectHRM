@@ -45,7 +45,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                string insert = "INSERT INTO tbUsers VALUES('" + textBoxTen.Text + "','" + textBoxMatKhau.Text + "', '" + comboBoxQuyen.Text + "', N'" + textBoxTenThat.Text + "')";
+                string insert = "INSERT INTO tbuser VALUES('" + textBoxTen.Text + "','" + textBoxMatKhau.Text + "', '" + comboBoxQuyen.Text + "', N'" + textBoxTenThat.Text + "')";
                 cn.makeConnected(insert);
                 LoadDataGridView();
             }

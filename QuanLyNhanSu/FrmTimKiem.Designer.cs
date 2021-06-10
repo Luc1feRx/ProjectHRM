@@ -1,0 +1,380 @@
+﻿namespace QuanLyNhanSu
+{
+    partial class FrmTimKiem
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewTimKiem = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.radChucVu = new System.Windows.Forms.RadioButton();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.radGioiTinh = new System.Windows.Forms.RadioButton();
+            this.radQuocTich = new System.Windows.Forms.RadioButton();
+            this.radTonGiao = new System.Windows.Forms.RadioButton();
+            this.radDanToc = new System.Windows.Forms.RadioButton();
+            this.radNoiSinh = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonTim = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.textBoxTK = new System.Windows.Forms.TextBox();
+            this.radioButtonCMTND = new System.Windows.Forms.RadioButton();
+            this.radioButtonHoTen = new System.Windows.Forms.RadioButton();
+            this.radioButtonMNV = new System.Windows.Forms.RadioButton();
+            this.txtKQTimKiem = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimKiem)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.dataGridViewTimKiem);
+            this.groupBox2.Location = new System.Drawing.Point(13, 367);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(937, 218);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            // 
+            // dataGridViewTimKiem
+            // 
+            this.dataGridViewTimKiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewTimKiem.Location = new System.Drawing.Point(4, 19);
+            this.dataGridViewTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewTimKiem.Name = "dataGridViewTimKiem";
+            this.dataGridViewTimKiem.RowHeadersWidth = 51;
+            this.dataGridViewTimKiem.Size = new System.Drawing.Size(929, 195);
+            this.dataGridViewTimKiem.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.linkLabel2);
+            this.groupBox1.Controls.Add(this.radChucVu);
+            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.radGioiTinh);
+            this.groupBox1.Controls.Add(this.radQuocTich);
+            this.groupBox1.Controls.Add(this.radTonGiao);
+            this.groupBox1.Controls.Add(this.radDanToc);
+            this.groupBox1.Controls.Add(this.radNoiSinh);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.buttonTim);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.buttonThoat);
+            this.groupBox1.Controls.Add(this.textBoxTK);
+            this.groupBox1.Controls.Add(this.radioButtonCMTND);
+            this.groupBox1.Controls.Add(this.radioButtonHoTen);
+            this.groupBox1.Controls.Add(this.radioButtonMNV);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(933, 285);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tìm kiếm thông tin";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(551, 165);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(213, 17);
+            this.linkLabel2.TabIndex = 14;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Nhân viên nào có lương thấp nhất?";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // radChucVu
+            // 
+            this.radChucVu.AutoSize = true;
+            this.radChucVu.Location = new System.Drawing.Point(681, 134);
+            this.radChucVu.Name = "radChucVu";
+            this.radChucVu.Size = new System.Drawing.Size(79, 21);
+            this.radChucVu.TabIndex = 12;
+            this.radChucVu.TabStop = true;
+            this.radChucVu.Text = "Chức vụ";
+            this.radChucVu.UseVisualStyleBackColor = true;
+            this.radChucVu.CheckedChanged += new System.EventHandler(this.radSDT_CheckedChanged);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(292, 165);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(209, 17);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Nhân viên nào có lương cao nhất?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // radGioiTinh
+            // 
+            this.radGioiTinh.AutoSize = true;
+            this.radGioiTinh.Location = new System.Drawing.Point(491, 134);
+            this.radGioiTinh.Name = "radGioiTinh";
+            this.radGioiTinh.Size = new System.Drawing.Size(83, 21);
+            this.radGioiTinh.TabIndex = 11;
+            this.radGioiTinh.TabStop = true;
+            this.radGioiTinh.Text = "Giới Tính";
+            this.radGioiTinh.UseVisualStyleBackColor = true;
+            this.radGioiTinh.CheckedChanged += new System.EventHandler(this.radGioiTinh_CheckedChanged);
+            // 
+            // radQuocTich
+            // 
+            this.radQuocTich.AutoSize = true;
+            this.radQuocTich.Location = new System.Drawing.Point(295, 134);
+            this.radQuocTich.Name = "radQuocTich";
+            this.radQuocTich.Size = new System.Drawing.Size(91, 21);
+            this.radQuocTich.TabIndex = 10;
+            this.radQuocTich.TabStop = true;
+            this.radQuocTich.Text = "Quốc Tịch";
+            this.radQuocTich.UseVisualStyleBackColor = true;
+            this.radQuocTich.CheckedChanged += new System.EventHandler(this.radQuocTich_CheckedChanged);
+            // 
+            // radTonGiao
+            // 
+            this.radTonGiao.AutoSize = true;
+            this.radTonGiao.Location = new System.Drawing.Point(681, 107);
+            this.radTonGiao.Name = "radTonGiao";
+            this.radTonGiao.Size = new System.Drawing.Size(83, 21);
+            this.radTonGiao.TabIndex = 9;
+            this.radTonGiao.TabStop = true;
+            this.radTonGiao.Text = "Tôn Giáo";
+            this.radTonGiao.UseVisualStyleBackColor = true;
+            this.radTonGiao.CheckedChanged += new System.EventHandler(this.radTonGiao_CheckedChanged);
+            // 
+            // radDanToc
+            // 
+            this.radDanToc.AutoSize = true;
+            this.radDanToc.Location = new System.Drawing.Point(491, 107);
+            this.radDanToc.Name = "radDanToc";
+            this.radDanToc.Size = new System.Drawing.Size(81, 21);
+            this.radDanToc.TabIndex = 8;
+            this.radDanToc.TabStop = true;
+            this.radDanToc.Text = "Dân Tộc";
+            this.radDanToc.UseVisualStyleBackColor = true;
+            this.radDanToc.CheckedChanged += new System.EventHandler(this.radDanToc_CheckedChanged);
+            // 
+            // radNoiSinh
+            // 
+            this.radNoiSinh.AutoSize = true;
+            this.radNoiSinh.Location = new System.Drawing.Point(295, 107);
+            this.radNoiSinh.Name = "radNoiSinh";
+            this.radNoiSinh.Size = new System.Drawing.Size(80, 21);
+            this.radNoiSinh.TabIndex = 7;
+            this.radNoiSinh.TabStop = true;
+            this.radNoiSinh.Text = "Nơi Sinh";
+            this.radNoiSinh.UseVisualStyleBackColor = true;
+            this.radNoiSinh.CheckedChanged += new System.EventHandler(this.radNoiSinh_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(292, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Tìm Kiếm ";
+            // 
+            // buttonTim
+            // 
+            this.buttonTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTim.FlatAppearance.BorderSize = 0;
+            this.buttonTim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonTim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTim.Location = new System.Drawing.Point(335, 209);
+            this.buttonTim.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonTim.Name = "buttonTim";
+            this.buttonTim.Size = new System.Drawing.Size(116, 48);
+            this.buttonTim.TabIndex = 5;
+            this.buttonTim.Text = "Tìm";
+            this.buttonTim.UseVisualStyleBackColor = true;
+            this.buttonTim.Click += new System.EventHandler(this.buttonTim_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyNhanSu.Properties.Resources.Search_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(47, 38);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(180, 174);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // buttonThoat
+            // 
+            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonThoat.FlatAppearance.BorderSize = 0;
+            this.buttonThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThoat.Location = new System.Drawing.Point(640, 208);
+            this.buttonThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(120, 51);
+            this.buttonThoat.TabIndex = 3;
+            this.buttonThoat.Text = "Thoát    ";
+            this.buttonThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
+            // 
+            // textBoxTK
+            // 
+            this.textBoxTK.Location = new System.Drawing.Point(396, 38);
+            this.textBoxTK.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTK.MaximumSize = new System.Drawing.Size(368, 24);
+            this.textBoxTK.MinimumSize = new System.Drawing.Size(368, 24);
+            this.textBoxTK.Multiline = true;
+            this.textBoxTK.Name = "textBoxTK";
+            this.textBoxTK.Size = new System.Drawing.Size(368, 24);
+            this.textBoxTK.TabIndex = 1;
+            this.textBoxTK.Text = "Nhập vào từ khóa tìm kiếm";
+            this.textBoxTK.TextChanged += new System.EventHandler(this.textBoxTK_TextChanged);
+            // 
+            // radioButtonCMTND
+            // 
+            this.radioButtonCMTND.AutoSize = true;
+            this.radioButtonCMTND.Location = new System.Drawing.Point(681, 79);
+            this.radioButtonCMTND.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonCMTND.Name = "radioButtonCMTND";
+            this.radioButtonCMTND.Size = new System.Drawing.Size(83, 21);
+            this.radioButtonCMTND.TabIndex = 0;
+            this.radioButtonCMTND.TabStop = true;
+            this.radioButtonCMTND.Text = "CMTND";
+            this.radioButtonCMTND.UseVisualStyleBackColor = true;
+            this.radioButtonCMTND.CheckedChanged += new System.EventHandler(this.radioButtonCMTND_CheckedChanged);
+            // 
+            // radioButtonHoTen
+            // 
+            this.radioButtonHoTen.AutoSize = true;
+            this.radioButtonHoTen.Location = new System.Drawing.Point(491, 79);
+            this.radioButtonHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonHoTen.Name = "radioButtonHoTen";
+            this.radioButtonHoTen.Size = new System.Drawing.Size(87, 21);
+            this.radioButtonHoTen.TabIndex = 0;
+            this.radioButtonHoTen.TabStop = true;
+            this.radioButtonHoTen.Text = "Họ và tên";
+            this.radioButtonHoTen.UseVisualStyleBackColor = true;
+            this.radioButtonHoTen.CheckedChanged += new System.EventHandler(this.radioButtonHoTen_CheckedChanged);
+            // 
+            // radioButtonMNV
+            // 
+            this.radioButtonMNV.AutoSize = true;
+            this.radioButtonMNV.Location = new System.Drawing.Point(295, 79);
+            this.radioButtonMNV.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonMNV.Name = "radioButtonMNV";
+            this.radioButtonMNV.Size = new System.Drawing.Size(109, 21);
+            this.radioButtonMNV.TabIndex = 0;
+            this.radioButtonMNV.TabStop = true;
+            this.radioButtonMNV.Text = "Mã nhân viên";
+            this.radioButtonMNV.UseVisualStyleBackColor = true;
+            this.radioButtonMNV.CheckedChanged += new System.EventHandler(this.radioButtonMNV_CheckedChanged);
+            // 
+            // txtKQTimKiem
+            // 
+            this.txtKQTimKiem.Enabled = false;
+            this.txtKQTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKQTimKiem.ForeColor = System.Drawing.Color.Red;
+            this.txtKQTimKiem.Location = new System.Drawing.Point(163, 330);
+            this.txtKQTimKiem.Name = "txtKQTimKiem";
+            this.txtKQTimKiem.Size = new System.Drawing.Size(77, 30);
+            this.txtKQTimKiem.TabIndex = 15;
+            this.txtKQTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKQTimKiem.TextChanged += new System.EventHandler(this.txtKQTimKiem_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 340);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Số KQ tìm kiếm:";
+            // 
+            // FrmTimKiem
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(962, 600);
+            this.Controls.Add(this.txtKQTimKiem);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "FrmTimKiem";
+            this.Text = "FrmTimKiem";
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimKiem)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonThoat;
+        private System.Windows.Forms.TextBox textBoxTK;
+        private System.Windows.Forms.RadioButton radioButtonCMTND;
+        private System.Windows.Forms.RadioButton radioButtonHoTen;
+        private System.Windows.Forms.RadioButton radioButtonMNV;
+        private System.Windows.Forms.DataGridView dataGridViewTimKiem;
+        private System.Windows.Forms.RadioButton radChucVu;
+        private System.Windows.Forms.RadioButton radGioiTinh;
+        private System.Windows.Forms.RadioButton radQuocTich;
+        private System.Windows.Forms.RadioButton radTonGiao;
+        private System.Windows.Forms.RadioButton radDanToc;
+        private System.Windows.Forms.RadioButton radNoiSinh;
+        private System.Windows.Forms.Button buttonTim;
+        private System.Windows.Forms.TextBox txtKQTimKiem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+    }
+}

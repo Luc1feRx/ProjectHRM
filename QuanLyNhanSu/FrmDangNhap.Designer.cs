@@ -35,7 +35,7 @@
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonTroVe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +80,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(606, 328);
+            this.buttonLogin.Location = new System.Drawing.Point(606, 354);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(288, 42);
             this.buttonLogin.TabIndex = 5;
@@ -99,16 +99,16 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonBack
+            // buttonTroVe
             // 
-            this.buttonBack.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(606, 386);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(288, 40);
-            this.buttonBack.TabIndex = 6;
-            this.buttonBack.Text = "Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            this.buttonTroVe.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTroVe.Location = new System.Drawing.Point(606, 424);
+            this.buttonTroVe.Name = "buttonTroVe";
+            this.buttonTroVe.Size = new System.Drawing.Size(288, 42);
+            this.buttonTroVe.TabIndex = 8;
+            this.buttonTroVe.Text = "Trở về";
+            this.buttonTroVe.UseVisualStyleBackColor = true;
+            this.buttonTroVe.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // FrmDangNhap
             // 
@@ -118,8 +118,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(928, 511);
+            this.Controls.Add(this.buttonTroVe);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.textBoxUsername);
@@ -142,7 +142,7 @@
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonTroVe;
     }
 }
 

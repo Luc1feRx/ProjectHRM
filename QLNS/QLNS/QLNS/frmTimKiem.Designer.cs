@@ -371,6 +371,7 @@
             this.dataTimKiem.Location = new System.Drawing.Point(18, 417);
             this.dataTimKiem.Name = "dataTimKiem";
             this.dataTimKiem.ReadOnly = true;
+            this.dataTimKiem.RowHeadersWidth = 51;
             this.dataTimKiem.RowTemplate.Height = 24;
             this.dataTimKiem.Size = new System.Drawing.Size(621, 267);
             this.dataTimKiem.TabIndex = 3;
@@ -394,6 +395,7 @@
             this.txtKQTimKiem.Size = new System.Drawing.Size(77, 30);
             this.txtKQTimKiem.TabIndex = 5;
             this.txtKQTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKQTimKiem.TextChanged += new System.EventHandler(this.txtKQTimKiem_TextChanged);
             // 
             // groupBox2
             // 

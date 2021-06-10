@@ -698,6 +698,11 @@ namespace QLNS
         {
 
         }
+
+        private void txt12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

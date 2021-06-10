@@ -159,3 +159,10 @@ C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\stdole.dll
 C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\devcomponents.dotnetbar2.xml
 C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\obj\Debug\QLNS.csproj.ResolveComReference.cache
 C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\obj\Debug\QLNS.csproj.CopyComplete
+C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\ExcelDataReader.dll
+C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\ExcelDataReader.pdb
+C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\ExcelDataReader.xml
+C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\tu\Desktop\ProjectHRM\QLNS\QLNS\QLNS\bin\Debug\ExcelDataReader.DataSet.xml

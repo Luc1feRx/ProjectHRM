@@ -471,6 +471,7 @@
             this.txt12.Name = "txt12";
             this.txt12.Size = new System.Drawing.Size(140, 25);
             this.txt12.TabIndex = 3;
+            this.txt12.TextChanged += new System.EventHandler(this.txt12_TextChanged);
             this.txt12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt12_KeyPress);
             // 
             // txt18
@@ -1096,7 +1097,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(34, 13);
+            this.tabControl1.Location = new System.Drawing.Point(34, 24);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;

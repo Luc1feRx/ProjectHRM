@@ -72,7 +72,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 52);
             this.button3.TabIndex = 10;
-            this.button3.Text = "Hủy bỏ";
+            this.button3.Text = "Trở về";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

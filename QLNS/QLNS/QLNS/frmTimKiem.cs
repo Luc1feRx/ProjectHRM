@@ -246,14 +246,6 @@ namespace QLNS
         {
             try
             {
-                if (radMaNV.Checked == true)
-                {
-                    string Search = "SELECT * FROM tblTTNhanVien WHERE MaNV='" + txtTimKiem.Text + "'";
-                    System.Data.DataTable dt = KiemTraKetNoi.getDatatable(Search);
-                    dataTimKiem.DataSource = dt;
-                    int count = dataTimKiem.Rows.Count - 1;
-                    txtKQTimKiem.Text = count.ToString();
-                }
                 //
                 if (radTenNV.Checked == true)
                 {
@@ -448,6 +440,11 @@ namespace QLNS
             }
             catch (Exception)
             { }
+        }
+
+        private void txtKQTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
