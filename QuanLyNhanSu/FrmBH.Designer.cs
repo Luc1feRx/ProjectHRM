@@ -149,7 +149,7 @@ namespace QuanLyNhanSu
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(162, 214);
+            this.button2.Location = new System.Drawing.Point(184, 214);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 53);
             this.button2.TabIndex = 14;
@@ -159,7 +159,7 @@ namespace QuanLyNhanSu
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(280, 214);
+            this.button3.Location = new System.Drawing.Point(321, 214);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 53);
             this.button3.TabIndex = 15;
@@ -169,7 +169,7 @@ namespace QuanLyNhanSu
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(400, 214);
+            this.button4.Location = new System.Drawing.Point(463, 214);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(80, 53);
             this.button4.TabIndex = 16;
@@ -195,7 +195,7 @@ namespace QuanLyNhanSu
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(513, 214);
+            this.button5.Location = new System.Drawing.Point(613, 214);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(80, 53);
             this.button5.TabIndex = 18;

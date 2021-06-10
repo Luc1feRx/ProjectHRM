@@ -139,7 +139,7 @@ namespace QuanLyNhanSu
                     Load_data();
                     textBox1.Enabled = false;
                     textBox2.Enabled = true;
-                    textBox3.Enabled = false;
+                    textBox3.Enabled = true;
                     button2.Enabled = true;
                     button4.Enabled = true;
                     button3.Enabled = true;
