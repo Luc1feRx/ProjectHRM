@@ -23,7 +23,7 @@ namespace QuanLyNhanSu
             button3.Enabled = false;
             button2.Enabled = false;
             button4.Enabled = false;
-           // Load_data();
+            Load_data();
             textBox1.Text = "";
             textBox2.Text = "BH";
             dateTimePicker1.Text = "1/1/2016";
@@ -36,7 +36,7 @@ namespace QuanLyNhanSu
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             button1.Enabled = false;
-            //Load_data();
+            Load_data();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

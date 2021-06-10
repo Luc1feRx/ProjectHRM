@@ -246,7 +246,7 @@ namespace QuanLyNhanSu
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "FrmBH";
-            this.Text = "Form1";
+            this.Text = "FrmBaoHiem";
             this.Load += new System.EventHandler(this.FrmBH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
