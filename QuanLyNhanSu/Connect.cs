@@ -17,6 +17,15 @@ namespace QuanLyNhanSu
         SqlDataReader reader;
         SqlDataAdapter sda;
 
+        public Connect(SqlDataAdapter sda)
+        {
+            this.sda = sda;
+        }
+
+        public Connect()
+        {
+        }
+
         public void Connected()//de ket noi database
         {
             SqlConnection con = new SqlConnection(connections);
@@ -80,6 +89,11 @@ namespace QuanLyNhanSu
                 Disconnected();
             }
             return dt;
+        }
+
+        internal static void executeQuery(string upLuonng)
+        {
+            throw new NotImplementedException();
         }
     }
 }

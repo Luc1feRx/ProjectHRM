@@ -60,9 +60,14 @@ namespace QuanLyNhanSu
         {
             string upLuonng = "cap nhat tblBaoHiemXH SET MaSoBH=N'" + textBox2.Text + "',NgayCap='" + dateTimePicker1.Text + "',NoiCap=N'" + textBox4.Text  + "',GhiChu=N'" + textBox5.Text + "'WHERE(MaNV=N'" + textBox1.Text + "')";
             string upTTNV = "cap nhat tblTTNhanVien set MaBHXH='" + textBox2.Text + "' where MaNV='" + textBox1.Text + "'";
-           //Conn.executeQuery(upLuonng);
-           //Conn.executeQuery(upTTNV);
-            //Load_data();
+            Connect.executeQuery(upLuonng);
+            Connect.executeQuery(upTTNV);
+            Load_data();
+        }
+
+        private void Load_data()
+        {
+            throw new NotImplementedException();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -79,11 +84,11 @@ namespace QuanLyNhanSu
             {
                 try
                 {
-                    /*Conn.executeQuery(delBH);
-                    Conn.executeQuery(delTTNV);
-                    Conn.executeQuery(delLuong);
-                    Conn.executeQuery(delThue);
-                    Load_data();*/
+                    Connect.executeQuery(delBH);
+                    Connect.executeQuery(delTTNV);
+                    Connect.executeQuery(delLuong);
+                    Connect.executeQuery(delThue);
+                    Load_data();
                 }
                 catch (Exception)
                 {
@@ -108,6 +113,42 @@ namespace QuanLyNhanSu
             {
                 this.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Lỗi", "Mã NV không được để trống.");
+            }
+            else
+            {
+                try
+                {
+                    //
+                    string addBHXH = "INSERT INTO tblBaoHiemXH(MaNV, MaSoBH, NgayCap, NoiCap, GhiChu) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + dateTimePicker1.Text + "',N'" + textBox4.Text + "',N'" + textBox5.Text + "')";
+                    // Add nhân viên vào bảng TTNV
+                    string addNV = "INSERT INTO tblTTNhanVien(MaNV,MaBHXH) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "')";
+                    // Add nhân viên vào bảng Lương
+                    string addLuong = "INSERT INTO tblLuong(MaNV) VALUES ('" + textBox1.Text + "')";
+                    Connect.executeQuery(addBHXH);
+                    Connect.executeQuery(addNV);
+                    Connect.executeQuery(addLuong);
+                    Load_data();
+                    textBox1.Enabled = false;
+                    textBox2.Enabled = true;
+                    button2.Enabled = true;
+                    button4.Enabled = true;
+                    button3.Enabled = true;
+                    button5.Enabled = true;
+                    textBox1.Enabled = false;
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            button1.Enabled = false;
         }
     }
 }
