@@ -16,6 +16,7 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
         }
+      //  Connect cn = Connect();
 
         private void button4_Click(object sender, EventArgs e)
         {
