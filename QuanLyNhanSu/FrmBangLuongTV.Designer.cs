@@ -263,7 +263,7 @@
             // 
             // txtLTV
             // 
-            this.txtLTV.Location = new System.Drawing.Point(392, 111);
+            this.txtLTV.Location = new System.Drawing.Point(396, 109);
             this.txtLTV.Margin = new System.Windows.Forms.Padding(4);
             this.txtLTV.Name = "txtLTV";
             this.txtLTV.Size = new System.Drawing.Size(100, 22);

@@ -425,5 +425,10 @@ namespace QuanLyNhanSu
         {
 
         }
+
+        private void groupBoxTTCB_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

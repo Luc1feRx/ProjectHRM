@@ -210,4 +210,11 @@ insert into TblBoPhan values(N'mb06 ',N'qe',Convert(NVARCHAR(20), '6/23/2021',10
 
 select * from TblPhongBan b,TblHoSoThuViec a where a.MaPhong=b.MaPhong and MaNVTV='002       '
 
+delete from TblSoBH where MaNV = '046'
+
+update TblSoBH set NgayCapSo=N' 05 / 27 / 2019 ',NoiCapSo=N'Bắc Ninh',GhiChu=N'qe' where MaNV=N'010'
+
+select p.MaPhong from TblBoPhan b,TblPhongBan p where b.MaBoPhan=p.MaBoPhan and p.MaBoPhan=N'mb04'
+
+
 UPDATE TblPhongBan set MaBoPhan=N'mb05      ', MaPhongBan=N'ktt01     ', TenPhong=N'Kinh te',NgayThanhLap=convert(datetime,' 30 / 06 / 2021 ',103),GhiChu=N'qrq' where MaPhong=N'ktt01     '

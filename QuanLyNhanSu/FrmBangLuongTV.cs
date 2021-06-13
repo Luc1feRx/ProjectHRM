@@ -214,7 +214,7 @@ namespace QuanLyNhanSu
             txtTenBP.Text = dataGridViewLTV.Rows[i].Cells[0].Value.ToString();
             txtTenPhong.Text = dataGridViewLTV.Rows[i].Cells[1].Value.ToString();
             cbMaNV.Text = dataGridViewLTV.Rows[i].Cells[2].Value.ToString();
-            textBoxLuong.Text = dataGridViewLTV.Rows[i].Cells[3].Value.ToString();
+            txtLTV.Text = dataGridViewLTV.Rows[i].Cells[3].Value.ToString();
             txtThang.Text = dataGridViewLTV.Rows[i].Cells[4].Value.ToString();
             txtNam.Text = dataGridViewLTV.Rows[i].Cells[5].Value.ToString();
             txtNgayCong.Text = dataGridViewLTV.Rows[i].Cells[6].Value.ToString();

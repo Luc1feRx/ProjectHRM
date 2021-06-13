@@ -276,6 +276,7 @@
             this.Controls.Add(this.dataGridViewBoPhan);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBoPhan";
             this.Text = "FrmBoPhan";
             this.Load += new System.EventHandler(this.FrmBoPhan_Load);

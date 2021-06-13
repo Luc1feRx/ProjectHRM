@@ -34,9 +34,6 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.radChucVu = new System.Windows.Forms.RadioButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.radGioiTinh = new System.Windows.Forms.RadioButton();
-            this.radQuocTich = new System.Windows.Forms.RadioButton();
-            this.radTonGiao = new System.Windows.Forms.RadioButton();
             this.radDanToc = new System.Windows.Forms.RadioButton();
             this.radNoiSinh = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,9 +81,6 @@
             this.groupBox1.Controls.Add(this.linkLabel2);
             this.groupBox1.Controls.Add(this.radChucVu);
             this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.radGioiTinh);
-            this.groupBox1.Controls.Add(this.radQuocTich);
-            this.groupBox1.Controls.Add(this.radTonGiao);
             this.groupBox1.Controls.Add(this.radDanToc);
             this.groupBox1.Controls.Add(this.radNoiSinh);
             this.groupBox1.Controls.Add(this.label1);
@@ -111,7 +105,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(551, 165);
+            this.linkLabel2.Location = new System.Drawing.Point(551, 144);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(213, 17);
             this.linkLabel2.TabIndex = 14;
@@ -122,7 +116,7 @@
             // radChucVu
             // 
             this.radChucVu.AutoSize = true;
-            this.radChucVu.Location = new System.Drawing.Point(681, 134);
+            this.radChucVu.Location = new System.Drawing.Point(681, 107);
             this.radChucVu.Name = "radChucVu";
             this.radChucVu.Size = new System.Drawing.Size(79, 21);
             this.radChucVu.TabIndex = 12;
@@ -134,49 +128,13 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(292, 165);
+            this.linkLabel1.Location = new System.Drawing.Point(292, 144);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(209, 17);
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Nhân viên nào có lương cao nhất?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // radGioiTinh
-            // 
-            this.radGioiTinh.AutoSize = true;
-            this.radGioiTinh.Location = new System.Drawing.Point(491, 134);
-            this.radGioiTinh.Name = "radGioiTinh";
-            this.radGioiTinh.Size = new System.Drawing.Size(83, 21);
-            this.radGioiTinh.TabIndex = 11;
-            this.radGioiTinh.TabStop = true;
-            this.radGioiTinh.Text = "Giới Tính";
-            this.radGioiTinh.UseVisualStyleBackColor = true;
-            this.radGioiTinh.CheckedChanged += new System.EventHandler(this.radGioiTinh_CheckedChanged);
-            // 
-            // radQuocTich
-            // 
-            this.radQuocTich.AutoSize = true;
-            this.radQuocTich.Location = new System.Drawing.Point(295, 134);
-            this.radQuocTich.Name = "radQuocTich";
-            this.radQuocTich.Size = new System.Drawing.Size(91, 21);
-            this.radQuocTich.TabIndex = 10;
-            this.radQuocTich.TabStop = true;
-            this.radQuocTich.Text = "Quốc Tịch";
-            this.radQuocTich.UseVisualStyleBackColor = true;
-            this.radQuocTich.CheckedChanged += new System.EventHandler(this.radQuocTich_CheckedChanged);
-            // 
-            // radTonGiao
-            // 
-            this.radTonGiao.AutoSize = true;
-            this.radTonGiao.Location = new System.Drawing.Point(681, 107);
-            this.radTonGiao.Name = "radTonGiao";
-            this.radTonGiao.Size = new System.Drawing.Size(83, 21);
-            this.radTonGiao.TabIndex = 9;
-            this.radTonGiao.TabStop = true;
-            this.radTonGiao.Text = "Tôn Giáo";
-            this.radTonGiao.UseVisualStyleBackColor = true;
-            this.radTonGiao.CheckedChanged += new System.EventHandler(this.radTonGiao_CheckedChanged);
             // 
             // radDanToc
             // 
@@ -366,9 +324,6 @@
         private System.Windows.Forms.RadioButton radioButtonMNV;
         private System.Windows.Forms.DataGridView dataGridViewTimKiem;
         private System.Windows.Forms.RadioButton radChucVu;
-        private System.Windows.Forms.RadioButton radGioiTinh;
-        private System.Windows.Forms.RadioButton radQuocTich;
-        private System.Windows.Forms.RadioButton radTonGiao;
         private System.Windows.Forms.RadioButton radDanToc;
         private System.Windows.Forms.RadioButton radNoiSinh;
         private System.Windows.Forms.Button buttonTim;

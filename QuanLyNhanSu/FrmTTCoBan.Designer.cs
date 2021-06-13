@@ -234,6 +234,7 @@
             this.groupBoxTTCB.TabIndex = 2;
             this.groupBoxTTCB.TabStop = false;
             this.groupBoxTTCB.Text = "Thông tin cơ bản";
+            this.groupBoxTTCB.Enter += new System.EventHandler(this.groupBoxTTCB_Enter);
             // 
             // label18
             // 
@@ -248,6 +249,7 @@
             // 
             // pictureBoxAnhNV
             // 
+            this.pictureBoxAnhNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxAnhNV.Location = new System.Drawing.Point(988, 38);
             this.pictureBoxAnhNV.Name = "pictureBoxAnhNV";
             this.pictureBoxAnhNV.Size = new System.Drawing.Size(151, 143);

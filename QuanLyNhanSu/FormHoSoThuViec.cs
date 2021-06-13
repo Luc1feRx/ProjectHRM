@@ -200,5 +200,17 @@ namespace QuanLyNhanSu
             LoadDataGridView();
             cn.loadcombobox(comboBoxMaPhong, "select * from Tblphongban", 1);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
+        }
     }
 }

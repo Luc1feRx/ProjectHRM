@@ -156,9 +156,10 @@ namespace QLNS
         {
             try
             {
-                string update = "update TblSoBH set NgayCapSo=N'" + dt1.Text + "',NoiCapSo=N'" + txt3.Text + "',GhiChu=N'" + txt4.Text + "' where MaNV=N'" + comboBox1.Text + "'";
+                string update = "update TblSoBH set MaSoBH = N'" + txt2.Text + "',NgayCapSo=N'" + dt1.Text + "',NoiCapSo=N'" + txt3.Text + "',GhiChu=N'" + txt4.Text + "' where MaNV=N'" + comboBox1.Text + "'";
                 cls.thucthiketnoi(update);
                 cls.loaddatagridview1(dataGridView1, ds1, "select * from TblSoBH");
+                MessageBox.Show("Sửa thành công");
             }
             catch
             {
@@ -168,7 +169,7 @@ namespace QLNS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string delete = "delete from TblSoBH where MaNV'" + comboBox1.Text + "'";
+            string delete = "delete from TblSoBH where MaNV=N'" + comboBox1.Text + "'";
             if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 cls.thucthiketnoi(delete);
@@ -248,6 +249,11 @@ namespace QLNS
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dt2_ValueChanged(object sender, EventArgs e)
         {
 
         }

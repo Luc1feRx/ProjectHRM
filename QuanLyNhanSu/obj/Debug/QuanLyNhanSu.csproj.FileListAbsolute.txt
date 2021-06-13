@@ -35,3 +35,7 @@ C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBan
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBangLuongNVCT.resources
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmLuong.resources
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormHoSoThuViec.resources
+C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmTangLuong.resources
+C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBH.resources
+C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmThaiSan.resources
+C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmCaNhan.resources

@@ -78,6 +78,12 @@
     <Compile Include="FrmBoPhan.Designer.cs">
       <DependentUpon>FrmBoPhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCaNhan.Designer.cs">
+      <DependentUpon>FrmCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,18 @@
     <Compile Include="FrmQLTK.Designer.cs">
       <DependentUpon>FrmQLTK.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTangLuong.Designer.cs">
+      <DependentUpon>FrmTangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThaiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThaiSan.Designer.cs">
+      <DependentUpon>FrmThaiSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTimKiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,8 +166,14 @@
     <EmbeddedResource Include="FrmBangLuongTV.resx">
       <DependentUpon>FrmBangLuongTV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBH.resx">
+      <DependentUpon>FrmBH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBoPhan.resx">
       <DependentUpon>FrmBoPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCaNhan.resx">
+      <DependentUpon>FrmCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmChucVu.resx">
       <DependentUpon>FrmChucVu.cs</DependentUpon>
@@ -171,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQLTK.resx">
       <DependentUpon>FrmQLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTangLuong.resx">
+      <DependentUpon>FrmTangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThaiSan.resx">
+      <DependentUpon>FrmThaiSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTimKiem.resx">
       <DependentUpon>FrmTimKiem.cs</DependentUpon>

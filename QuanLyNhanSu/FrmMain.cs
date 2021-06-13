@@ -156,5 +156,38 @@ namespace QuanLyNhanSu
             FormHoSoThuViec frmHS = new FormHoSoThuViec();
             frmHS.ShowDialog();
         }
+
+        private void MenuDanhMuc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vấnĐềTăngLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmTangLuong frmTangLuong = new FrmTangLuong();
+            frmTangLuong.ShowDialog();
+        }
+
+        private void bảoHiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmBH frmBH = new FrmBH();
+            frmBH.ShowDialog();
+        }
+
+        private void thaiSảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmThaiSan frmThaiSan = new FrmThaiSan();
+            frmThaiSan.ShowDialog();
+        }
+
+        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmCaNhan frmCaNhan = new FrmCaNhan();
+            frmCaNhan.ShowDialog();
+        }
     }
 }

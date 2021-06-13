@@ -103,6 +103,7 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Các thông tin về thử việc";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label18
             // 
@@ -116,6 +117,7 @@
             // 
             // pictureBoxAnhNVTV
             // 
+            this.pictureBoxAnhNVTV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxAnhNVTV.Location = new System.Drawing.Point(1041, 40);
             this.pictureBoxAnhNVTV.Name = "pictureBoxAnhNVTV";
             this.pictureBoxAnhNVTV.Size = new System.Drawing.Size(151, 143);
@@ -383,6 +385,7 @@
             this.button5.Text = "Thoát ";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 

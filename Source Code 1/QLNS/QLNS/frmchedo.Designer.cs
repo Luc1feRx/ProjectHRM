@@ -624,6 +624,7 @@
             this.dt2.Name = "dt2";
             this.dt2.Size = new System.Drawing.Size(131, 25);
             this.dt2.TabIndex = 4;
+            this.dt2.ValueChanged += new System.EventHandler(this.dt2_ValueChanged);
             // 
             // dt4
             // 

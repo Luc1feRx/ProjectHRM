@@ -106,5 +106,16 @@ namespace QuanLyNhanSu
             }
             Disconnected();
         }
+        public void loaddatetime(DateTimePicker dt, string strselect, int cot)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                dt.Text = reader[cot].ToString();
+            }
+            Disconnected();
+        }
     }
 }
