@@ -162,7 +162,7 @@ namespace QuanLyNhanSu
                     {
                         cn.makeConnected(queryin);
                         dataGridViewTTCoBan.Refresh();
-                    }
+                    }else MessageBox.Show("Bạn chưa nhập Mã nhân viên");
                 }
 
                 string queryins = "insert into TblCongKhoiDieuHanh(MaNV,HoTen,MaLuong) select MaNV,HoTen,MaLuong from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
@@ -172,8 +172,12 @@ namespace QuanLyNhanSu
                     {
                        cn.makeConnected(queryins);
                         dataGridViewTTCoBan.Refresh();
-                    }
+                    }else MessageBox.Show("Bạn chưa nhập Mã nhân viên");
                 }
+
+                string upda = " update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'" + comboBoxMaPhong.Text + "' group by TenPhong) where MaNV='" + textBoxMaNV.Text + "'";
+                cn.makeConnected(upda);
+                dataGridViewTTCoBan.Refresh();
             }
             catch (Exception ex)
             {

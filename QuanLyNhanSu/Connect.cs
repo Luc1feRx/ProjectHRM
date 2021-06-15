@@ -95,6 +95,18 @@ namespace QuanLyNhanSu
             Disconnected();
         }
 
+        public void loadcomboboxText(ComboBox cb, string strselect)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cb.Text = reader[0].ToString();
+            }
+            Disconnected();
+        }
+
         public void loadtextbox(TextBox cb, string strselect, int cot)
         {
             Connected();

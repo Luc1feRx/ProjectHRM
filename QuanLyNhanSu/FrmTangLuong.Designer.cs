@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTangLuong));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBoxGioiTinh = new System.Windows.Forms.ComboBox();
             this.comboBoxChucVu = new System.Windows.Forms.ComboBox();
             this.comboBoxMLM = new System.Windows.Forms.ComboBox();
             this.comboBoxMLC = new System.Windows.Forms.ComboBox();
@@ -52,7 +53,6 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.dg2 = new System.Windows.Forms.DataGridView();
-            this.comboBoxGioiTinh = new System.Windows.Forms.ComboBox();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg2)).BeginInit();
@@ -84,6 +84,17 @@
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin về tăng lương nhân viên";
+            // 
+            // comboBoxGioiTinh
+            // 
+            this.comboBoxGioiTinh.FormattingEnabled = true;
+            this.comboBoxGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.comboBoxGioiTinh.Location = new System.Drawing.Point(121, 103);
+            this.comboBoxGioiTinh.Name = "comboBoxGioiTinh";
+            this.comboBoxGioiTinh.Size = new System.Drawing.Size(117, 24);
+            this.comboBoxGioiTinh.TabIndex = 15;
             // 
             // comboBoxChucVu
             // 
@@ -119,6 +130,7 @@
             this.comboBoxMaNV.Name = "comboBoxMaNV";
             this.comboBoxMaNV.Size = new System.Drawing.Size(116, 24);
             this.comboBoxMaNV.TabIndex = 11;
+            this.comboBoxMaNV.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNV_SelectedIndexChanged);
             // 
             // dateTimePickerNgayTang
             // 
@@ -344,14 +356,6 @@
             this.dg2.TabIndex = 7;
             this.dg2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg2_CellClick);
             // 
-            // comboBoxGioiTinh
-            // 
-            this.comboBoxGioiTinh.FormattingEnabled = true;
-            this.comboBoxGioiTinh.Location = new System.Drawing.Point(121, 103);
-            this.comboBoxGioiTinh.Name = "comboBoxGioiTinh";
-            this.comboBoxGioiTinh.Size = new System.Drawing.Size(117, 24);
-            this.comboBoxGioiTinh.TabIndex = 15;
-            // 
             // FrmTangLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -360,6 +364,7 @@
             this.Controls.Add(this.dg2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTangLuong";
             this.Text = "FrmTangLuong";
             this.Load += new System.EventHandler(this.FrmTangLuong_Load);

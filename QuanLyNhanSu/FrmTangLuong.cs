@@ -145,5 +145,16 @@ namespace QuanLyNhanSu
             dateTimePickerNgayTang.Text = dg2.Rows[i].Cells[6].Value.ToString();
             txtLyDo.Text = dg2.Rows[i].Cells[7].Value.ToString();
         }
+
+        private void comboBoxMaNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cn.loadtextbox(txtHoTen, "select HoTen from TblTTNVCoBan where MaNV='" + comboBoxMaNV.Text + "'", 0);
+            cn.loadcomboboxText(comboBoxGioiTinh, "select GioiTinh from TblTTNVCoBan where MaNV='" + comboBoxMaNV.Text + "'");
+            cn.loadcomboboxText(comboBoxChucVu, "select ChucVu from TblTTNVCoBan where MaNV='" + comboBoxMaNV.Text + "'");
+            cn.loadcomboboxText(comboBoxMLC, "select MaLuong from TblCongKhoiDieuHanh where MaNV='" + comboBoxMaNV.Text + "'");
+            cn.loadcomboboxText(comboBoxMLM, "select MaLuongMoi from TblTangLuong where MaNV='" + comboBoxMaNV.Text + "'");
+            cn.loadtextbox(txtLyDo, "select LyDo from TblTangLuong where MaNV='" + comboBoxMaNV.Text + "'", 0);
+            cn.loaddatetime(dateTimePickerNgayTang, "select NgayTang from TblTangLuong where MaNV='" + comboBoxMaNV.Text + "'", 0);
+        }
     }
 }

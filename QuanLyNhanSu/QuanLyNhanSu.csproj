@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -160,12 +157,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNSDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TestIcons.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestIcons.Designer.cs">
-      <DependentUpon>TestIcons.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FormHoSoThuViec.resx">
       <DependentUpon>FormHoSoThuViec.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,7 +218,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
