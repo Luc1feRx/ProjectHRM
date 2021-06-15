@@ -217,4 +217,9 @@ update TblSoBH set NgayCapSo=N' 05 / 27 / 2019 ',NoiCapSo=N'Bắc Ninh',GhiChu=N
 select p.MaPhong from TblBoPhan b,TblPhongBan p where b.MaBoPhan=p.MaBoPhan and p.MaBoPhan=N'mb04'
 
 
+select GioiTinh from TblTTNVCoBan where MaNV='004'
+
+
+update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'kt01      ' group by TenPhong) where MaNV='010'
+
 UPDATE TblPhongBan set MaBoPhan=N'mb05      ', MaPhongBan=N'ktt01     ', TenPhong=N'Kinh te',NgayThanhLap=convert(datetime,' 30 / 06 / 2021 ',103),GhiChu=N'qrq' where MaPhong=N'ktt01     '
