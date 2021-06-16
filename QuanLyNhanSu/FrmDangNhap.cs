@@ -24,7 +24,7 @@ namespace QuanLyNhanSu
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);//khoi tao bien con de ket noi database su dung thu vien sqlClient
             try
             {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
 
@@ -26,22 +27,15 @@ namespace QuanLyNhanSu
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            textboxTenTruycap.Text = "";
+            textBoxMKMoi.Text = "";
+            textBoxNhapLaiMK.Text = "";
+            textBoxMatKhauCu.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void buttonThem_Click(object sender, EventArgs e)
-        {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);//khoi tao bien con de ket noi database su dung thu vien sqlClient
             con.Open();
             string query = "SELECT * FROM tbuser WHERE Username = '" + textboxTenTruycap.Text + "'";//chon ra Username ma ban muon doi pass
@@ -55,7 +49,7 @@ namespace QuanLyNhanSu
                 }
                 else
                 {
-                    if (textBoxMatKhauCu.Text == "")
+                    if(textBoxMatKhauCu.Text == "")
                     {
                         MessageBox.Show("Bạn chưa nhập mật khẩu");
                     }
@@ -90,7 +84,7 @@ namespace QuanLyNhanSu
                                         this.Hide();
                                         FrmMain frmMain = new FrmMain();
                                         frmMain.ShowDialog();
-
+                                        
                                     }
                                     else
                                     {
@@ -105,15 +99,7 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void buttonMoi_Click(object sender, EventArgs e)
-        {
-            textboxTenTruycap.Text = "";
-            textBoxMKMoi.Text = "";
-            textBoxNhapLaiMK.Text = "";
-            textBoxMatKhauCu.Text = "";
-        }
-
-        private void buttonThoat_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmMain frmMain = new FrmMain();

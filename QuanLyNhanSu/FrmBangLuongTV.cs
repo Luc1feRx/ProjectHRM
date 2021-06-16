@@ -45,7 +45,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             string query = "select * from TblBangCongThuViec";
@@ -123,7 +123,11 @@ namespace QuanLyNhanSu
 
         private void buttonTinhLuong_Click(object sender, EventArgs e)
         {
-            
+            int l = Convert.ToInt32(txtLTV.Text);
+            int nc = Convert.ToInt32(txtNgayCong.Text);
+            int lt = Convert.ToInt32(txtGioLamThem.Text);
+            float luong = ((l / 26) * nc + (lt * 40000));
+            textBoxLuong.Text = luong.ToString();
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
@@ -239,15 +243,6 @@ namespace QuanLyNhanSu
             cn.loadtextbox(txtGioLamThem, "select * from TblBangCongThuViec where MaNVTV='" + cbMaNV.Text + "'", 8);
             cn.loadtextbox(textBoxLuong, "select * from TblBangCongThuViec where MaNVTV='" + cbMaNV.Text + "'", 9);
             cn.loadtextbox(txtGhiChu, "select * from TblBangCongThuViec where MaNVTV='" + cbMaNV.Text + "'", 10);
-        }
-
-        private void buttonTinhLuong_Click_1(object sender, EventArgs e)
-        {
-            int l = Convert.ToInt32(txtLTV.Text);
-            int nc = Convert.ToInt32(txtNgayCong.Text);
-            int lt = Convert.ToInt32(txtGioLamThem.Text);
-            float luong = ((l / 26) * nc + (lt * 40000));
-            textBoxLuong.Text = luong.ToString();
         }
     }
 }

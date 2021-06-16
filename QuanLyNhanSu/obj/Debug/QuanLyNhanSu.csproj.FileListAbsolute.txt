@@ -39,30 +39,3 @@ C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmTan
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBH.resources
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmThaiSan.resources
 C:\Users\tu\source\repos\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmCaNhan.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojAssemblyReference.cache
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.ResolveComReference.cache
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormHoSoThuViec.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBangLuongNVCT.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBangLuongTV.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBH.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmBoPhan.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmCaNhan.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmChucVu.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmDangNhap.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmDoiMatKhau.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmLuong.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmMain.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmPhongBan.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmQLTK.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmTangLuong.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmThaiSan.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmTimKiem.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FrmTTCoBan.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
-D:\bài học\C+\ProjectHRM-main\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb

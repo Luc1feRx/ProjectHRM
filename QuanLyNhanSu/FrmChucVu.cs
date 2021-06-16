@@ -38,7 +38,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             string query = "SELECT * FROM tblChucVu";
@@ -78,62 +78,6 @@ namespace QuanLyNhanSu
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void buttonThoat_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonSua_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void dataGridViewChucVu_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i = e.RowIndex;
-            maChucVuTextBox.Text = dataGridViewChucVu.Rows[i].Cells[0].Value.ToString();
-            chucVuTextBox.Text = dataGridViewChucVu.Rows[i].Cells[1].Value.ToString();
-        }
-
-        private void buttonThem_Click_1(object sender, EventArgs e)
-        {
-            string query = "insert into tblChucVu values(N'" + maChucVuTextBox.Text + "',N'" + chucVuTextBox.Text + "')";
-            if (!cn.Exitsted(maChucVuTextBox.Text, "select MaChucVu from tblChucVu") && !cn.Exitsted(chucVuTextBox.Text, "select ChucVu from tblChucVu"))
-            {
-                if (maChucVuTextBox.Text != "" && chucVuTextBox.Text != "")
-                {
-                    cn.makeConnected(query);
-                    dataGridViewChucVu.Refresh();
-                    LoadDataGridView();
-                    MessageBox.Show("Thêm thành công!!!");
-                }
-                else if (maChucVuTextBox.Text == "") MessageBox.Show("Bạn chưa nhập mã chức vụ");
-                else if (chucVuTextBox.Text == "") MessageBox.Show("Bạn chưa nhập chức vụ");
-            }
-            else if (cn.Exitsted(maChucVuTextBox.Text, "select MaChucVu from tblChucVu") && !cn.Exitsted(chucVuTextBox.Text, "select ChucVu from tblChucVu"))
-            {
-                MessageBox.Show("Trùng mã chức vụ!!!");
-            }
-            else if (!cn.Exitsted(maChucVuTextBox.Text, "select MaChucVu from tblChucVu") && cn.Exitsted(chucVuTextBox.Text, "select ChucVu from tblChucVu"))
-            {
-                MessageBox.Show("Trùng chức vụ!!!");
-            }
-        }
-
-        private void buttonSua_Click_1(object sender, EventArgs e)
-        {
-            string query = "update tblChucVu set MaChucVu = N'" + maChucVuTextBox.Text + "',ChucVu = N'" + chucVuTextBox.Text + "' where MaChucVu='" + maChucVuTextBox.Text + "'";
-            cn.makeConnected(query);
-            dataGridViewChucVu.Refresh();
-            LoadDataGridView();
-            MessageBox.Show("Sửa thành công!!!");
-        }
-
-        private void buttonXoa_Click_1(object sender, EventArgs e)
-        {
             string query = "DELETE FROM tblChucVu WhERE MaChucVu = '" + maChucVuTextBox.Text + "'";
             if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
@@ -142,11 +86,27 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void buttonThoat_Click_1(object sender, EventArgs e)
+        private void buttonThoat_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+            string query = "update tblChucVu set MaChucVu = N'" + maChucVuTextBox.Text + "',ChucVu = N'" + chucVuTextBox.Text + "' where MaChucVu='" + maChucVuTextBox.Text + "'";
+            cn.makeConnected(query);
+            dataGridViewChucVu.Refresh();
+            LoadDataGridView();
+            MessageBox.Show("Sửa thành công!!!");
+        }
+
+        private void dataGridViewChucVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            maChucVuTextBox.Text = dataGridViewChucVu.Rows[i].Cells[0].Value.ToString();
+            chucVuTextBox.Text = dataGridViewChucVu.Rows[i].Cells[1].Value.ToString();
         }
     }
 }

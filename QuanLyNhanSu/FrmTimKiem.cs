@@ -37,7 +37,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridViewCoBan(DataGridView dg, string query)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -67,7 +67,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridViewCaNhan(DataGridView dg, string query)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -92,7 +92,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridViewLuong(DataGridView dg, string query)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             SqlCommand cmd = new SqlCommand(query, con);
@@ -115,7 +115,87 @@ namespace QuanLyNhanSu
 
         private void buttonTim_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                if ((textBoxTK.Text == "") || (textBoxTK.Text == "Nhập vào từ khóa tìm kiếm"))
+                {
+                    MessageBox.Show("bạn chưa nhập tù khóa", "Nhập từ khóa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else
+                {
+                    if (i == 1)
+                    {
+                        LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where MaNV=N'" + textBoxTK.Text + "'");
+                        int count = dataGridViewTimKiem.Rows.Count - 1;
+                        txtKQTimKiem.Text = count.ToString();
+                    }
+                    if (i == 2)
+                    {
+                        LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where HoTen =N'" + textBoxTK.Text + "'");
+                        int count = dataGridViewTimKiem.Rows.Count - 1;
+                        txtKQTimKiem.Text = count.ToString();
+                    }
+                    if (i == 3)
+                    {
+                        LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where CMTND =N'" + textBoxTK.Text + "'");
+                        int count = dataGridViewTimKiem.Rows.Count - 1;
+                        txtKQTimKiem.Text = count.ToString();
+                    }
+                    if(i == 4)
+                    {
+                        LoadDataGridViewCaNhan(dataGridViewTimKiem, "select * from TblTTCaNhan where NoiSinh =N'" + textBoxTK.Text + "'");
+                        int count = dataGridViewTimKiem.Rows.Count - 1;
+                        txtKQTimKiem.Text = count.ToString();
+                    }
+                    if(i == 5)
+                    {
+                        LoadDataGridViewCaNhan(dataGridViewTimKiem, "select * from TblTTCaNhan where DanToc=N'" + textBoxTK.Text + "'");
+                        int count = dataGridViewTimKiem.Rows.Count - 1;
+                        txtKQTimKiem.Text = count.ToString();
+                    }
+                    //if(i == 6)
+                    //{
+                    //    LoadDataGridViewCaNhan(dataGridViewTimKiem, "select * from TblTTCaNhan where TonGiao like N'%" + textBoxTK.Text + "%'");
+                    //    int count = dataGridViewTimKiem.Rows.Count - 1;
+                    //    txtKQTimKiem.Text = count.ToString();
+                    //}
+                    //if(i == 7)
+                    //{
+                    //    LoadDataGridViewCaNhan(dataGridViewTimKiem, "select * from TblTTCaNhan where QuocTich like N'%" + textBoxTK.Text + "%'");
+                    //    int count = dataGridViewTimKiem.Rows.Count - 1;
+                    //    txtKQTimKiem.Text = count.ToString();
+                    //}
+                    //if(i == 8)
+                    //{
+                    //    LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where GioiTinh like N'%" + textBoxTK.Text + "%'");
+                    //    int count = dataGridViewTimKiem.Rows.Count - 1;
+                    //    txtKQTimKiem.Text = count.ToString();
+                    //}
+                    if(i == 9)
+                    {
+                        LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where ChucVu=N'" + textBoxTK.Text + "'");
+                        int count = dataGridViewTimKiem.Rows.Count - 1;
+                        txtKQTimKiem.Text = count.ToString();
+                    }
+                    if(textBoxTK.Text == "Nhân viên nào có lương cao nhất?" || textBoxTK.Text == "nhân viên nào có lương cao nhất?" || textBoxTK.Text == "lương cao nhất?")
+                    {
+                        LoadDataGridViewLuong(dataGridViewTimKiem, "SELECT * FROM TblCongKhoiDieuHanh  where Luong = (select max(Luong) from TblCongKhoiDieuHanh)");
+                        int count = dataGridViewTimKiem.Rows.Count - 1;
+                        txtKQTimKiem.Text = count.ToString();
+                    }
+                    if(textBoxTK.Text == "Nhân viên nào có lương thấp nhất?" || textBoxTK.Text == "nhân viên nào có lương thấp nhất?" || textBoxTK.Text == "lương thấp nhất?")
+                    {
+                        LoadDataGridViewLuong(dataGridViewTimKiem, "SELECT * FROM TblCongKhoiDieuHanh  where Luong = (select min(Luong) from TblCongKhoiDieuHanh)");
+                        int count = dataGridViewTimKiem.Rows.Count - 1;
+                        txtKQTimKiem.Text = count.ToString();
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Tìm kiếm sai");
+            }
         }
 
         private void radioButtonHoTen_CheckedChanged(object sender, EventArgs e)
@@ -249,96 +329,6 @@ namespace QuanLyNhanSu
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonMoi_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if ((textBoxTK.Text == "") || (textBoxTK.Text == "Nhập vào từ khóa tìm kiếm"))
-                {
-                    MessageBox.Show("bạn chưa nhập tù khóa", "Nhập từ khóa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                }
-                else
-                {
-                    if (i == 1)
-                    {
-                        LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where MaNV=N'" + textBoxTK.Text + "'");
-                        int count = dataGridViewTimKiem.Rows.Count - 1;
-                        txtKQTimKiem.Text = count.ToString();
-                    }
-                    if (i == 2)
-                    {
-                        LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where HoTen =N'" + textBoxTK.Text + "'");
-                        int count = dataGridViewTimKiem.Rows.Count - 1;
-                        txtKQTimKiem.Text = count.ToString();
-                    }
-                    if (i == 3)
-                    {
-                        LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where CMTND =N'" + textBoxTK.Text + "'");
-                        int count = dataGridViewTimKiem.Rows.Count - 1;
-                        txtKQTimKiem.Text = count.ToString();
-                    }
-                    if (i == 4)
-                    {
-                        LoadDataGridViewCaNhan(dataGridViewTimKiem, "select * from TblTTCaNhan where NoiSinh =N'" + textBoxTK.Text + "'");
-                        int count = dataGridViewTimKiem.Rows.Count - 1;
-                        txtKQTimKiem.Text = count.ToString();
-                    }
-                    if (i == 5)
-                    {
-                        LoadDataGridViewCaNhan(dataGridViewTimKiem, "select * from TblTTCaNhan where DanToc=N'" + textBoxTK.Text + "'");
-                        int count = dataGridViewTimKiem.Rows.Count - 1;
-                        txtKQTimKiem.Text = count.ToString();
-                    }
-                    //if(i == 6)
-                    //{
-                    //    LoadDataGridViewCaNhan(dataGridViewTimKiem, "select * from TblTTCaNhan where TonGiao like N'%" + textBoxTK.Text + "%'");
-                    //    int count = dataGridViewTimKiem.Rows.Count - 1;
-                    //    txtKQTimKiem.Text = count.ToString();
-                    //}
-                    //if(i == 7)
-                    //{
-                    //    LoadDataGridViewCaNhan(dataGridViewTimKiem, "select * from TblTTCaNhan where QuocTich like N'%" + textBoxTK.Text + "%'");
-                    //    int count = dataGridViewTimKiem.Rows.Count - 1;
-                    //    txtKQTimKiem.Text = count.ToString();
-                    //}
-                    //if(i == 8)
-                    //{
-                    //    LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where GioiTinh like N'%" + textBoxTK.Text + "%'");
-                    //    int count = dataGridViewTimKiem.Rows.Count - 1;
-                    //    txtKQTimKiem.Text = count.ToString();
-                    //}
-                    if (i == 9)
-                    {
-                        LoadDataGridViewCoBan(dataGridViewTimKiem, "select * from TblTTNVCoBan where ChucVu=N'" + textBoxTK.Text + "'");
-                        int count = dataGridViewTimKiem.Rows.Count - 1;
-                        txtKQTimKiem.Text = count.ToString();
-                    }
-                    if (textBoxTK.Text == "Nhân viên nào có lương cao nhất?" || textBoxTK.Text == "nhân viên nào có lương cao nhất?" || textBoxTK.Text == "lương cao nhất?")
-                    {
-                        LoadDataGridViewLuong(dataGridViewTimKiem, "SELECT * FROM TblCongKhoiDieuHanh  where Luong = (select max(Luong) from TblCongKhoiDieuHanh)");
-                        int count = dataGridViewTimKiem.Rows.Count - 1;
-                        txtKQTimKiem.Text = count.ToString();
-                    }
-                    if (textBoxTK.Text == "Nhân viên nào có lương thấp nhất?" || textBoxTK.Text == "nhân viên nào có lương thấp nhất?" || textBoxTK.Text == "lương thấp nhất?")
-                    {
-                        LoadDataGridViewLuong(dataGridViewTimKiem, "SELECT * FROM TblCongKhoiDieuHanh  where Luong = (select min(Luong) from TblCongKhoiDieuHanh)");
-                        int count = dataGridViewTimKiem.Rows.Count - 1;
-                        txtKQTimKiem.Text = count.ToString();
-                    }
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Tìm kiếm sai");
-            }
-        }
-
-        private void buttonThoat_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             FrmMain frmMain = new FrmMain();
