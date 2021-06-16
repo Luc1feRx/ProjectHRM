@@ -22,18 +22,12 @@ namespace QuanLyNhanSu
 
         private void button6_Click(object sender, EventArgs e)
         {
-            foreach (Control ctr in this.groupBox1.Controls)
-            {
-                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
-                {
-                    ctr.Text = "";
-                }
-            }
+          
         }
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             string query = "select * from TblTTCaNhan";
@@ -59,43 +53,17 @@ namespace QuanLyNhanSu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string update = "update TblTTCaNhan set Manv=N'" + comboBox1.Text + "',Noisinh=N'" + textBox2.Text + "',NguyenQuan=N'" + textBox3.Text + "',DCThuongChu=N'" + textBox4.Text + "',DCTamChu=N'" + textBox5.Text + "',SDT=N'" + textBox6.Text + "',DanToc=N'" + textBox7.Text + "',TonGiao=N'" + textBox8.Text + "',QuocTich=N'" + textBox9.Text + "',HocVan=N'" + textBox12.Text + "',GhiChu=N'" + textBox17.Text + "' where MaNV=N'" + comboBox1.Text + "'";
-                cn.makeConnected(update);
-                LoadDataGridView();
-                MessageBox.Show("Sửa thành công");
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu đầu vào không đúng");
-            }
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string delete = "delete from TblTTCaNhan where MaNV=N'" + comboBox1.Text + "'";
-                string delete2 = "delete from TblTTNVCoBan where MaNV=N'" + comboBox1.Text + "'";
-                if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    cn.makeConnected(delete);
-                    cn.makeConnected(delete2);
-                    LoadDataGridView();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Xóa thất bại");
-            }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmMain frmMain = new FrmMain();
-            frmMain.ShowDialog();
+            
         }
 
         private void FrmCaNhan_Load(object sender, EventArgs e)
@@ -153,6 +121,58 @@ namespace QuanLyNhanSu
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            foreach (Control ctr in this.groupBox1.Controls)
+            {
+                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string update = "update TblTTCaNhan set Manv=N'" + comboBox1.Text + "',Noisinh=N'" + textBox2.Text + "',NguyenQuan=N'" + textBox3.Text + "',DCThuongChu=N'" + textBox4.Text + "',DCTamChu=N'" + textBox5.Text + "',SDT=N'" + textBox6.Text + "',DanToc=N'" + textBox7.Text + "',TonGiao=N'" + textBox8.Text + "',QuocTich=N'" + textBox9.Text + "',HocVan=N'" + textBox12.Text + "',GhiChu=N'" + textBox17.Text + "' where MaNV=N'" + comboBox1.Text + "'";
+                cn.makeConnected(update);
+                LoadDataGridView();
+                MessageBox.Show("Sửa thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string delete = "delete from TblTTCaNhan where MaNV=N'" + comboBox1.Text + "'";
+                string delete2 = "delete from TblTTNVCoBan where MaNV=N'" + comboBox1.Text + "'";
+                if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    cn.makeConnected(delete);
+                    cn.makeConnected(delete2);
+                    LoadDataGridView();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
         }
     }
 }

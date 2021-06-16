@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoiMatKhau));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxNhapLaiMK = new System.Windows.Forms.TextBox();
             this.textBoxMKMoi = new System.Windows.Forms.TextBox();
@@ -40,44 +38,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.buttonMoi = new System.Windows.Forms.Button();
+            this.buttonThoat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(135, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 52);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Hoàn tất";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(356, 326);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 52);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Nhập lại";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(584, 326);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 52);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Trở về";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.textBoxNhapLaiMK);
             this.groupBox1.Controls.Add(this.textBoxMKMoi);
             this.groupBox1.Controls.Add(this.textBoxMatKhauCu);
@@ -162,15 +131,73 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Tên truy cập:";
             // 
+            // buttonThem
+            // 
+            this.buttonThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThem.BackgroundImage")));
+            this.buttonThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThem.FlatAppearance.BorderSize = 0;
+            this.buttonThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(122, 354);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(119, 43);
+            this.buttonThem.TabIndex = 18;
+            this.buttonThem.Text = "Hoàn Tất";
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            // 
+            // buttonMoi
+            // 
+            this.buttonMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoi.BackgroundImage")));
+            this.buttonMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMoi.FlatAppearance.BorderSize = 0;
+            this.buttonMoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonMoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMoi.Image = ((System.Drawing.Image)(resources.GetObject("buttonMoi.Image")));
+            this.buttonMoi.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.buttonMoi.Location = new System.Drawing.Point(378, 354);
+            this.buttonMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMoi.Name = "buttonMoi";
+            this.buttonMoi.Size = new System.Drawing.Size(112, 43);
+            this.buttonMoi.TabIndex = 16;
+            this.buttonMoi.Text = "Nhập Lại";
+            this.buttonMoi.UseVisualStyleBackColor = true;
+            this.buttonMoi.Click += new System.EventHandler(this.buttonMoi_Click);
+            // 
+            // buttonThoat
+            // 
+            this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
+            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThoat.FlatAppearance.BorderSize = 0;
+            this.buttonThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThoat.Image = ((System.Drawing.Image)(resources.GetObject("buttonThoat.Image")));
+            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThoat.Location = new System.Drawing.Point(633, 354);
+            this.buttonThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(116, 43);
+            this.buttonThoat.TabIndex = 17;
+            this.buttonThoat.Text = "Trở Về";
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
+            // 
             // FrmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.blue_moving_flowing_abstract_waves_on_white_background_blurred_smooth_graphic_motion_design_video_animation_1920x1080_vhhueydte__F0000;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonThem);
+            this.Controls.Add(this.buttonMoi);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonThoat);
             this.Name = "FrmDoiMatKhau";
             this.Text = "Đổi mật khẩu";
             this.groupBox1.ResumeLayout(false);
@@ -180,9 +207,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxNhapLaiMK;
         private System.Windows.Forms.TextBox textBoxMKMoi;
@@ -192,5 +216,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.Button buttonMoi;
+        private System.Windows.Forms.Button buttonThoat;
     }
 }

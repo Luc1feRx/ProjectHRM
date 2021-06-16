@@ -15,7 +15,7 @@ namespace QuanLyNhanSu
 {
     public partial class FormHoSoThuViec : Form
     {
-        string strconnect = "Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
+        string strconnect = @"Data Source=DESKTOP-E6DDT4F\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
         Connect cn = new Connect();
         public FormHoSoThuViec()
         {
@@ -24,18 +24,12 @@ namespace QuanLyNhanSu
 
         private void button6_Click(object sender, EventArgs e)
         {
-            foreach (Control ctr in this.groupBox1.Controls)
-            {
-                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
-                {
-                    ctr.Text = "";
-                }
-            }
+            
         }
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             string query = "select * from TblHoSoThuViec";
@@ -73,37 +67,7 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection sqlcon = new SqlConnection(strconnect);
-                byte[] b = ConvertImageToBytes(pictureBoxAnhNVTV.Image);
-                string queryinsert = "insert into TblHoSoThuViec values(@MaPhong, @MaNVTV, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @TDHocVan, @ViTriThuViec, @NgayTV, @GhiChu, @AnhNVTV)";
-                if (!cn.Exitsted(txtMaNVTV.Text, "select MaNVTV from TblHoSoThuViec"))
-                {
-                    sqlcon.Open();
-                    SqlCommand cmd = new SqlCommand(queryinsert, sqlcon);
-                    cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
-                    cmd.Parameters.AddWithValue("@MaNVTV", txtMaNVTV.Text);
-                    cmd.Parameters.AddWithValue("@HoTen", txtHoTen.Text);
-                    cmd.Parameters.AddWithValue("@NgaySinh", dateTimePickerngaySinh.Text);
-                    cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
-                    cmd.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
-                    cmd.Parameters.AddWithValue("@TDHocVan", txtTrinhDo.Text);
-                    cmd.Parameters.AddWithValue("@ViTriThuViec", txtVTTV.Text);
-                    cmd.Parameters.AddWithValue("@NgayTV", dateTimePickerNgayThuViec.Text);
-                    cmd.Parameters.AddWithValue("@GhiChu", txtGhiChu.Text);
-                    cmd.Parameters.AddWithValue("@AnhNVTV", b);
-                    cmd.ExecuteNonQuery();
-                    sqlcon.Close();
-                    dataGridView1.Refresh();
-                    LoadDataGridView();
-                    MessageBox.Show("Thêm thành công");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu đầu vào không đúng");
-            }
+            
         }
 
         private void pictureBoxAnhNVTV_Click(object sender, EventArgs e)
@@ -122,51 +86,12 @@ namespace QuanLyNhanSu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection sqlcon = new SqlConnection(strconnect);
-                byte[] b = ConvertImageToBytes(pictureBoxAnhNVTV.Image);
-                string update = "update TblHoSoThuViec set MaPhong=@MaPhong,HoTen=@HoTen,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,DiaChi=@DiaChi,TDHocVan=@TDHocVan,ViTriThuViec=@ViTriThuViec,NgayTV=@NgayTV,GhiChu=@GhiChu,AnhNVTV=@AnhNVTV where MaNVTV=@MaNVTV";
-                sqlcon.Open();
-                SqlCommand cmd = new SqlCommand(update, sqlcon);
-                cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
-                cmd.Parameters.AddWithValue("@MaNVTV", txtMaNVTV.Text);
-                cmd.Parameters.AddWithValue("@HoTen", txtHoTen.Text);
-                cmd.Parameters.AddWithValue("@NgaySinh", dateTimePickerngaySinh.Text);
-                cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
-                cmd.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
-                cmd.Parameters.AddWithValue("@TDHocVan", txtTrinhDo.Text);
-                cmd.Parameters.AddWithValue("@ViTriThuViec", txtVTTV.Text);
-                cmd.Parameters.AddWithValue("@NgayTV", dateTimePickerNgayThuViec.Text);
-                cmd.Parameters.AddWithValue("@GhiChu", txtGhiChu.Text);
-                cmd.Parameters.AddWithValue("@AnhNVTV", b);
-                cmd.ExecuteNonQuery();
-                sqlcon.Close();
-                dataGridView1.Refresh();
-                LoadDataGridView();
-                MessageBox.Show("Sửa thành công");
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu đầu vào không đúng");
-            }
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string del = "delete from TblHoSoThuViec where MaNVTV='" + txtMaNVTV.Text + "'";
-                if (MessageBox.Show("Bạn có chắc chắn muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    cn.makeConnected(del);
-                    LoadDataGridView();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu đầu vào không đúng");
-            }
+           
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -207,6 +132,106 @@ namespace QuanLyNhanSu
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            foreach (Control ctr in this.groupBox1.Controls)
+            {
+                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection sqlcon = new SqlConnection(strconnect);
+                byte[] b = ConvertImageToBytes(pictureBoxAnhNVTV.Image);
+                string queryinsert = "insert into TblHoSoThuViec values(@MaPhong, @MaNVTV, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @TDHocVan, @ViTriThuViec, @NgayTV, @GhiChu, @AnhNVTV)";
+                if (!cn.Exitsted(txtMaNVTV.Text, "select MaNVTV from TblHoSoThuViec"))
+                {
+                    sqlcon.Open();
+                    SqlCommand cmd = new SqlCommand(queryinsert, sqlcon);
+                    cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
+                    cmd.Parameters.AddWithValue("@MaNVTV", txtMaNVTV.Text);
+                    cmd.Parameters.AddWithValue("@HoTen", txtHoTen.Text);
+                    cmd.Parameters.AddWithValue("@NgaySinh", dateTimePickerngaySinh.Text);
+                    cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
+                    cmd.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
+                    cmd.Parameters.AddWithValue("@TDHocVan", txtTrinhDo.Text);
+                    cmd.Parameters.AddWithValue("@ViTriThuViec", txtVTTV.Text);
+                    cmd.Parameters.AddWithValue("@NgayTV", dateTimePickerNgayThuViec.Text);
+                    cmd.Parameters.AddWithValue("@GhiChu", txtGhiChu.Text);
+                    cmd.Parameters.AddWithValue("@AnhNVTV", b);
+                    cmd.ExecuteNonQuery();
+                    sqlcon.Close();
+                    dataGridView1.Refresh();
+                    LoadDataGridView();
+                    MessageBox.Show("Thêm thành công");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection sqlcon = new SqlConnection(strconnect);
+                byte[] b = ConvertImageToBytes(pictureBoxAnhNVTV.Image);
+                string update = "update TblHoSoThuViec set MaPhong=@MaPhong,HoTen=@HoTen,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,DiaChi=@DiaChi,TDHocVan=@TDHocVan,ViTriThuViec=@ViTriThuViec,NgayTV=@NgayTV,GhiChu=@GhiChu,AnhNVTV=@AnhNVTV where MaNVTV=@MaNVTV";
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand(update, sqlcon);
+                cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
+                cmd.Parameters.AddWithValue("@MaNVTV", txtMaNVTV.Text);
+                cmd.Parameters.AddWithValue("@HoTen", txtHoTen.Text);
+                cmd.Parameters.AddWithValue("@NgaySinh", dateTimePickerngaySinh.Text);
+                cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
+                cmd.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
+                cmd.Parameters.AddWithValue("@TDHocVan", txtTrinhDo.Text);
+                cmd.Parameters.AddWithValue("@ViTriThuViec", txtVTTV.Text);
+                cmd.Parameters.AddWithValue("@NgayTV", dateTimePickerNgayThuViec.Text);
+                cmd.Parameters.AddWithValue("@GhiChu", txtGhiChu.Text);
+                cmd.Parameters.AddWithValue("@AnhNVTV", b);
+                cmd.ExecuteNonQuery();
+                sqlcon.Close();
+                dataGridView1.Refresh();
+                LoadDataGridView();
+                MessageBox.Show("Sửa thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string del = "delete from TblHoSoThuViec where MaNVTV='" + txtMaNVTV.Text + "'";
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    cn.makeConnected(del);
+                    LoadDataGridView();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+        }
+
+        private void buttonThoat_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmMain frmMain = new FrmMain();

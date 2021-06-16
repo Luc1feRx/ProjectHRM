@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Button buttonTinhLuong;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBangLuongTV));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonTinhLuong = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.buttonMoi = new System.Windows.Forms.Button();
             this.buttonThoat = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewLTV = new System.Windows.Forms.DataGridView();
+            buttonTinhLuong = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -69,7 +70,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.buttonTinhLuong);
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(buttonTinhLuong);
             this.groupBox2.Controls.Add(this.buttonThem);
             this.groupBox2.Controls.Add(this.buttonMoi);
             this.groupBox2.Controls.Add(this.buttonThoat);
@@ -83,25 +85,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các chức năng";
-            // 
-            // buttonTinhLuong
-            // 
-            this.buttonTinhLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonTinhLuong.BackgroundImage")));
-            this.buttonTinhLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonTinhLuong.FlatAppearance.BorderSize = 0;
-            this.buttonTinhLuong.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonTinhLuong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonTinhLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTinhLuong.Location = new System.Drawing.Point(702, 23);
-            this.buttonTinhLuong.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonTinhLuong.Name = "buttonTinhLuong";
-            this.buttonTinhLuong.Size = new System.Drawing.Size(122, 41);
-            this.buttonTinhLuong.TabIndex = 7;
-            this.buttonTinhLuong.Text = "Tính lương";
-            this.buttonTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonTinhLuong.UseVisualStyleBackColor = true;
-            this.buttonTinhLuong.Click += new System.EventHandler(this.buttonTinhLuong_Click);
             // 
             // buttonThem
             // 
@@ -200,6 +183,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.textBoxLuong);
             this.groupBox1.Controls.Add(this.cbMaNV);
@@ -454,6 +438,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.dataGridViewLTV);
             this.groupBox3.Location = new System.Drawing.Point(13, 264);
             this.groupBox3.Name = "groupBox3";
@@ -473,10 +458,31 @@
             this.dataGridViewLTV.TabIndex = 3;
             this.dataGridViewLTV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLTV_CellClick);
             // 
+            // buttonTinhLuong
+            // 
+            buttonTinhLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonTinhLuong.BackgroundImage")));
+            buttonTinhLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            buttonTinhLuong.FlatAppearance.BorderSize = 0;
+            buttonTinhLuong.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            buttonTinhLuong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            buttonTinhLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonTinhLuong.Image = global::QuanLyNhanSu.Properties.Resources.payment_icon;
+            buttonTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            buttonTinhLuong.Location = new System.Drawing.Point(696, 23);
+            buttonTinhLuong.Margin = new System.Windows.Forms.Padding(4);
+            buttonTinhLuong.Name = "buttonTinhLuong";
+            buttonTinhLuong.Size = new System.Drawing.Size(127, 41);
+            buttonTinhLuong.TabIndex = 8;
+            buttonTinhLuong.Text = "Tính lương";
+            buttonTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            buttonTinhLuong.UseVisualStyleBackColor = true;
+            buttonTinhLuong.Click += new System.EventHandler(this.buttonTinhLuong_Click_1);
+            // 
             // FrmBangLuongTV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.blue_moving_flowing_abstract_waves_on_white_background_blurred_smooth_graphic_motion_design_video_animation_1920x1080_vhhueydte__F0000;
             this.ClientSize = new System.Drawing.Size(992, 462);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -495,10 +501,8 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonTinhLuong;
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Button buttonMoi;
-        private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -526,5 +530,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridViewLTV;
+        private System.Windows.Forms.Button buttonThoat;
     }
 }

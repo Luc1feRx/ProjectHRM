@@ -18,7 +18,7 @@ namespace QuanLyNhanSu
     public partial class FrmTTCoBan : Form
     {
         Connect cn = new Connect();
-        string strconnect = "Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
+        string strconnect = @"Data Source=DESKTOP-E6DDT4F\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
         public FrmTTCoBan()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             string query = "SELECT * FROM TblTTNVCoBan";
@@ -76,120 +76,12 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection sqlcon = new SqlConnection(strconnect);
-                byte[] b = ConvertImageToBytes(pictureBoxAnhNV.Image);
-                string queryinsert = "insert into TblTTNVCoBan values(@MaBoPhan, @MaPhong, @MaNV, @HoTen, @MaLuong, @NgaySinh, @GioiTinh, @TTHonNhan, @CMTND, @NoiCap, @ChucVu, @LoaiHD, @ThoiGian, @NgayKy, @NgayHetHan, @GhiChu, @AnhNV)";
-                if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && !cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND FROM tblThoiViec"))
-                {
-                    //kiem tra nguoi dung da nhap hay chua
-                    if(textBoxMaNV.Text != "" && textBoxCMTND.Text != "" && textBoxNoiCap.Text != "" && comboBoxChucVu.Text != "" && comboBoxHopDong.Text != "" && textBoxHoTen.Text != "")
-                    {
-                        sqlcon.Open();
-                        SqlCommand cmd = new SqlCommand(queryinsert, sqlcon);
-                        cmd.Parameters.AddWithValue("@MaBoPhan", comboBoxMaBoPhan.Text);
-                        cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
-                        cmd.Parameters.AddWithValue("@MaNV", textBoxMaNV.Text);
-                        cmd.Parameters.AddWithValue("@HoTen", textBoxHoTen .Text);
-                        cmd.Parameters.AddWithValue("@MaLuong", comboBoxMaLuong .Text);
-                        cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
-                        cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
-                        cmd.Parameters.AddWithValue("@TTHonNhan", comboBoxTTHonNhan.Text);
-                        cmd.Parameters.AddWithValue("@CMTND", textBoxCMTND.Text);
-                        cmd.Parameters.AddWithValue("@NoiCap", textBoxNoiCap.Text);
-                        cmd.Parameters.AddWithValue("@ChucVu", comboBoxChucVu.Text);
-                        cmd.Parameters.AddWithValue("@LoaiHD", comboBoxHopDong.Text);
-                        cmd.Parameters.AddWithValue("@ThoiGian", textBoxThoiGian.Text);
-                        cmd.Parameters.AddWithValue("@NgayKy",dateBoxThoiGiaNgayKy.Text);
-                        cmd.Parameters.AddWithValue("@NgayHetHan", dateTimePickerNgayHetHan.Text);
-                        cmd.Parameters.AddWithValue("@GhiChu", textBoxGhiChu.Text);
-                        cmd.Parameters.AddWithValue("@AnhNV", b);
-                        cmd.ExecuteNonQuery();
-                        sqlcon.Close();
-                        dataGridViewTTCoBan.Refresh();
-                        LoadDataGridView();
-                        MessageBox.Show("Thêm thành công");
-                    }
-                    //kiem tra neu nguoi dung chua nhap du lieu
-                    else if (textBoxHoTen.Text == "") MessageBox.Show("Bạn chưa nhập họ tên");
-                    else if (textBoxMaNV.Text == "") MessageBox.Show("Bạn chưa nhập Mã nhân viên");
-                    else if (textBoxCMTND.Text == "") MessageBox.Show("Bạn chưa nhập căn cước công dân");
-                    else if (textBoxNoiCap.Text == "") MessageBox.Show("Bạn chưa nhập nơi cấp");
-                    else if (comboBoxChucVu.Text == "") MessageBox.Show("Bạn chưa nhập chức vụ");
-                    else if (comboBoxHopDong.Text == "") MessageBox.Show("Bạn chưa nhập loại hợp đồng");
-                }
-                else if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND FROM tblThoiViec"))
-                {
-                    //them nhan vien da xoa hoac khong
-                    if (MessageBox.Show("Nhân viên này đã từng làm ở công ty, bạn có chắc muốn thêm?", "Thêm thất bại", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    {
-                        sqlcon.Open();
-                        SqlCommand cmd = new SqlCommand(queryinsert, sqlcon);
-                        cmd.Parameters.AddWithValue("@MaBoPhan", comboBoxMaBoPhan.Text);
-                        cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
-                        cmd.Parameters.AddWithValue("@MaNV", textBoxMaNV.Text);
-                        cmd.Parameters.AddWithValue("@HoTen", textBoxHoTen.Text);
-                        cmd.Parameters.AddWithValue("@MaLuong", comboBoxMaLuong.Text);
-                        cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
-                        cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
-                        cmd.Parameters.AddWithValue("@TTHonNhan", comboBoxTTHonNhan.Text);
-                        cmd.Parameters.AddWithValue("@CMTND", textBoxCMTND.Text);
-                        cmd.Parameters.AddWithValue("@NoiCap", textBoxNoiCap.Text);
-                        cmd.Parameters.AddWithValue("@ChucVu", comboBoxChucVu.Text);
-                        cmd.Parameters.AddWithValue("@LoaiHD", comboBoxHopDong.Text);
-                        cmd.Parameters.AddWithValue("@ThoiGian", textBoxThoiGian.Text);
-                        cmd.Parameters.AddWithValue("@NgayKy", dateBoxThoiGiaNgayKy.Text);
-                        cmd.Parameters.AddWithValue("@NgayHetHan", dateTimePickerNgayHetHan.Text);
-                        cmd.Parameters.AddWithValue("@GhiChu", textBoxGhiChu.Text);
-                        cmd.Parameters.AddWithValue("@AnhNV", b);
-                        cmd.ExecuteNonQuery();
-                        sqlcon.Close();
-                        dataGridViewTTCoBan.Refresh();
-                        LoadDataGridView();
-                        MessageBox.Show("Thêm thành công");
-                        string delete = "delete from tblThoiViec where CMTND='" + textBoxCMTND.Text + "'";
-                        cn.makeConnected(delete);
-                    }   
-                }
-                else if (cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && (!cn.Exitsted(textBoxCMTND.Text, "select CMTND from tblThoiViec")))
-                    MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                string queryin = "INSERT INTO TblTTCaNhan(MaNV,HoTen) select MaNV,HoTen from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
-                if ((!cn.Exitsted(textBoxMaNV.Text, "select MaNV from TblTTCaNhan")))
-                {
-                    if (textBoxMaNV.Text != "")
-                    {
-                        cn.makeConnected(queryin);
-                        dataGridViewTTCoBan.Refresh();
-                    }else MessageBox.Show("Bạn chưa nhập Mã nhân viên");
-                }
-
-                string queryins = "insert into TblCongKhoiDieuHanh(MaNV,HoTen,MaLuong) select MaNV,HoTen,MaLuong from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
-                if ((!cn.Exitsted(textBoxMaNV.Text, "select MaNV from TblCongKhoiDieuHanh")))
-                {
-                    if (textBoxMaNV.Text != "")
-                    {
-                       cn.makeConnected(queryins);
-                        dataGridViewTTCoBan.Refresh();
-                    }else MessageBox.Show("Bạn chưa nhập Mã nhân viên");
-                }
-
-                string upda = " update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'" + comboBoxMaPhong.Text + "' group by TenPhong) where MaNV='" + textBoxMaNV.Text + "'";
-                cn.makeConnected(upda);
-                dataGridViewTTCoBan.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmMain frmMain = new FrmMain();
-            frmMain.ShowDialog();
+           
         }
 
         private void buttonLamMoi_Click(object sender, EventArgs e)
@@ -205,61 +97,12 @@ namespace QuanLyNhanSu
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection sqlcon = new SqlConnection(strconnect);
-                byte[] b = ConvertImageToBytes(pictureBoxAnhNV.Image);
-                string update = "update TblTTNVCoBan set MaBoPhan=@MaBoPhan,MaPhong=@MaPhong,HoTen=@HoTen,MaLuong=@MaLuong,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,TTHonNhan=@TTHonNhan,CMTND=@CMTND,NoiCap=@NoiCap,ChucVu=@ChucVu,LoaiHD=@LoaiHD,ThoiGian=@ThoiGian,NgayKy=@NgayKy,NgayHetHan=NgayHetHan,GhiChu=@GhiChu,AnhNV=@AnhNV where MaNV=@MaNV";
-                sqlcon.Open();
-                SqlCommand cmd = new SqlCommand(update, sqlcon);
-                cmd.Parameters.AddWithValue("@MaBoPhan", comboBoxMaBoPhan.Text);
-                cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
-                cmd.Parameters.AddWithValue("@MaNV", textBoxMaNV.Text);
-                cmd.Parameters.AddWithValue("@HoTen", textBoxHoTen.Text);
-                cmd.Parameters.AddWithValue("@MaLuong", comboBoxMaLuong.Text);
-                cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
-                cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
-                cmd.Parameters.AddWithValue("@TTHonNhan", comboBoxTTHonNhan.Text);
-                cmd.Parameters.AddWithValue("@CMTND", textBoxCMTND.Text);
-                cmd.Parameters.AddWithValue("@NoiCap", textBoxNoiCap.Text);
-                cmd.Parameters.AddWithValue("@ChucVu", comboBoxChucVu.Text);
-                cmd.Parameters.AddWithValue("@LoaiHD", comboBoxHopDong.Text);
-                cmd.Parameters.AddWithValue("@ThoiGian", textBoxThoiGian.Text);
-                cmd.Parameters.AddWithValue("@NgayKy", dateBoxThoiGiaNgayKy.Text);
-                cmd.Parameters.AddWithValue("@NgayHetHan", dateTimePickerNgayHetHan.Text);
-                cmd.Parameters.AddWithValue("@GhiChu", textBoxGhiChu.Text);
-                cmd.Parameters.AddWithValue("@AnhNV", b);
-                cmd.ExecuteNonQuery();
-                sqlcon.Close();
-                dataGridViewTTCoBan.Refresh();
-                LoadDataGridView();
-                MessageBox.Show("Sửa thảnh công");
-            }
-            catch
-            {
-                MessageBox.Show("Sửa thất bại");
-            }
-            string update2 = "update TblCongKhoiDieuHanh set HoTen=N'" + textBoxHoTen.Text + "',MaLuong=N'" + comboBoxMaLuong.Text + "' where MaNV=N'" + textBoxMaNV.Text + "'";
-            cn.makeConnected(update2);
-            LoadDataGridView();
-            string update3 = "update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'" + comboBoxMaPhong.Text + "' group by TenPhong) where MaNV='" + textBoxMaNV.Text + "'";
-            cn.makeConnected(update3);
-            dataGridViewTTCoBan.Refresh();
+            
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            string insTV = "insert into tblThoiViec(MaNV,HoTen,CMTND,LyDo) select MaNV,HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
-            cn.makeConnected(insTV);
-            LoadDataGridView();
-
-            string delete = "delete from TblTTNVCoBan where MaNV=N'" + textBoxMaNV.Text + "'";
-            if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                cn.makeConnected(delete);
-                LoadDataGridView();
-                MessageBox.Show("Đã xóa dữ liệu");
-            }
+            
         }
 
         private void dataGridViewTTCoBan_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -299,7 +142,7 @@ namespace QuanLyNhanSu
 
         private void FrmTTCoBan_Load(object sender, EventArgs e)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             FillCombobox("SELECT MaBoPhan FROM TblBoPhan", comboBoxMaBoPhan, "MaBoPhan", "MaBoPhan");
@@ -322,7 +165,7 @@ namespace QuanLyNhanSu
 
         public static void FillCombobox(string query, ComboBox cb, string ma, string ten) // do du lieu vao combobox
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
@@ -410,7 +253,178 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            exprotExcel(dataGridViewTTCoBan, @"D:\", "ThongTinNhanSu");
+          
+        }
+
+        private void buttonThem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection sqlcon = new SqlConnection(strconnect);
+                byte[] b = ConvertImageToBytes(pictureBoxAnhNV.Image);
+                string queryinsert = "insert into TblTTNVCoBan values(@MaBoPhan, @MaPhong, @MaNV, @HoTen, @MaLuong, @NgaySinh, @GioiTinh, @TTHonNhan, @CMTND, @NoiCap, @ChucVu, @LoaiHD, @ThoiGian, @NgayKy, @NgayHetHan, @GhiChu, @AnhNV)";
+                if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && !cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND FROM tblThoiViec"))
+                {
+                    //kiem tra nguoi dung da nhap hay chua
+                    if (textBoxMaNV.Text != "" && textBoxCMTND.Text != "" && textBoxNoiCap.Text != "" && comboBoxChucVu.Text != "" && comboBoxHopDong.Text != "" && textBoxHoTen.Text != "")
+                    {
+                        sqlcon.Open();
+                        SqlCommand cmd = new SqlCommand(queryinsert, sqlcon);
+                        cmd.Parameters.AddWithValue("@MaBoPhan", comboBoxMaBoPhan.Text);
+                        cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
+                        cmd.Parameters.AddWithValue("@MaNV", textBoxMaNV.Text);
+                        cmd.Parameters.AddWithValue("@HoTen", textBoxHoTen.Text);
+                        cmd.Parameters.AddWithValue("@MaLuong", comboBoxMaLuong.Text);
+                        cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
+                        cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
+                        cmd.Parameters.AddWithValue("@TTHonNhan", comboBoxTTHonNhan.Text);
+                        cmd.Parameters.AddWithValue("@CMTND", textBoxCMTND.Text);
+                        cmd.Parameters.AddWithValue("@NoiCap", textBoxNoiCap.Text);
+                        cmd.Parameters.AddWithValue("@ChucVu", comboBoxChucVu.Text);
+                        cmd.Parameters.AddWithValue("@LoaiHD", comboBoxHopDong.Text);
+                        cmd.Parameters.AddWithValue("@ThoiGian", textBoxThoiGian.Text);
+                        cmd.Parameters.AddWithValue("@NgayKy", dateBoxThoiGiaNgayKy.Text);
+                        cmd.Parameters.AddWithValue("@NgayHetHan", dateTimePickerNgayHetHan.Text);
+                        cmd.Parameters.AddWithValue("@GhiChu", textBoxGhiChu.Text);
+                        cmd.Parameters.AddWithValue("@AnhNV", b);
+                        cmd.ExecuteNonQuery();
+                        sqlcon.Close();
+                        dataGridViewTTCoBan.Refresh();
+                        LoadDataGridView();
+                        MessageBox.Show("Thêm thành công");
+                    }
+                    //kiem tra neu nguoi dung chua nhap du lieu
+                    else if (textBoxHoTen.Text == "") MessageBox.Show("Bạn chưa nhập họ tên");
+                    else if (textBoxMaNV.Text == "") MessageBox.Show("Bạn chưa nhập Mã nhân viên");
+                    else if (textBoxCMTND.Text == "") MessageBox.Show("Bạn chưa nhập căn cước công dân");
+                    else if (textBoxNoiCap.Text == "") MessageBox.Show("Bạn chưa nhập nơi cấp");
+                    else if (comboBoxChucVu.Text == "") MessageBox.Show("Bạn chưa nhập chức vụ");
+                    else if (comboBoxHopDong.Text == "") MessageBox.Show("Bạn chưa nhập loại hợp đồng");
+                }
+                else if (!cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && cn.Exitsted(textBoxCMTND.Text, "SELECT CMTND FROM tblThoiViec"))
+                {
+                    //them nhan vien da xoa hoac khong
+                    if (MessageBox.Show("Nhân viên này đã từng làm ở công ty, bạn có chắc muốn thêm?", "Thêm thất bại", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        sqlcon.Open();
+                        SqlCommand cmd = new SqlCommand(queryinsert, sqlcon);
+                        cmd.Parameters.AddWithValue("@MaBoPhan", comboBoxMaBoPhan.Text);
+                        cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
+                        cmd.Parameters.AddWithValue("@MaNV", textBoxMaNV.Text);
+                        cmd.Parameters.AddWithValue("@HoTen", textBoxHoTen.Text);
+                        cmd.Parameters.AddWithValue("@MaLuong", comboBoxMaLuong.Text);
+                        cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
+                        cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
+                        cmd.Parameters.AddWithValue("@TTHonNhan", comboBoxTTHonNhan.Text);
+                        cmd.Parameters.AddWithValue("@CMTND", textBoxCMTND.Text);
+                        cmd.Parameters.AddWithValue("@NoiCap", textBoxNoiCap.Text);
+                        cmd.Parameters.AddWithValue("@ChucVu", comboBoxChucVu.Text);
+                        cmd.Parameters.AddWithValue("@LoaiHD", comboBoxHopDong.Text);
+                        cmd.Parameters.AddWithValue("@ThoiGian", textBoxThoiGian.Text);
+                        cmd.Parameters.AddWithValue("@NgayKy", dateBoxThoiGiaNgayKy.Text);
+                        cmd.Parameters.AddWithValue("@NgayHetHan", dateTimePickerNgayHetHan.Text);
+                        cmd.Parameters.AddWithValue("@GhiChu", textBoxGhiChu.Text);
+                        cmd.Parameters.AddWithValue("@AnhNV", b);
+                        cmd.ExecuteNonQuery();
+                        sqlcon.Close();
+                        dataGridViewTTCoBan.Refresh();
+                        LoadDataGridView();
+                        MessageBox.Show("Thêm thành công");
+                        string delete = "delete from tblThoiViec where CMTND='" + textBoxCMTND.Text + "'";
+                        cn.makeConnected(delete);
+                    }
+                }
+                else if (cn.Exitsted(textBoxMaNV.Text, "SELECT MaNV FROM TblTTNVCoBan") && (!cn.Exitsted(textBoxCMTND.Text, "select CMTND from tblThoiViec")))
+                    MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                string queryin = "INSERT INTO TblTTCaNhan(MaNV,HoTen) select MaNV,HoTen from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
+                if ((!cn.Exitsted(textBoxMaNV.Text, "select MaNV from TblTTCaNhan")))
+                {
+                    if (textBoxMaNV.Text != "")
+                    {
+                        cn.makeConnected(queryin);
+                        dataGridViewTTCoBan.Refresh();
+                    }
+                }
+
+                string queryins = "insert into TblCongKhoiDieuHanh(MaNV,HoTen,MaLuong) select MaNV,HoTen,MaLuong from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
+                if ((!cn.Exitsted(textBoxMaNV.Text, "select MaNV from TblCongKhoiDieuHanh")))
+                {
+                    if (textBoxMaNV.Text != "")
+                    {
+                        cn.makeConnected(queryins);
+                        dataGridViewTTCoBan.Refresh();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void buttonSua_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection sqlcon = new SqlConnection(strconnect);
+                byte[] b = ConvertImageToBytes(pictureBoxAnhNV.Image);
+                string update = "update TblTTNVCoBan set MaBoPhan=@MaBoPhan,MaPhong=@MaPhong,HoTen=@HoTen,MaLuong=@MaLuong,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,TTHonNhan=@TTHonNhan,CMTND=@CMTND,NoiCap=@NoiCap,ChucVu=@ChucVu,LoaiHD=@LoaiHD,ThoiGian=@ThoiGian,NgayKy=@NgayKy,NgayHetHan=NgayHetHan,GhiChu=@GhiChu,AnhNV=@AnhNV where MaNV=@MaNV";
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand(update, sqlcon);
+                cmd.Parameters.AddWithValue("@MaBoPhan", comboBoxMaBoPhan.Text);
+                cmd.Parameters.AddWithValue("@MaPhong", comboBoxMaPhong.Text);
+                cmd.Parameters.AddWithValue("@MaNV", textBoxMaNV.Text);
+                cmd.Parameters.AddWithValue("@HoTen", textBoxHoTen.Text);
+                cmd.Parameters.AddWithValue("@MaLuong", comboBoxMaLuong.Text);
+                cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
+                cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
+                cmd.Parameters.AddWithValue("@TTHonNhan", comboBoxTTHonNhan.Text);
+                cmd.Parameters.AddWithValue("@CMTND", textBoxCMTND.Text);
+                cmd.Parameters.AddWithValue("@NoiCap", textBoxNoiCap.Text);
+                cmd.Parameters.AddWithValue("@ChucVu", comboBoxChucVu.Text);
+                cmd.Parameters.AddWithValue("@LoaiHD", comboBoxHopDong.Text);
+                cmd.Parameters.AddWithValue("@ThoiGian", textBoxThoiGian.Text);
+                cmd.Parameters.AddWithValue("@NgayKy", dateBoxThoiGiaNgayKy.Text);
+                cmd.Parameters.AddWithValue("@NgayHetHan", dateTimePickerNgayHetHan.Text);
+                cmd.Parameters.AddWithValue("@GhiChu", textBoxGhiChu.Text);
+                cmd.Parameters.AddWithValue("@AnhNV", b);
+                cmd.ExecuteNonQuery();
+                sqlcon.Close();
+                dataGridViewTTCoBan.Refresh();
+                LoadDataGridView();
+                MessageBox.Show("Sửa thảnh công");
+            }
+            catch
+            {
+                MessageBox.Show("Sửa thất bại");
+            }
+            string update2 = "update TblCongKhoiDieuHanh set HoTen=N'" + textBoxHoTen.Text + "',MaLuong=N'" + comboBoxMaLuong.Text + "' where MaNV=N'" + textBoxMaNV.Text + "'";
+            cn.makeConnected(update2);
+            LoadDataGridView();
+            string update3 = "update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'" + comboBoxMaPhong.Text + "' group by TenPhong) where MaNV='" + textBoxMaNV.Text + "'";
+            cn.makeConnected(update3);
+            dataGridViewTTCoBan.Refresh();
+        }
+
+        private void buttonXoa_Click_1(object sender, EventArgs e)
+        {
+            string insTV = "insert into tblThoiViec(MaNV,HoTen,CMTND,LyDo) select MaNV,HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
+            cn.makeConnected(insTV);
+            LoadDataGridView();
+
+            string delete = "delete from TblTTNVCoBan where MaNV=N'" + textBoxMaNV.Text + "'";
+            if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                cn.makeConnected(delete);
+                LoadDataGridView();
+                MessageBox.Show("Đã xóa dữ liệu");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+              exprotExcel(dataGridViewTTCoBan, @"D:\", "ThongTinNhanSu");
             DialogResult dialog = MessageBox.Show("Xuất thành công. Bạn có muốn mở file Exel?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
                 System.Diagnostics.Process.Start(@"D:\");
@@ -433,6 +447,24 @@ namespace QuanLyNhanSu
         private void groupBoxTTCB_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonMoi_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctr in this.groupBoxTTCB.Controls)
+            {
+                if ((ctr is System.Windows.Forms.TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+        }
+
+        private void buttonThoat_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
         }
     }
 }

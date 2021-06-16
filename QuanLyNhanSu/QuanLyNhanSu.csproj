@@ -307,5 +307,137 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand-1076597_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russia-95311_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startup-593341_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand-1076597_19201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team-3639693_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\th1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startup-593341_19201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team-3639693_19201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-moving-flowing-abstract-waves-on-white-background-blurred-smooth-graphic-motion-design-video-animation-1920x1080_vhhueydte__F0000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman-1031755_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material-design-blue-and-white-to-2048x1152.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand-1076597_19202.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptops-593296_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contextthem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khachhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khachhang2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hopdong2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baocaohoadondichvu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baocaohoadondichvu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bhiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Other-Search-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10686-pregnant-woman-light-skin-tone-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diadiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhanvien2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folders-OS-User-No-Frame-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\698627-icon-111-search-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Other-Search-Metro-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timkiem2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoadon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usd_dollar_money_cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tourist industry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timhopdong.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

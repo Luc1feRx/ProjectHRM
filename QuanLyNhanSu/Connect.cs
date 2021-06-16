@@ -12,7 +12,7 @@ namespace QuanLyNhanSu
 {
     class Connect
     {
-        string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+        string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
         SqlCommand cmd;
         SqlDataReader reader;
         SqlDataAdapter sda;
@@ -94,7 +94,6 @@ namespace QuanLyNhanSu
             }
             Disconnected();
         }
-
         public void loadcomboboxText(ComboBox cb, string strselect)
         {
             Connected();

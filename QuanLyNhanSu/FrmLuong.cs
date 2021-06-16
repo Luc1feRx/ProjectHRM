@@ -33,7 +33,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             string query = "select * from TblBangLuongCTy";
@@ -57,27 +57,7 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string insert = "insert into TblBangLuongCTy values(N'" + txtMaLuong.Text + "',N'" + txtLCB.Text + "',N'" + txtPCCV.Text + "',N'" + dateTimePickerNgayNhap.Text + "',N'" + txtL.Text + "',N'" + dateTimePickerNgaySua.Text + "',N'" + txtLyDo.Text + "',N'" + txtPCCVMoi.Text + "',N'" + dateTimePickerNgayPCCVMoi.Text + "',N'" + txtGhiChu.Text + "')";
-                if (!cn.Exitsted(txtMaLuong.Text, "select MaLuong from TblBangLuongCTy"))
-                {
-                    if (txtMaLuong.Text != "")
-                    {
-                        cn.makeConnected(insert);
-                        dataGridViewLuong.Refresh();
-                        LoadDataGridView();
-                        MessageBox.Show("Thêm thành công");
-                    }
-                    else MessageBox.Show("Bạn chưa nhập Mã Lương");
-                }
-                else
-                    MessageBox.Show("Mã Lương này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu đầu vào không đúng");
-            }
+           
         }
 
         private void buttonSua_Click(object sender, EventArgs e)
@@ -117,6 +97,31 @@ namespace QuanLyNhanSu
         private void FrmLuong_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
+        }
+
+        private void buttonThem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string insert = "insert into TblBangLuongCTy values(N'" + txtMaLuong.Text + "',N'" + txtLCB.Text + "',N'" + txtPCCV.Text + "',N'" + dateTimePickerNgayNhap.Text + "',N'" + txtL.Text + "',N'" + dateTimePickerNgaySua.Text + "',N'" + txtLyDo.Text + "',N'" + txtPCCVMoi.Text + "',N'" + dateTimePickerNgayPCCVMoi.Text + "',N'" + txtGhiChu.Text + "')";
+                if (!cn.Exitsted(txtMaLuong.Text, "select MaLuong from TblBangLuongCTy"))
+                {
+                    if (txtMaLuong.Text != "")
+                    {
+                        cn.makeConnected(insert);
+                        dataGridViewLuong.Refresh();
+                        LoadDataGridView();
+                        MessageBox.Show("Thêm thành công");
+                    }
+                    else MessageBox.Show("Bạn chưa nhập Mã Lương");
+                }
+                else
+                    MessageBox.Show("Mã Lương này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
         }
     }
 }

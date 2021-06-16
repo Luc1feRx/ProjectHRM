@@ -79,13 +79,15 @@
             // 
             // buttonLogin
             // 
+            this.buttonLogin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonLogin.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.blue_moving_flowing_abstract_waves_on_white_background_blurred_smooth_graphic_motion_design_video_animation_1920x1080_vhhueydte__F0000;
             this.buttonLogin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.Location = new System.Drawing.Point(606, 354);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(288, 42);
             this.buttonLogin.TabIndex = 5;
             this.buttonLogin.Text = "Đăng nhập";
-            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // pictureBox1
@@ -101,13 +103,14 @@
             // 
             // buttonTroVe
             // 
+            this.buttonTroVe.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonTroVe.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTroVe.Location = new System.Drawing.Point(606, 424);
             this.buttonTroVe.Name = "buttonTroVe";
             this.buttonTroVe.Size = new System.Drawing.Size(288, 42);
             this.buttonTroVe.TabIndex = 8;
             this.buttonTroVe.Text = "Trở về";
-            this.buttonTroVe.UseVisualStyleBackColor = true;
+            this.buttonTroVe.UseVisualStyleBackColor = false;
             this.buttonTroVe.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // FrmDangNhap
