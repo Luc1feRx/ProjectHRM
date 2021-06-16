@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Data;
 
 namespace QuanLyNhanSu
 {
@@ -19,8 +18,6 @@ namespace QuanLyNhanSu
         public FrmQLTK()
         {
             InitializeComponent();
-            LoadComboBox();
-            LoadDataGridView();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -30,27 +27,12 @@ namespace QuanLyNhanSu
 
         private void buttonNhapLai_Click(object sender, EventArgs e)
         {
-            textBoxTen.Text = "";
-            textBoxTenThat.Text = "";
-            textBoxMatKhau.Text = "";
-            comboBoxQuyen.Text = "";
+           
         }
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            string input = textBoxTen.Text;
-            string query = "SELECT * FROM tbUsers";
-            if(cn.Exitsted(input, query))
-            {
-                MessageBox.Show("Tên tài khoản đã tồn tại, mời bạn nhập lại");
-                textBoxTen.Text = "";
-            }
-            else
-            {
-                string insert = "INSERT INTO tbUsers VALUES('" + textBoxTen.Text + "','" + textBoxMatKhau.Text + "', '" + comboBoxQuyen.Text + "', N'" + textBoxTenThat.Text + "')";
-                cn.makeConnected(insert);
-                LoadDataGridView();
-            }
+           
 
         }
 
@@ -63,26 +45,17 @@ namespace QuanLyNhanSu
 
         private void FrmQLTK_Load(object sender, EventArgs e)
         {
-            
+            LoadDataGridView();
+            cn.loadcombobox(comboBoxQuyen, "select TenQuyen from tblQuyen", 0);
         }
 
-        public void LoadComboBox()
-        {
-            string queryQuyen = "SELECT * FROM tbQuyen";
-            DataTable dt = new DataTable();
-            dt = cn.GetDataTable(queryQuyen);
-            //gan hien thi gia tri cho combobox
-            comboBoxQuyen.DataSource = new BindingSource(dt, null);
-            comboBoxQuyen.DisplayMember = dt.Columns[1].ToString();
-            comboBoxQuyen.ValueMember = dt.Columns[0].ToString();
-        }
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QuanLyNhanSuConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
-            string query = "SELECT * FROM tbUsers";
+            string query = "SELECT * FROM tbuser";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -98,26 +71,12 @@ namespace QuanLyNhanSu
 
         private void buttonTroVe_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmMain frmMain = new FrmMain();
-            frmMain.ShowDialog();
+           
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string query = "DELETE FROM tbUsers WhERE Username = '" + textBoxTen.Text + "'";
-                if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    cn.makeConnected(query);
-                    LoadDataGridView();
-                } 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+           
         }
 
         private void dataGridViewTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -134,9 +93,39 @@ namespace QuanLyNhanSu
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void buttonThem_Click_1(object sender, EventArgs e)
+        {
+            string input = textBoxTen.Text;
+            string query = "SELECT * FROM tbuser";
+            if (cn.Exitsted(input, query))
+            {
+                MessageBox.Show("Tên tài khoản đã tồn tại, mời bạn nhập lại");
+                textBoxTen.Text = "";
+            }
+            else
+            {
+                string insert = "INSERT INTO tbuser VALUES('" + textBoxTen.Text + "','" + textBoxMatKhau.Text + "', '" + comboBoxQuyen.Text + "', N'" + textBoxTenThat.Text + "')";
+                cn.makeConnected(insert);
+                LoadDataGridView();
+            }
+        }
+
+        private void buttonMoi_Click(object sender, EventArgs e)
+        {
+            textBoxTen.Text = "";
+            textBoxTenThat.Text = "";
+            textBoxMatKhau.Text = "";
+            comboBoxQuyen.Text = "";
+        }
+
+        private void buttonSua_Click_1(object sender, EventArgs e)
+        {
             try
             {
-                string query = "UPDATE tbUsers SET Username = '" + textBoxTen.Text + "', Pass = '" + textBoxMatKhau.Text + "', Quyen = '" + comboBoxQuyen.Text + "', Ten = '" + textBoxTenThat.Text +"' WHERE Username = '" + textBoxTen.Text + "'";
+                string query = "UPDATE tbuser SET Username = '" + textBoxTen.Text + "', Pass = '" + textBoxMatKhau.Text + "', Quyen = '" + comboBoxQuyen.Text + "', Ten = '" + textBoxTenThat.Text + "' WHERE Username = '" + textBoxTen.Text + "'";
                 cn.makeConnected(query);
                 LoadDataGridView();
             }
@@ -144,6 +133,30 @@ namespace QuanLyNhanSu
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void buttonXoa_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "DELETE FROM tbuser WhERE Username = '" + textBoxTen.Text + "'";
+                if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    cn.makeConnected(query);
+                    LoadDataGridView();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void buttonThoat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
         }
     }
 }

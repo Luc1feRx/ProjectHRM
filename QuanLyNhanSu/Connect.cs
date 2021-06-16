@@ -12,25 +12,26 @@ namespace QuanLyNhanSu
 {
     class Connect
     {
-        string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QuanLyNhanSuConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+        string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
         SqlCommand cmd;
         SqlDataReader reader;
         SqlDataAdapter sda;
+        SqlConnection con;
 
         public void Connected()//de ket noi database
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             con.Open();
         }
         public void Disconnected()//ngat database
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             con.Close();
         }
 
         public void makeConnected(string queryC)//thuc thi ket noi
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             con.Open();
             cmd = new SqlCommand(queryC, con);
             cmd.ExecuteNonQuery();
@@ -39,7 +40,7 @@ namespace QuanLyNhanSu
 
         public bool Exitsted(string input, string query) //kiem tra trung lap hay khong
         {
-            SqlConnection con = new SqlConnection(connections);
+            con = new SqlConnection(connections);
             con.Open();
             cmd = new SqlCommand(query, con);
             reader = cmd.ExecuteReader();
@@ -56,30 +57,76 @@ namespace QuanLyNhanSu
             return check;
         }
 
-        public DataTable GetDataTable(string queryGet)
-        {
-            SqlConnection con = new SqlConnection(connections);
-            DataTable dt = new DataTable();
-            cmd = new SqlCommand(queryGet, con);
-            try
-            {
-                con.Open();
-                reader = cmd.ExecuteReader();
-                dt.Load(reader, LoadOption.OverwriteChanges);
-                if(dt.Rows.Count == 0)
-                {
-                    return null;
-                }
-            }
-            catch
-            {
+        //public DataTable GetDataTable(string queryGet)
+        //{
+        //    con = new SqlConnection(connections);
+        //    DataTable dt = new DataTable();
+        //    cmd = new SqlCommand(queryGet, con);
+        //    try
+        //    {
+        //        con.Open();
+        //        reader = cmd.ExecuteReader();
+        //        dt.Load(reader, LoadOption.OverwriteChanges);
+        //        if(dt.Rows.Count == 0)
+        //        {
+        //            return null;
+        //        }
+        //    }
+        //    catch
+        //    {
 
-            }
-            finally
+        //    }
+        //    finally
+        //    {
+        //        Disconnected();
+        //    }
+        //    return dt;
+        //}
+
+        public void loadcombobox(ComboBox cb, string strselect, int cot)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
-                Disconnected();
+                cb.Items.Add(reader[cot].ToString());
             }
-            return dt;
+            Disconnected();
+        }
+        public void loadcomboboxText(ComboBox cb, string strselect)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cb.Text = reader[0].ToString();
+            }
+            Disconnected();
+        }
+
+        public void loadtextbox(TextBox cb, string strselect, int cot)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cb.Text = reader[cot].ToString();
+            }
+            Disconnected();
+        }
+        public void loaddatetime(DateTimePicker dt, string strselect, int cot)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                dt.Text = reader[cot].ToString();
+            }
+            Disconnected();
         }
     }
 }

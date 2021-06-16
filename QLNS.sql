@@ -1,4 +1,4 @@
-﻿use QuanLyNhanSu
+﻿CREATE DATABASE QuanLyNhanSu
 
 GO
 
@@ -62,6 +62,7 @@ CREATE TABLE tbTTCaNhan(
 	HocVan nvarchar(30),
 	GhiChu nvarchar(MAX)
 )
+
 
 CREATE TABLE tbBoPhan(
 	MaBoPhan char(10) PRIMARY KEY NOT NULL,
