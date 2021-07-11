@@ -71,6 +71,7 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             int soNgayNghi = Convert.ToInt32(txtNgayNghi.Text);
             int soNgayCong = Convert.ToInt32(txtNgayCong.Text);
             if (soNgayNghi > 26)
@@ -99,12 +100,30 @@ namespace QuanLyNhanSu
                 else
                     MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+=======
+            string insert = "insert into TblBangCongThuViec values(N'" + txtTenBP.Text + "',N'" + txtTenPhong.Text + "',N'" + cbMaNV.Text + "',N'" + txtThang.Text + "',N'" + txtNam.Text + "',N'" + textBoxLuong.Text + "',N'" + txtGioLamThem.Text + "',N'" + txtNgayCong.Text + "',N'" + txtNgayNghi.Text + "',N'" + textBoxLuong.Text + "',N'" + txtGhiChu.Text + "')";
+            if (!cn.Exitsted(cbMaNV.Text, "select MaNVTV from TblBangCongThuViec"))
+            {
+                if (cbMaNV.Text != "")
+                {
+                    cn.makeConnected(insert);
+                    dataGridViewLTV.Refresh();
+                    LoadDataGridView();
+                    MessageBox.Show("Thêm thành công");
+
+                }
+                else MessageBox.Show("Bạn chưa nhập Mã nhân viên");
+            }
+            else
+                MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
             try
             {
+<<<<<<< HEAD
                 int soNgayNghi = Convert.ToInt32(txtNgayNghi.Text);
                 int soNgayCong = Convert.ToInt32(txtNgayCong.Text);
                 if (soNgayNghi > 26)
@@ -122,6 +141,12 @@ namespace QuanLyNhanSu
                     LoadDataGridView();
                     MessageBox.Show("Sửa thành công");
                 }
+=======
+                string update = "update TblBangCongThuViec set TenBoPhan=N'" + txtTenBP.Text + "',TenPhong=N'" + txtTenPhong.Text + "',LuongTViec=N'" + txtLTV.Text + "',Thang=N'" + txtThang.Text + "',Nam='" + txtNam.Text + "',SoNgayCong=N'" + txtNgayCong.Text + "',SoNgayNghi=N'" + txtNgayNghi.Text + "',SoGioLamThem=N'" + txtGioLamThem.Text + "',Luong=N'" + textBoxLuong.Text + "',GhiChu='" + txtGhiChu.Text + "' where MaNVTV=N'" + cbMaNV.Text + "'";
+                cn.makeConnected(update);
+                LoadDataGridView();
+                MessageBox.Show("Sửa thành công");
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             }
             catch
             {
@@ -149,7 +174,15 @@ namespace QuanLyNhanSu
 
         private void buttonTinhLuong_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            int l = Convert.ToInt32(txtLTV.Text);
+            int nc = Convert.ToInt32(txtNgayCong.Text);
+            int lt = Convert.ToInt32(txtGioLamThem.Text);
+            float luong = ((l / 26) * nc + (lt * 40000));
+            textBoxLuong.Text = luong.ToString();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
@@ -266,6 +299,7 @@ namespace QuanLyNhanSu
             cn.loadtextbox(textBoxLuong, "select * from TblBangCongThuViec where MaNVTV='" + cbMaNV.Text + "'", 9);
             cn.loadtextbox(txtGhiChu, "select * from TblBangCongThuViec where MaNVTV='" + cbMaNV.Text + "'", 10);
         }
+<<<<<<< HEAD
 
         private void buttonTinhLuong_Click_1(object sender, EventArgs e)
         {
@@ -275,5 +309,7 @@ namespace QuanLyNhanSu
             float luong = ((l / 26) * nc + (lt * 40000));
             textBoxLuong.Text = luong.ToString();
         }
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

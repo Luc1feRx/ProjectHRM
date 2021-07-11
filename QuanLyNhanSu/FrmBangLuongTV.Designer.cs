@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.Windows.Forms.Button buttonTinhLuong;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBangLuongTV));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBangLuongTV));
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonTinhLuong = new System.Windows.Forms.Button();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.buttonThem = new System.Windows.Forms.Button();
             this.buttonMoi = new System.Windows.Forms.Button();
             this.buttonThoat = new System.Windows.Forms.Button();
@@ -61,13 +67,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewLTV = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             buttonTinhLuong = new System.Windows.Forms.Button();
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLTV)).BeginInit();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // buttonTinhLuong
             // 
             buttonTinhLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonTinhLuong.BackgroundImage")));
@@ -92,6 +102,11 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(buttonTinhLuong);
+=======
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonTinhLuong);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox2.Controls.Add(this.buttonThem);
             this.groupBox2.Controls.Add(this.buttonMoi);
             this.groupBox2.Controls.Add(this.buttonThoat);
@@ -106,6 +121,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các chức năng";
             // 
+<<<<<<< HEAD
+=======
+            // buttonTinhLuong
+            // 
+            this.buttonTinhLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonTinhLuong.BackgroundImage")));
+            this.buttonTinhLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTinhLuong.FlatAppearance.BorderSize = 0;
+            this.buttonTinhLuong.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonTinhLuong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonTinhLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTinhLuong.Location = new System.Drawing.Point(702, 23);
+            this.buttonTinhLuong.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonTinhLuong.Name = "buttonTinhLuong";
+            this.buttonTinhLuong.Size = new System.Drawing.Size(122, 41);
+            this.buttonTinhLuong.TabIndex = 7;
+            this.buttonTinhLuong.Text = "Tính lương";
+            this.buttonTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonTinhLuong.UseVisualStyleBackColor = true;
+            this.buttonTinhLuong.Click += new System.EventHandler(this.buttonTinhLuong_Click);
+            // 
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // buttonThem
             // 
             this.buttonThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThem.BackgroundImage")));
@@ -203,7 +240,10 @@
             // 
             // groupBox1
             // 
+<<<<<<< HEAD
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.textBoxLuong);
             this.groupBox1.Controls.Add(this.cbMaNV);
@@ -258,7 +298,11 @@
             // 
             this.cbMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaNV.FormattingEnabled = true;
+<<<<<<< HEAD
             this.cbMaNV.Location = new System.Drawing.Point(127, 33);
+=======
+            this.cbMaNV.Location = new System.Drawing.Point(132, 105);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.cbMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaNV.Name = "cbMaNV";
             this.cbMaNV.Size = new System.Drawing.Size(143, 24);
@@ -312,7 +356,11 @@
             // 
             // txtTenPhong
             // 
+<<<<<<< HEAD
             this.txtTenPhong.Location = new System.Drawing.Point(127, 110);
+=======
+            this.txtTenPhong.Location = new System.Drawing.Point(132, 70);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.txtTenPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.ReadOnly = true;
@@ -339,7 +387,11 @@
             // 
             // txtTenBP
             // 
+<<<<<<< HEAD
             this.txtTenBP.Location = new System.Drawing.Point(127, 73);
+=======
+            this.txtTenBP.Location = new System.Drawing.Point(132, 33);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.txtTenBP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenBP.Name = "txtTenBP";
             this.txtTenBP.ReadOnly = true;
@@ -383,7 +435,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(16, 41);
+=======
+            this.label3.Location = new System.Drawing.Point(21, 113);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 17);
@@ -416,7 +472,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(27, 115);
+=======
+            this.label2.Location = new System.Drawing.Point(32, 75);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 17);
@@ -449,7 +509,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(16, 76);
+=======
+            this.label1.Location = new System.Drawing.Point(21, 36);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 17);
@@ -458,7 +522,10 @@
             // 
             // groupBox3
             // 
+<<<<<<< HEAD
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox3.Controls.Add(this.dataGridViewLTV);
             this.groupBox3.Location = new System.Drawing.Point(13, 264);
             this.groupBox3.Name = "groupBox3";
@@ -482,14 +549,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.blue_moving_flowing_abstract_waves_on_white_background_blurred_smooth_graphic_motion_design_video_animation_1920x1080_vhhueydte__F0000;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.ClientSize = new System.Drawing.Size(992, 462);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBangLuongTV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+            this.Name = "FrmBangLuongTV";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.Text = "FrmBangLuongTV";
             this.Load += new System.EventHandler(this.FrmBangLuongTV_Load);
             this.groupBox2.ResumeLayout(false);
@@ -503,8 +577,15 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox2;
+<<<<<<< HEAD
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Button buttonMoi;
+=======
+        private System.Windows.Forms.Button buttonTinhLuong;
+        private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.Button buttonMoi;
+        private System.Windows.Forms.Button buttonThoat;
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -532,6 +613,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridViewLTV;
+<<<<<<< HEAD
         private System.Windows.Forms.Button buttonThoat;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

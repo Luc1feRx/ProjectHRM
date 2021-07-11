@@ -32,7 +32,23 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            string input = textBoxTen.Text;
+            string query = "SELECT * FROM tbuser";
+            if(cn.Exitsted(input, query))
+            {
+                MessageBox.Show("Tên tài khoản đã tồn tại, mời bạn nhập lại");
+                textBoxTen.Text = "";
+            }
+            else
+            {
+                string insert = "INSERT INTO tbuser VALUES('" + textBoxTen.Text + "','" + textBoxMatKhau.Text + "', '" + comboBoxQuyen.Text + "', N'" + textBoxTenThat.Text + "')";
+                cn.makeConnected(insert);
+                LoadDataGridView();
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
 
         }
 
@@ -76,7 +92,23 @@ namespace QuanLyNhanSu
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            try
+            {
+                string query = "DELETE FROM tbuser WhERE Username = '" + textBoxTen.Text + "'";
+                if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    cn.makeConnected(query);
+                    LoadDataGridView();
+                } 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void dataGridViewTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -125,7 +157,11 @@ namespace QuanLyNhanSu
         {
             try
             {
+<<<<<<< HEAD
                 string query = "UPDATE tbuser SET Username = '" + textBoxTen.Text + "', Pass = '" + textBoxMatKhau.Text + "', Quyen = '" + comboBoxQuyen.Text + "', Ten = '" + textBoxTenThat.Text + "' WHERE Username = '" + textBoxTen.Text + "'";
+=======
+                string query = "UPDATE tbuser SET Username = '" + textBoxTen.Text + "', Pass = '" + textBoxMatKhau.Text + "', Quyen = '" + comboBoxQuyen.Text + "', Ten = '" + textBoxTenThat.Text +"' WHERE Username = '" + textBoxTen.Text + "'";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
                 cn.makeConnected(query);
                 LoadDataGridView();
             }

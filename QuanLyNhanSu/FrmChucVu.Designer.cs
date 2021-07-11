@@ -29,35 +29,62 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
             System.Windows.Forms.Label maChucVuLabel;
             System.Windows.Forms.Label chucVuLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChucVu));
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmChucVu));
+            System.Windows.Forms.Label maChucVuLabel;
+            System.Windows.Forms.Label chucVuLabel;
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.qLNSDataSet = new QuanLyNhanSu.QLNSDataSet();
             this.tblChucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblChucVuTableAdapter = new QuanLyNhanSu.QLNSDataSetTableAdapters.tblChucVuTableAdapter();
             this.tableAdapterManager = new QuanLyNhanSu.QLNSDataSetTableAdapters.TableAdapterManager();
             this.tblChucVuBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+<<<<<<< HEAD
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+<<<<<<< HEAD
+=======
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+<<<<<<< HEAD
             this.tblChucVuBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
+=======
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.tblChucVuBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.maChucVuTextBox = new System.Windows.Forms.TextBox();
             this.chucVuTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewChucVu = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+=======
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonThoat = new System.Windows.Forms.Button();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             maChucVuLabel = new System.Windows.Forms.Label();
             chucVuLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.qLNSDataSet)).BeginInit();
@@ -69,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChucVu)).BeginInit();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // maChucVuLabel
             // 
             maChucVuLabel.AutoSize = true;
@@ -89,6 +117,8 @@
             chucVuLabel.TabIndex = 7;
             chucVuLabel.Text = "Chức vụ:";
             // 
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // qLNSDataSet
             // 
             this.qLNSDataSet.DataSetName = "QLNSDataSet";
@@ -155,6 +185,7 @@
             this.tblChucVuBindingNavigator.TabIndex = 0;
             this.tblChucVuBindingNavigator.Text = "bindingNavigator1";
             // 
+<<<<<<< HEAD
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -180,6 +211,8 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -213,9 +246,22 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+<<<<<<< HEAD
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+=======
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -238,9 +284,33 @@
             // 
             // bindingNavigatorSeparator2
             // 
+<<<<<<< HEAD
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+=======
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // tblChucVuBindingNavigatorSaveItem
             // 
             this.tblChucVuBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -252,7 +322,10 @@
             // 
             // groupBox1
             // 
+<<<<<<< HEAD
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox1.Controls.Add(this.buttonThoat);
             this.groupBox1.Controls.Add(this.buttonXoa);
             this.groupBox1.Controls.Add(this.buttonSua);
@@ -268,6 +341,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức vụ";
             // 
+<<<<<<< HEAD
             // buttonThoat
             // 
             this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
@@ -343,6 +417,17 @@
             this.buttonThem.Text = "Thêm ";
             this.buttonThem.UseVisualStyleBackColor = true;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click_1);
+=======
+            // maChucVuLabel
+            // 
+            maChucVuLabel.AutoSize = true;
+            maChucVuLabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            maChucVuLabel.Location = new System.Drawing.Point(61, 49);
+            maChucVuLabel.Name = "maChucVuLabel";
+            maChucVuLabel.Size = new System.Drawing.Size(103, 21);
+            maChucVuLabel.TabIndex = 5;
+            maChucVuLabel.Text = "Mã chức vụ:";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // 
             // maChucVuTextBox
             // 
@@ -352,6 +437,19 @@
             this.maChucVuTextBox.Size = new System.Drawing.Size(168, 22);
             this.maChucVuTextBox.TabIndex = 6;
             // 
+<<<<<<< HEAD
+=======
+            // chucVuLabel
+            // 
+            chucVuLabel.AutoSize = true;
+            chucVuLabel.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chucVuLabel.Location = new System.Drawing.Point(78, 78);
+            chucVuLabel.Name = "chucVuLabel";
+            chucVuLabel.Size = new System.Drawing.Size(78, 21);
+            chucVuLabel.TabIndex = 7;
+            chucVuLabel.Text = "Chức vụ:";
+            // 
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // chucVuTextBox
             // 
             this.chucVuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblChucVuBindingSource, "ChucVu", true));
@@ -362,11 +460,18 @@
             // 
             // groupBox2
             // 
+<<<<<<< HEAD
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.dataGridViewChucVu);
             this.groupBox2.Location = new System.Drawing.Point(12, 278);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(403, 209);
+=======
+            this.groupBox2.Controls.Add(this.dataGridViewChucVu);
+            this.groupBox2.Location = new System.Drawing.Point(12, 278);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(403, 248);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -377,14 +482,62 @@
             this.dataGridViewChucVu.Name = "dataGridViewChucVu";
             this.dataGridViewChucVu.RowHeadersWidth = 51;
             this.dataGridViewChucVu.RowTemplate.Height = 24;
+<<<<<<< HEAD
             this.dataGridViewChucVu.Size = new System.Drawing.Size(391, 169);
             this.dataGridViewChucVu.TabIndex = 0;
             this.dataGridViewChucVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChucVu_CellClick);
             // 
+=======
+            this.dataGridViewChucVu.Size = new System.Drawing.Size(391, 221);
+            this.dataGridViewChucVu.TabIndex = 0;
+            this.dataGridViewChucVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChucVu_CellClick);
+            // 
+            // buttonThem
+            // 
+            this.buttonThem.Location = new System.Drawing.Point(24, 131);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(93, 40);
+            this.buttonThem.TabIndex = 9;
+            this.buttonThem.Text = "Thêm";
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            // 
+            // buttonSua
+            // 
+            this.buttonSua.Location = new System.Drawing.Point(155, 131);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(93, 40);
+            this.buttonSua.TabIndex = 10;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.UseVisualStyleBackColor = true;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.Location = new System.Drawing.Point(293, 131);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(93, 40);
+            this.buttonXoa.TabIndex = 11;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            // 
+            // buttonThoat
+            // 
+            this.buttonThoat.Location = new System.Drawing.Point(142, 196);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(116, 40);
+            this.buttonThoat.TabIndex = 12;
+            this.buttonThoat.Text = "Thoát";
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
+            // 
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // FrmChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.blue_moving_flowing_abstract_waves_on_white_background_blurred_smooth_graphic_motion_design_video_animation_1920x1080_vhhueydte__F0000;
             this.ClientSize = new System.Drawing.Size(427, 498);
             this.Controls.Add(this.groupBox2);
@@ -393,6 +546,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmChucVu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+            this.ClientSize = new System.Drawing.Size(427, 536);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.tblChucVuBindingNavigator);
+            this.Name = "FrmChucVu";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.Text = "FrmChucVu";
             this.Load += new System.EventHandler(this.FrmChucVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qLNSDataSet)).EndInit();
@@ -429,13 +589,23 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton tblChucVuBindingNavigatorSaveItem;
         private System.Windows.Forms.GroupBox groupBox1;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Button buttonThoat;
+        private System.Windows.Forms.Button buttonXoa;
+        private System.Windows.Forms.Button buttonSua;
+        private System.Windows.Forms.Button buttonThem;
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         private System.Windows.Forms.TextBox maChucVuTextBox;
         private System.Windows.Forms.TextBox chucVuTextBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridViewChucVu;
+<<<<<<< HEAD
         private System.Windows.Forms.Button buttonThem;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonThoat;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

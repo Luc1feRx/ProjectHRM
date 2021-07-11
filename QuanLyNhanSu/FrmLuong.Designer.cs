@@ -30,10 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLuong));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.buttonThem = new System.Windows.Forms.Button();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
+=======
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.buttonMoi = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewLuong = new System.Windows.Forms.DataGridView();
@@ -43,7 +50,11 @@
             this.dateTimePickerNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtLCB = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
             this.txtM = new System.Windows.Forms.TextBox();
+=======
+            this.txtL = new System.Windows.Forms.TextBox();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.txtPCCVMoi = new System.Windows.Forms.TextBox();
             this.txtLyDo = new System.Windows.Forms.TextBox();
             this.txtPCCV = new System.Windows.Forms.TextBox();
@@ -66,11 +77,18 @@
             // 
             // groupBox2
             // 
+<<<<<<< HEAD
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.buttonThem);
             this.groupBox2.Controls.Add(this.buttonThoat);
             this.groupBox2.Controls.Add(this.buttonXoa);
             this.groupBox2.Controls.Add(this.buttonSua);
+=======
+            this.groupBox2.Controls.Add(this.buttonThoat);
+            this.groupBox2.Controls.Add(this.buttonXoa);
+            this.groupBox2.Controls.Add(this.buttonSua);
+            this.groupBox2.Controls.Add(this.buttonThem);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox2.Controls.Add(this.buttonMoi);
             this.groupBox2.Location = new System.Drawing.Point(20, 181);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -81,6 +99,7 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các chức năng";
             // 
+<<<<<<< HEAD
             // buttonThem
             // 
             this.buttonThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThem.BackgroundImage")));
@@ -100,6 +119,8 @@
             this.buttonThem.UseVisualStyleBackColor = true;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click_1);
             // 
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // buttonThoat
             // 
             this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
@@ -160,6 +181,28 @@
             this.buttonSua.UseVisualStyleBackColor = true;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
+<<<<<<< HEAD
+=======
+            // buttonThem
+            // 
+            this.buttonThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThem.BackgroundImage")));
+            this.buttonThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThem.FlatAppearance.BorderSize = 0;
+            this.buttonThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(288, 25);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(105, 32);
+            this.buttonThem.TabIndex = 7;
+            this.buttonThem.Text = "Thêm ";
+            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            // 
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // buttonMoi
             // 
             this.buttonMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoi.BackgroundImage")));
@@ -182,7 +225,10 @@
             // 
             // groupBox3
             // 
+<<<<<<< HEAD
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox3.Controls.Add(this.dataGridViewLuong);
             this.groupBox3.Location = new System.Drawing.Point(12, 254);
             this.groupBox3.Name = "groupBox3";
@@ -199,17 +245,27 @@
             this.dataGridViewLuong.RowHeadersWidth = 51;
             this.dataGridViewLuong.Size = new System.Drawing.Size(945, 172);
             this.dataGridViewLuong.TabIndex = 1;
+<<<<<<< HEAD
             this.dataGridViewLuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLuong_CellClick);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+=======
+            // 
+            // groupBox1
+            // 
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox1.Controls.Add(this.dateTimePickerNgayPCCVMoi);
             this.groupBox1.Controls.Add(this.dateTimePickerNgaySua);
             this.groupBox1.Controls.Add(this.dateTimePickerNgayNhap);
             this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(this.txtLCB);
+<<<<<<< HEAD
             this.groupBox1.Controls.Add(this.txtM);
+=======
+            this.groupBox1.Controls.Add(this.txtL);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox1.Controls.Add(this.txtPCCVMoi);
             this.groupBox1.Controls.Add(this.txtLyDo);
             this.groupBox1.Controls.Add(this.txtPCCV);
@@ -276,6 +332,7 @@
             this.txtLCB.Size = new System.Drawing.Size(127, 22);
             this.txtLCB.TabIndex = 2;
             // 
+<<<<<<< HEAD
             // txtM
             // 
             this.txtM.Location = new System.Drawing.Point(343, 76);
@@ -283,6 +340,15 @@
             this.txtM.Name = "txtM";
             this.txtM.Size = new System.Drawing.Size(132, 22);
             this.txtM.TabIndex = 6;
+=======
+            // txtL
+            // 
+            this.txtL.Location = new System.Drawing.Point(343, 76);
+            this.txtL.Margin = new System.Windows.Forms.Padding(4);
+            this.txtL.Name = "txtL";
+            this.txtL.Size = new System.Drawing.Size(132, 22);
+            this.txtL.TabIndex = 6;
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // 
             // txtPCCVMoi
             // 
@@ -420,14 +486,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.blue_moving_flowing_abstract_waves_on_white_background_blurred_smooth_graphic_motion_design_video_animation_1920x1080_vhhueydte__F0000;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.ClientSize = new System.Drawing.Size(987, 482);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLuong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+            this.Name = "FrmLuong";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.Text = "FrmLuong";
             this.Load += new System.EventHandler(this.FrmLuong_Load);
             this.groupBox2.ResumeLayout(false);
@@ -441,6 +514,10 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox2;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Button buttonThem;
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         private System.Windows.Forms.Button buttonMoi;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonXoa;
@@ -453,7 +530,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayNhap;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.TextBox txtLCB;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox txtM;
+=======
+        private System.Windows.Forms.TextBox txtL;
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         private System.Windows.Forms.TextBox txtPCCVMoi;
         private System.Windows.Forms.TextBox txtLyDo;
         private System.Windows.Forms.TextBox txtPCCV;
@@ -468,6 +549,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
         private System.Windows.Forms.Button buttonThem;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

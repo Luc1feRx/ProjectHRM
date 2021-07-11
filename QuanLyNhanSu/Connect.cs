@@ -94,6 +94,10 @@ namespace QuanLyNhanSu
             }
             Disconnected();
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         public void loadcomboboxText(ComboBox cb, string strselect)
         {
             Connected();
@@ -114,6 +118,7 @@ namespace QuanLyNhanSu
             while (reader.Read())
             {
                 cb.Text = reader[cot].ToString();
+<<<<<<< HEAD
             }
             Disconnected();
         }
@@ -130,13 +135,23 @@ namespace QuanLyNhanSu
         }
 
         public void loadtextboxText(TextBox tb, string strselect)
+=======
+            }
+            Disconnected();
+        }
+        public void loaddatetime(DateTimePicker dt, string strselect, int cot)
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         {
             Connected();
             cmd = new SqlCommand(strselect, con);
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
+<<<<<<< HEAD
                 tb.Text = reader[0].ToString();
+=======
+                dt.Text = reader[cot].ToString();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             }
             Disconnected();
         }

@@ -57,14 +57,42 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            try
+            {
+                string insert = "insert into TblBangLuongCTy values(N'" + txtMaLuong.Text + "',N'" + txtLCB.Text + "',N'" + txtPCCV.Text + "',N'" + dateTimePickerNgayNhap.Text + "',N'" + txtL.Text + "',N'" + dateTimePickerNgaySua.Text + "',N'" + txtLyDo.Text + "',N'" + txtPCCVMoi.Text + "',N'" + dateTimePickerNgayPCCVMoi.Text + "',N'" + txtGhiChu.Text + "')";
+                if (!cn.Exitsted(txtMaLuong.Text, "select MaLuong from TblBangLuongCTy"))
+                {
+                    if (txtMaLuong.Text != "")
+                    {
+                        cn.makeConnected(insert);
+                        dataGridViewLuong.Refresh();
+                        LoadDataGridView();
+                        MessageBox.Show("Thêm thành công");
+                    }
+                    else MessageBox.Show("Bạn chưa nhập Mã Lương");
+                }
+                else
+                    MessageBox.Show("Mã Lương này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
             try
             {
+<<<<<<< HEAD
                 string update = "update TblBangLuongCTy set LCB=N'" + txtLCB.Text + "',PCChucVu=N'" + txtPCCV.Text + "',NgayNhap='" + dateTimePickerNgayNhap.Text + "',LCBMoi=N'" + txtM.Text + "',NgaySua=N'" + dateTimePickerNgaySua.Text + "',LyDo=N'" + txtLyDo.Text + "',PCCVuMoi='" + txtPCCVMoi.Text + "',NgaySuaPC=N'" + dateTimePickerNgayPCCVMoi.Text + "',GhiChu=N'" + txtGhiChu.Text + "' where MaLuong=N'" + txtMaLuong.Text + "'";
+=======
+                string update = "update TblBangLuongCTy set LCB=N'" + txtLCB.Text + "',PCChucVu=N'" + txtPCCV.Text + "',NgayNhap='" + dateTimePickerNgayNhap.Text + "',LCBMoi=N'" + txtL.Text + "',NgaySua=N'" + dateTimePickerNgaySua.Text + "',LyDo=N'" + txtLyDo.Text + "',PCCVuMoi='" + txtPCCVMoi.Text + "',NgaySuaPC=N'" + dateTimePickerNgayPCCVMoi.Text + "',GhiChu=N'" + txtGhiChu.Text + "' where MaLuong=N'" + txtMaLuong.Text + "'";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
                 cn.makeConnected(update);
                 LoadDataGridView();
                 MessageBox.Show("Sửa thành công");
@@ -98,6 +126,7 @@ namespace QuanLyNhanSu
         {
             LoadDataGridView();
         }
+<<<<<<< HEAD
 
         private void buttonThem_Click_1(object sender, EventArgs e)
         {
@@ -145,5 +174,7 @@ namespace QuanLyNhanSu
                 MessageBox.Show(ex.ToString());
             }
         }
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

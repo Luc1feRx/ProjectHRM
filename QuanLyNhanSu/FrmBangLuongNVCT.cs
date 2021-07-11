@@ -17,12 +17,16 @@ namespace QuanLyNhanSu
     public partial class FrmBangLuongNVCT : Form
     {
         Connect cn = new Connect();
+<<<<<<< HEAD
         string username, password;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         public FrmBangLuongNVCT()
         {
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         public FrmBangLuongNVCT(string user, string pass)
         {
             InitializeComponent();
@@ -30,6 +34,8 @@ namespace QuanLyNhanSu
             password = pass;
         }
 
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         private void label17_Click(object sender, EventArgs e)
         {
 
@@ -67,10 +73,17 @@ namespace QuanLyNhanSu
             dataGridViewLuongNVCT.Columns[7].HeaderText = "Thưởng";
             dataGridViewLuongNVCT.Columns[8].HeaderText = "Kỷ luật";
             dataGridViewLuongNVCT.Columns[9].HeaderText = "Tháng";
+<<<<<<< HEAD
             dataGridViewLuongNVCT.Columns[10].HeaderText = "Năm";
             dataGridViewLuongNVCT.Columns[11].HeaderText = "Số ngày công";
             dataGridViewLuongNVCT.Columns[12].HeaderText = "Số ngày nghỉ";
             dataGridViewLuongNVCT.Columns[13].HeaderText = "Số giờ làm thêm";
+=======
+            dataGridViewLuongNVCT.Columns[10].HeaderText = "Số ngày nghỉ";
+            dataGridViewLuongNVCT.Columns[11].HeaderText = "Số giờ làm thêm";
+            dataGridViewLuongNVCT.Columns[12].HeaderText = "Năm";
+            dataGridViewLuongNVCT.Columns[13].HeaderText = "Số ngày công";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             dataGridViewLuongNVCT.Columns[14].HeaderText = "Lương";
             dataGridViewLuongNVCT.Columns[15].HeaderText = "Ghi chú";
         }
@@ -79,6 +92,7 @@ namespace QuanLyNhanSu
         {
             try
             {
+<<<<<<< HEAD
                 int soNgayNghi = Convert.ToInt32(txtSoNgayNghi.Text);
                 int soNgayCong = Convert.ToInt32(txtNgayCong.Text);
                 if (soNgayNghi > 26)
@@ -100,6 +114,16 @@ namespace QuanLyNhanSu
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+=======
+                string update = "update TblCongKhoiDieuHanh set MaNV='" + cbMaNV.Text + "', MaLuong=N'" + txtMaLuong.Text + "',TenPhong=N'" + comboBoxTenPhong.Text + "', HoTen=N'" + txtHoTen.Text + "',LCB=N'" + txtLCB.Text + "',PCChucVu=N'" + txtPC.Text + "',PCapKhac=N'" + txtPCK.Text + "',Thuong=N'" + textBoxThuong.Text + "',KyLuat='" + textBoxThuong.Text + "',Thang=N'" + txtThang.Text + "',Nam='" + txtNam.Text + "',SoNgayCongThang=N'" + txtNgayCong.Text + "',SoNgayNghi=N'" + txtSoNgayNghi.Text + "',SoGioLamThem=N'" + txtLamThem.Text + "',Luong=N'" + txtLuong.Text + "',GhiChu='" + txtGhiChu.Text + "' where MaNV=N'" + cbMaNV.Text + "'";
+                cn.makeConnected(update);
+                LoadDataGridView();
+                MessageBox.Show("Sửa thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             }
         }
 
@@ -221,7 +245,11 @@ namespace QuanLyNhanSu
         private void buttonThoat_Click(object sender, EventArgs e)
         {
             this.Hide();
+<<<<<<< HEAD
             FrmMain frmMain = new FrmMain(username, password);
+=======
+            FrmMain frmMain = new FrmMain();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             frmMain.ShowDialog();
         }
 
@@ -313,6 +341,7 @@ namespace QuanLyNhanSu
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+<<<<<<< HEAD
 
         private void txtThang_TextChanged(object sender, EventArgs e)
         {
@@ -328,5 +357,7 @@ namespace QuanLyNhanSu
         {
             
         }
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

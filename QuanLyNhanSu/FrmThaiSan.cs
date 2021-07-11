@@ -32,7 +32,17 @@ namespace QuanLyNhanSu
 
         private void button7_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            foreach (Control ctr in this.groupBox4.Controls)
+            {
+                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         public void LoadDataGridView()
@@ -61,22 +71,75 @@ namespace QuanLyNhanSu
 
         private void button9_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            try
+            {
+            string insert = "insert into TblThaiSan values(N'" + txt5.Text + "',N'" + txt6.Text + "',N'" + comboBox2.Text + "',N'" + txt7.Text + "',N'" + dt2.Text + "',N'" + dt3.Text + "',N'" + dt4.Text + "',N'" + dt5.Text + "',N'" + txt8.Text + "',N'" + txt9.Text + "')";
+            if (!cn.Exitsted(comboBox2.Text, "select MaNV from TblThaiSan"))
+            {
+                if (comboBox2.Text != "")
+                {
+                    cn.makeConnected(insert);
+                    dataGridView2.Refresh();
+                    LoadDataGridView();
+                    MessageBox.Show("Thêm thành công");
+                }
+                else MessageBox.Show("Bạn chưa nhập Mã  nhân vien");
+            }
+            else
+                MessageBox.Show("Mã nhân viên này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            try
+            {
+                string update = "update TblThaiSan set NgayVeSom=N'" + dt3.Text + "',NgayNghiSinh=N'" + dt4.Text + "',NgayLamTroLai='" + dt5.Text + "',TroCapCTy=N'" + txt8.Text + "',GhiChu=N'" + txt9.Text + "' where MaNV=N'" + comboBox2.Text + "'";
+                cn.makeConnected(update);
+                LoadDataGridView();
+                MessageBox.Show("Sửa thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            string delete = "delete from TblThaiSan where MaNV=N'" + comboBox2.Text + "'";
+            if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                cn.makeConnected(delete);
+                LoadDataGridView();
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -112,6 +175,7 @@ namespace QuanLyNhanSu
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+<<<<<<< HEAD
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
@@ -185,5 +249,7 @@ namespace QuanLyNhanSu
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
         }
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

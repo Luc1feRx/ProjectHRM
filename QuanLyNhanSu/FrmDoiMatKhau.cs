@@ -38,6 +38,7 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
         }
 
@@ -48,6 +49,8 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);//khoi tao bien con de ket noi database su dung thu vien sqlClient
             con.Open();
@@ -88,7 +91,20 @@ namespace QuanLyNhanSu
                                 {
                                     if(textBoxMatKhauCu.Text == textBoxMKMoi.Text)
                                     {
+<<<<<<< HEAD
                                         MessageBox.Show("Trùng mật khẩu cũ, mời bạn nhập lại!!!");
+=======
+                                        string query2 = "UPDATE tbuser SET Pass = '" + textBoxMKMoi.Text + "' WHERE(Username = '" + textboxTenTruycap.Text + "' AND Pass = '" + textBoxMatKhauCu.Text + "')";
+                                        SqlCommand cmd2 = new SqlCommand(query2, con);//xac dinh thao tac can xu ly doi voi data
+                                        Connect cn = new Connect();
+                                        cn.makeConnected(query2);
+                                        MessageBox.Show("Bạn đã thay đổi mật khẩu thành công");
+                                        this.Close();
+                                        this.Hide();
+                                        FrmMain frmMain = new FrmMain();
+                                        frmMain.ShowDialog();
+                                        
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
                                     }
                                     else
                                     {

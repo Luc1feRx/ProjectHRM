@@ -44,11 +44,19 @@ namespace QuanLyNhanSu
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+=======
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -59,7 +67,10 @@ namespace QuanLyNhanSu
             // 
             // groupBox1
             // 
+<<<<<<< HEAD
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox1.Controls.Add(this.comboBoxMaNV);
             this.groupBox1.Controls.Add(this.dtNgayCap);
             this.groupBox1.Controls.Add(this.txtGhiChu);
@@ -72,7 +83,10 @@ namespace QuanLyNhanSu
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
+<<<<<<< HEAD
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -84,7 +98,10 @@ namespace QuanLyNhanSu
             // 
             // comboBoxMaNV
             // 
+<<<<<<< HEAD
             this.comboBoxMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.comboBoxMaNV.FormattingEnabled = true;
             this.comboBoxMaNV.Location = new System.Drawing.Point(120, 28);
             this.comboBoxMaNV.Margin = new System.Windows.Forms.Padding(4);
@@ -197,12 +214,20 @@ namespace QuanLyNhanSu
             // 
             // groupBox2
             // 
+<<<<<<< HEAD
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.buttonThoat);
             this.groupBox2.Controls.Add(this.buttonXoa);
             this.groupBox2.Controls.Add(this.buttonSua);
             this.groupBox2.Controls.Add(this.buttonThem);
             this.groupBox2.Controls.Add(this.button6);
+=======
+            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.button2);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox2.Location = new System.Drawing.Point(13, 161);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -212,6 +237,7 @@ namespace QuanLyNhanSu
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các chức năng";
             // 
+<<<<<<< HEAD
             // buttonThoat
             // 
             this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
@@ -288,6 +314,8 @@ namespace QuanLyNhanSu
             this.buttonThem.UseVisualStyleBackColor = true;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // button6
             // 
             this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
@@ -296,6 +324,7 @@ namespace QuanLyNhanSu
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button6.Location = new System.Drawing.Point(124, 19);
@@ -310,6 +339,97 @@ namespace QuanLyNhanSu
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+=======
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button6.Location = new System.Drawing.Point(137, 25);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(103, 37);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Mới   ";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(708, 25);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(103, 37);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Thoát ";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button3.Location = new System.Drawing.Point(569, 25);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 37);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Xóa   ";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(281, 25);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 37);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Thêm ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(425, 25);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 37);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Sửa   ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // groupBox3
+            // 
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Location = new System.Drawing.Point(13, 243);
             this.groupBox3.Name = "groupBox3";
@@ -319,7 +439,10 @@ namespace QuanLyNhanSu
             // 
             // dataGridView1
             // 
+<<<<<<< HEAD
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 11);
             this.dataGridView1.Name = "dataGridView1";
@@ -333,14 +456,20 @@ namespace QuanLyNhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.material_design_blue_and_white_to_2048x1152;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.ClientSize = new System.Drawing.Size(989, 484);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBH";
+<<<<<<< HEAD
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmBH_Load);
             this.groupBox1.ResumeLayout(false);
@@ -368,6 +497,7 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
+<<<<<<< HEAD
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button6;
@@ -375,5 +505,14 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonThoat;
+=======
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

@@ -83,6 +83,7 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap _698627_icon_111_search_128 {
             get {
                 object obj = ResourceManager.GetObject("698627-icon-111-search-128", resourceCulture);
@@ -93,6 +94,8 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         internal static System.Drawing.Bitmap Actions_contact_new_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-contact-new-icon", resourceCulture);
@@ -113,6 +116,7 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap add1 {
             get {
                 object obj = ResourceManager.GetObject("add1", resourceCulture);
@@ -174,6 +178,8 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         internal static System.Drawing.Bitmap Button_Add_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Add-icon", resourceCulture);
@@ -194,6 +200,7 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap cash_icon {
             get {
                 object obj = ResourceManager.GetObject("cash-icon", resourceCulture);
@@ -224,6 +231,8 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         internal static System.Drawing.Bitmap d2678io_4c8877cf_9c0a_4914_adca_b6b4d037be10 {
             get {
                 object obj = ResourceManager.GetObject("d2678io-4c8877cf-9c0a-4914-adca-b6b4d037be10", resourceCulture);
@@ -234,6 +243,7 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap diadiem {
             get {
                 object obj = ResourceManager.GetObject("diadiem", resourceCulture);
@@ -254,6 +264,8 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         internal static System.Drawing.Bitmap Document_icon {
             get {
                 object obj = ResourceManager.GetObject("Document-icon", resourceCulture);
@@ -264,6 +276,7 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap Find {
             get {
                 object obj = ResourceManager.GetObject("Find", resourceCulture);
@@ -274,6 +287,8 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         internal static System.Drawing.Bitmap Folders_OS_Exit_Full_Screen_Metro_icon {
             get {
                 object obj = ResourceManager.GetObject("Folders-OS-Exit-Full-Screen-Metro-icon", resourceCulture);
@@ -284,6 +299,7 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap Folders_OS_User_No_Frame_Metro_icon {
             get {
                 object obj = ResourceManager.GetObject("Folders-OS-User-No-Frame-Metro-icon", resourceCulture);
@@ -444,6 +460,8 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         internal static System.Drawing.Bitmap pw_icon {
             get {
                 object obj = ResourceManager.GetObject("pw-icon", resourceCulture);
@@ -454,6 +472,7 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap russia_95311_1920 {
             get {
                 object obj = ResourceManager.GetObject("russia-95311_1920", resourceCulture);
@@ -497,6 +516,11 @@ namespace QuanLyNhanSu.Properties {
         internal static System.Drawing.Bitmap team_3639693_19201 {
             get {
                 object obj = ResourceManager.GetObject("team-3639693_19201", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap Search_icon {
+            get {
+                object obj = ResourceManager.GetObject("Search-icon", resourceCulture);
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -520,6 +544,7 @@ namespace QuanLyNhanSu.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+<<<<<<< HEAD
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -600,5 +625,7 @@ namespace QuanLyNhanSu.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

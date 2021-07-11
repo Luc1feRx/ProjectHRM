@@ -15,7 +15,11 @@ namespace QuanLyNhanSu
 {
     public partial class FormHoSoThuViec : Form
     {
+<<<<<<< HEAD
         string strconnect = @"Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
+=======
+        string strconnect = "Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         Connect cn = new Connect();
         public FormHoSoThuViec()
         {
@@ -24,7 +28,17 @@ namespace QuanLyNhanSu
 
         private void button6_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            foreach (Control ctr in this.groupBox1.Controls)
+            {
+                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         public void LoadDataGridView()
@@ -67,6 +81,7 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
         }
 
@@ -149,6 +164,8 @@ namespace QuanLyNhanSu
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             try
             {
                 SqlConnection sqlcon = new SqlConnection(strconnect);
@@ -182,7 +199,25 @@ namespace QuanLyNhanSu
             }
         }
 
+<<<<<<< HEAD
         private void buttonSua_Click(object sender, EventArgs e)
+=======
+        private void pictureBoxAnhNVTV_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "PNG files(*.png)|*.png|JPG files (*.jpg|*.jpg|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = -1;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxAnhNVTV.ImageLocation = openFileDialog.FileName;
+                this.Text = openFileDialog.FileName;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         {
             try
             {
@@ -214,12 +249,19 @@ namespace QuanLyNhanSu
             }
         }
 
+<<<<<<< HEAD
         private void buttonXoa_Click(object sender, EventArgs e)
         {
             try
             {
                 string dell = "delete from TblBangCongThuViec where MaNVTV='" + txtMaNVTV.Text + "'";
                 cn.makeConnected(dell);
+=======
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
                 string del = "delete from TblHoSoThuViec where MaNVTV='" + txtMaNVTV.Text + "'";
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -233,7 +275,48 @@ namespace QuanLyNhanSu
             }
         }
 
+<<<<<<< HEAD
         private void buttonThoat_Click(object sender, EventArgs e)
+=======
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int i = e.RowIndex;
+                comboBoxMaPhong.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                txtMaNVTV.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                txtHoTen.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                dateTimePickerngaySinh.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                comboBoxGioiTinh.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                txtDiaChi.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+                txtTrinhDo.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
+                txtVTTV.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
+                dateTimePickerNgayThuViec.Text = dataGridView1.Rows[i].Cells[8].Value.ToString();
+                txtGhiChu.Text = dataGridView1.Rows[i].Cells[9].Value.ToString();
+                byte[] b = (byte[])dataGridView1.Rows[i].Cells[10].Value;
+                pictureBoxAnhNVTV.Image = ByteToImage(b);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi không tải được dữ liệu");
+            }
+        }
+
+        private void FormHoSoThuViec_Load(object sender, EventArgs e)
+        {
+            dateTimePickerngaySinh.CustomFormat = " MM / dd / yyyy ";
+            dateTimePickerNgayThuViec.CustomFormat = " MM / dd / yyyy ";
+            LoadDataGridView();
+            cn.loadcombobox(comboBoxMaPhong, "select * from Tblphongban", 1);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         {
             this.Hide();
             FrmMain frmMain = new FrmMain();

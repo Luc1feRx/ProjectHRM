@@ -22,7 +22,17 @@ namespace QuanLyNhanSu
 
         private void button6_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
           
+=======
+            foreach (Control ctr in this.groupBox1.Controls)
+            {
+                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         public void LoadDataGridView()
@@ -53,17 +63,55 @@ namespace QuanLyNhanSu
 
         private void button2_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            try
+            {
+                string update = "update TblTTCaNhan set Manv=N'" + comboBox1.Text + "',Noisinh=N'" + textBox2.Text + "',NguyenQuan=N'" + textBox3.Text + "',DCThuongChu=N'" + textBox4.Text + "',DCTamChu=N'" + textBox5.Text + "',SDT=N'" + textBox6.Text + "',DanToc=N'" + textBox7.Text + "',TonGiao=N'" + textBox8.Text + "',QuocTich=N'" + textBox9.Text + "',HocVan=N'" + textBox12.Text + "',GhiChu=N'" + textBox17.Text + "' where MaNV=N'" + comboBox1.Text + "'";
+                cn.makeConnected(update);
+                LoadDataGridView();
+                MessageBox.Show("Sửa thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            try
+            {
+                string delete = "delete from TblTTCaNhan where MaNV=N'" + comboBox1.Text + "'";
+                string delete2 = "delete from TblTTNVCoBan where MaNV=N'" + comboBox1.Text + "'";
+                if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    cn.makeConnected(delete);
+                    cn.makeConnected(delete2);
+                    LoadDataGridView();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Xóa thất bại");
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void FrmCaNhan_Load(object sender, EventArgs e)
@@ -76,6 +124,7 @@ namespace QuanLyNhanSu
         {
             try
             {
+<<<<<<< HEAD
                 int i = e.RowIndex;
                 comboBox1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
                 textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
@@ -89,6 +138,21 @@ namespace QuanLyNhanSu
                 textBox9.Text = dataGridView1.Rows[i].Cells[9].Value.ToString();
                 textBox12.Text = dataGridView1.Rows[i].Cells[10].Value.ToString();
                 textBox17.Text = dataGridView1.Rows[i].Cells[11].Value.ToString();
+=======
+                int hang = e.RowIndex;
+                comboBox1.Text = dataGridView1.Rows[hang].Cells[0].Value.ToString();
+                textBox1.Text = dataGridView1.Rows[hang].Cells[1].Value.ToString();
+                textBox2.Text = dataGridView1.Rows[hang].Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.Rows[hang].Cells[3].Value.ToString();
+                textBox4.Text = dataGridView1.Rows[hang].Cells[4].Value.ToString();
+                textBox5.Text = dataGridView1.Rows[hang].Cells[5].Value.ToString();
+                textBox6.Text = dataGridView1.Rows[hang].Cells[6].Value.ToString();
+                textBox7.Text = dataGridView1.Rows[hang].Cells[7].Value.ToString();
+                textBox8.Text = dataGridView1.Rows[hang].Cells[8].Value.ToString();
+                textBox9.Text = dataGridView1.Rows[hang].Cells[9].Value.ToString();
+                textBox12.Text = dataGridView1.Rows[hang].Cells[10].Value.ToString();
+                textBox17.Text = dataGridView1.Rows[hang].Cells[11].Value.ToString();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
 
             }
             catch (Exception ex)
@@ -122,6 +186,7 @@ namespace QuanLyNhanSu
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+<<<<<<< HEAD
 
         private void button6_Click_1(object sender, EventArgs e)
         {
@@ -174,5 +239,7 @@ namespace QuanLyNhanSu
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
         }
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

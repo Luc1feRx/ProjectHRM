@@ -306,6 +306,7 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hand-1076597_1920.jpg" />
@@ -438,6 +439,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\timhopdong.png" />
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

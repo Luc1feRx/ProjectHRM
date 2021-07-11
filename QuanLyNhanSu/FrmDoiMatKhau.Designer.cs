@@ -44,6 +44,42 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
+=======
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(135, 326);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 52);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Hoàn tất";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(356, 326);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(89, 52);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Nhập lại";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(584, 326);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 52);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Trở về";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;

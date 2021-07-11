@@ -42,6 +42,7 @@ namespace QuanLyNhanSu.Properties {
                 return ((string)(this["QLNSConnectionString"]));
             }
         }
+<<<<<<< HEAD
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -64,5 +65,7 @@ namespace QuanLyNhanSu.Properties {
                 return ((string)(this["QLNSConnectionString2"]));
             }
         }
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

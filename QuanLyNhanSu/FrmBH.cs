@@ -29,7 +29,17 @@ namespace QuanLyNhanSu
 
         private void button6_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            foreach (Control ctr in this.groupBox1.Controls)
+            {
+                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         public void LoadDataGridView()
@@ -54,6 +64,7 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -105,6 +116,8 @@ namespace QuanLyNhanSu
         private void buttonThem_Click(object sender, EventArgs e)
         {
 
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             try
             {
                 string insert = "insert into TblSoBH values(N'" + comboBoxMaNV.Text + "',N'" + txtMaLuong.Text + "',N'" + txtMaBaoHiem.Text + "',N'" + dtNgayCap.Text + "',N'" + txtNoiCap.Text + "',N'" + txtGhiChu.Text + "')";
@@ -128,7 +141,11 @@ namespace QuanLyNhanSu
             }
         }
 
+<<<<<<< HEAD
         private void buttonSua_Click(object sender, EventArgs e)
+=======
+        private void button2_Click(object sender, EventArgs e)
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         {
             try
             {
@@ -143,7 +160,11 @@ namespace QuanLyNhanSu
             }
         }
 
+<<<<<<< HEAD
         private void buttonXoa_Click(object sender, EventArgs e)
+=======
+        private void button3_Click(object sender, EventArgs e)
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         {
             string delete = "delete from TblSoBH where MaNV=N'" + comboBoxMaNV.Text + "'";
             if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -153,11 +174,38 @@ namespace QuanLyNhanSu
             }
         }
 
+<<<<<<< HEAD
         private void buttonThoat_Click(object sender, EventArgs e)
+=======
+        private void button5_Click(object sender, EventArgs e)
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         {
             this.Hide();
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
         }
+<<<<<<< HEAD
+=======
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            comboBoxMaNV.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            txtMaLuong.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            txtMaBaoHiem.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            dtNgayCap.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            txtNoiCap.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            txtGhiChu.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cn.loadtextbox(txtMaLuong, "select * from TblTTNVCoBan where MaNV=N'" + comboBoxMaNV.Text + "'", 4);
+            cn.loadtextbox(txtMaBaoHiem, "select * from TblSoBH where MaNV=N'" + comboBoxMaNV.Text + "'", 2);
+            cn.loaddatetime(dtNgayCap, "select * from TblSoBH where MaNV=N'" + comboBoxMaNV.Text + "'", 3);
+            cn.loadtextbox(txtNoiCap, "select * from TblSoBH where MaNV=N'" + comboBoxMaNV.Text + "'", 4);
+            cn.loadtextbox(txtGhiChu, "select * from TblSoBH where MaNV=N'" + comboBoxMaNV.Text + "'", 5);
+        }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
     }
 }

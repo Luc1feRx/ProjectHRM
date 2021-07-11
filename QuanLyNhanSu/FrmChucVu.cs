@@ -78,16 +78,32 @@ namespace QuanLyNhanSu
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            string query = "DELETE FROM tblChucVu WhERE MaChucVu = '" + maChucVuTextBox.Text + "'";
+            if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                cn.makeConnected(query);
+                LoadDataGridView();
+            }
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             
+=======
+            this.Hide();
+            FrmMain frmMain = new FrmMain();
+            frmMain.ShowDialog();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
         }
 
@@ -125,6 +141,8 @@ namespace QuanLyNhanSu
 
         private void buttonSua_Click_1(object sender, EventArgs e)
         {
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             string query = "update tblChucVu set MaChucVu = N'" + maChucVuTextBox.Text + "',ChucVu = N'" + chucVuTextBox.Text + "' where MaChucVu='" + maChucVuTextBox.Text + "'";
             cn.makeConnected(query);
             dataGridViewChucVu.Refresh();
@@ -132,6 +150,7 @@ namespace QuanLyNhanSu
             MessageBox.Show("Sửa thành công!!!");
         }
 
+<<<<<<< HEAD
         private void buttonXoa_Click_1(object sender, EventArgs e)
         {
             string query = "DELETE FROM tblChucVu WhERE MaChucVu = '" + maChucVuTextBox.Text + "'";
@@ -147,6 +166,13 @@ namespace QuanLyNhanSu
             this.Hide();
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
+=======
+        private void dataGridViewChucVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            maChucVuTextBox.Text = dataGridViewChucVu.Rows[i].Cells[0].Value.ToString();
+            chucVuTextBox.Text = dataGridViewChucVu.Rows[i].Cells[1].Value.ToString();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         }
     }
 }

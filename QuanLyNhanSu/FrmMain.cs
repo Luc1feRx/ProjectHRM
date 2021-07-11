@@ -157,7 +157,11 @@ namespace QuanLyNhanSu
         private void lươngNhânViênĐiềuHànhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+<<<<<<< HEAD
             FrmBangLuongNVCT frm = new FrmBangLuongNVCT(username, password);
+=======
+            FrmBangLuongNVCT frm = new FrmBangLuongNVCT();
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
             frm.ShowDialog();
         }
 
@@ -194,6 +198,7 @@ namespace QuanLyNhanSu
             frmThaiSan.ShowDialog();
         }
 
+<<<<<<< HEAD
         private void MenuTroGiup_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Đăng xuất thành công", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -207,6 +212,8 @@ namespace QuanLyNhanSu
             }
         }
 
+=======
+>>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
