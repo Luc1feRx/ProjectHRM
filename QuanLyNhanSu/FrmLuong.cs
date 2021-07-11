@@ -57,34 +57,14 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string insert = "insert into TblBangLuongCTy values(N'" + txtMaLuong.Text + "',N'" + txtLCB.Text + "',N'" + txtPCCV.Text + "',N'" + dateTimePickerNgayNhap.Text + "',N'" + txtL.Text + "',N'" + dateTimePickerNgaySua.Text + "',N'" + txtLyDo.Text + "',N'" + txtPCCVMoi.Text + "',N'" + dateTimePickerNgayPCCVMoi.Text + "',N'" + txtGhiChu.Text + "')";
-                if (!cn.Exitsted(txtMaLuong.Text, "select MaLuong from TblBangLuongCTy"))
-                {
-                    if (txtMaLuong.Text != "")
-                    {
-                        cn.makeConnected(insert);
-                        dataGridViewLuong.Refresh();
-                        LoadDataGridView();
-                        MessageBox.Show("Thêm thành công");
-                    }
-                    else MessageBox.Show("Bạn chưa nhập Mã Lương");
-                }
-                else
-                    MessageBox.Show("Mã Lương này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu đầu vào không đúng");
-            }
+           
         }
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
             try
             {
-                string update = "update TblBangLuongCTy set LCB=N'" + txtLCB.Text + "',PCChucVu=N'" + txtPCCV.Text + "',NgayNhap='" + dateTimePickerNgayNhap.Text + "',LCBMoi=N'" + txtL.Text + "',NgaySua=N'" + dateTimePickerNgaySua.Text + "',LyDo=N'" + txtLyDo.Text + "',PCCVuMoi='" + txtPCCVMoi.Text + "',NgaySuaPC=N'" + dateTimePickerNgayPCCVMoi.Text + "',GhiChu=N'" + txtGhiChu.Text + "' where MaLuong=N'" + txtMaLuong.Text + "'";
+                string update = "update TblBangLuongCTy set LCB=N'" + txtLCB.Text + "',PCChucVu=N'" + txtPCCV.Text + "',NgayNhap='" + dateTimePickerNgayNhap.Text + "',LCBMoi=N'" + txtM.Text + "',NgaySua=N'" + dateTimePickerNgaySua.Text + "',LyDo=N'" + txtLyDo.Text + "',PCCVuMoi='" + txtPCCVMoi.Text + "',NgaySuaPC=N'" + dateTimePickerNgayPCCVMoi.Text + "',GhiChu=N'" + txtGhiChu.Text + "' where MaLuong=N'" + txtMaLuong.Text + "'";
                 cn.makeConnected(update);
                 LoadDataGridView();
                 MessageBox.Show("Sửa thành công");
@@ -117,6 +97,53 @@ namespace QuanLyNhanSu
         private void FrmLuong_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
+        }
+
+        private void buttonThem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string insert = "insert into TblBangLuongCTy values(N'" + txtMaLuong.Text + "',N'" + txtLCB.Text + "',N'" + txtPCCV.Text + "',N'" + dateTimePickerNgayNhap.Text + "',N'" + txtM.Text + "',N'" + dateTimePickerNgaySua.Text + "',N'" + txtLyDo.Text + "',N'" + txtPCCVMoi.Text + "',N'" + dateTimePickerNgayPCCVMoi.Text + "',N'" + txtGhiChu.Text + "')";
+                if (!cn.Exitsted(txtMaLuong.Text, "select MaLuong from TblBangLuongCTy"))
+                {
+                    if (txtMaLuong.Text != "")
+                    {
+                        cn.makeConnected(insert);
+                        dataGridViewLuong.Refresh();
+                        LoadDataGridView();
+                        MessageBox.Show("Thêm thành công");
+                    }
+                    else MessageBox.Show("Bạn chưa nhập Mã Lương");
+                }
+                else
+                    MessageBox.Show("Mã Lương này đã tồn tại", "Thêm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu đầu vào không đúng");
+            }
+        }
+
+        private void dataGridViewLuong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int i = e.RowIndex;
+                txtMaLuong.Text = dataGridViewLuong.Rows[i].Cells[0].Value.ToString();
+                txtLCB.Text = dataGridViewLuong.Rows[i].Cells[1].Value.ToString();
+                txtPCCV.Text = dataGridViewLuong.Rows[i].Cells[2].Value.ToString();
+                dateTimePickerNgayNhap.Text = dataGridViewLuong.Rows[i].Cells[3].Value.ToString();
+                txtM.Text = dataGridViewLuong.Rows[i].Cells[4].Value.ToString();
+                dateTimePickerNgaySua.Text = dataGridViewLuong.Rows[i].Cells[5].Value.ToString();
+                txtLyDo.Text = dataGridViewLuong.Rows[i].Cells[6].Value.ToString();
+                txtPCCVMoi.Text = dataGridViewLuong.Rows[i].Cells[7].Value.ToString();
+                dateTimePickerNgayPCCVMoi.Text = dataGridViewLuong.Rows[i].Cells[8].Value.ToString();
+                txtGhiChu.Text = dataGridViewLuong.Rows[i].Cells[9].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

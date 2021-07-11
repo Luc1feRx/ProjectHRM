@@ -45,6 +45,60 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+        }
+
+        private void buttonMoi_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridViewPhongBan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            comboBoxMaBoPhan.Text = dataGridViewPhongBan.Rows[i].Cells[0].Value.ToString();
+            textBoxMaPhong.Text = dataGridViewPhongBan.Rows[i].Cells[1].Value.ToString();
+            textBoxTenPhong.Text = dataGridViewPhongBan.Rows[i].Cells[2].Value.ToString();
+            dateTimePickerNgayTL.Text = dataGridViewPhongBan.Rows[i].Cells[3].Value.ToString();
+            textBoxGhiChu.Text = dataGridViewPhongBan.Rows[i].Cells[4].Value.ToString();
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonThoat_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void FrmPhongBan_Load(object sender, EventArgs e)
+        {
+            LoadDataGridView();
+            dateTimePickerNgayTL.CustomFormat = " dd / MM / yyyy ";
+            cn.loadcombobox(comboBoxMaBoPhan, "select * from TblBoPhan", 0);
+        }
+
+        private void buttonMoi_Click_1(object sender, EventArgs e)
+        {
+            comboBoxMaBoPhan.Text = "";
+            foreach (Control ctr in this.groupBox1.Controls)
+            {
+                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+        }
+
+        private void buttonThem_Click_1(object sender, EventArgs e)
+        {
+
             try
             {
                 if (!cn.Exitsted(textBoxMaPhong.Text, "select MaPhong from TblPhongBan"))
@@ -65,29 +119,7 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void buttonMoi_Click(object sender, EventArgs e)
-        {
-            comboBoxMaBoPhan.Text = "";
-            foreach (Control ctr in this.groupBox1.Controls)
-            {
-                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
-                {
-                    ctr.Text = "";
-                }
-            }
-        }
-
-        private void dataGridViewPhongBan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i = e.RowIndex;
-            comboBoxMaBoPhan.Text = dataGridViewPhongBan.Rows[i].Cells[0].Value.ToString();
-            textBoxMaPhong.Text = dataGridViewPhongBan.Rows[i].Cells[1].Value.ToString();
-            textBoxTenPhong.Text = dataGridViewPhongBan.Rows[i].Cells[2].Value.ToString();
-            dateTimePickerNgayTL.Text = dataGridViewPhongBan.Rows[i].Cells[3].Value.ToString();
-            textBoxGhiChu.Text = dataGridViewPhongBan.Rows[i].Cells[4].Value.ToString();
-        }
-
-        private void buttonSua_Click(object sender, EventArgs e)
+        private void buttonSua_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -102,7 +134,7 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void buttonXoa_Click(object sender, EventArgs e)
+        private void buttonXoa_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -119,18 +151,11 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void buttonThoat_Click(object sender, EventArgs e)
+        private void buttonThoat_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             FrmMain frmMain = new FrmMain();
             frmMain.ShowDialog();
-        }
-
-        private void FrmPhongBan_Load(object sender, EventArgs e)
-        {
-            LoadDataGridView();
-            dateTimePickerNgayTL.CustomFormat = " dd / MM / yyyy ";
-            cn.loadcombobox(comboBoxMaBoPhan, "select * from TblBoPhan", 0);
         }
     }
 }

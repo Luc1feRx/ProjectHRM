@@ -32,6 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewPhongBan = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.buttonMoi = new System.Windows.Forms.Button();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxMaBoPhan = new System.Windows.Forms.ComboBox();
             this.dateTimePickerNgayTL = new System.Windows.Forms.DateTimePicker();
@@ -43,11 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonMoi = new System.Windows.Forms.Button();
-            this.buttonThoat = new System.Windows.Forms.Button();
-            this.buttonXoa = new System.Windows.Forms.Button();
-            this.buttonThem = new System.Windows.Forms.Button();
-            this.buttonSua = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhongBan)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -77,10 +77,10 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.buttonThem);
             this.groupBox2.Controls.Add(this.buttonMoi);
             this.groupBox2.Controls.Add(this.buttonThoat);
             this.groupBox2.Controls.Add(this.buttonXoa);
-            this.groupBox2.Controls.Add(this.buttonThem);
             this.groupBox2.Controls.Add(this.buttonSua);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(13, 194);
@@ -91,6 +91,101 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các chức năng";
+            // 
+            // buttonThem
+            // 
+            this.buttonThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThem.BackgroundImage")));
+            this.buttonThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThem.FlatAppearance.BorderSize = 0;
+            this.buttonThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.Image = ((System.Drawing.Image)(resources.GetObject("buttonThem.Image")));
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(247, 23);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(119, 43);
+            this.buttonThem.TabIndex = 11;
+            this.buttonThem.Text = "Thêm ";
+            this.buttonThem.UseVisualStyleBackColor = true;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click_1);
+            // 
+            // buttonMoi
+            // 
+            this.buttonMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoi.BackgroundImage")));
+            this.buttonMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMoi.FlatAppearance.BorderSize = 0;
+            this.buttonMoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonMoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMoi.Image = ((System.Drawing.Image)(resources.GetObject("buttonMoi.Image")));
+            this.buttonMoi.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.buttonMoi.Location = new System.Drawing.Point(87, 23);
+            this.buttonMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMoi.Name = "buttonMoi";
+            this.buttonMoi.Size = new System.Drawing.Size(112, 43);
+            this.buttonMoi.TabIndex = 7;
+            this.buttonMoi.Text = "Mới   ";
+            this.buttonMoi.UseVisualStyleBackColor = true;
+            this.buttonMoi.Click += new System.EventHandler(this.buttonMoi_Click_1);
+            // 
+            // buttonThoat
+            // 
+            this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
+            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThoat.FlatAppearance.BorderSize = 0;
+            this.buttonThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThoat.Image = ((System.Drawing.Image)(resources.GetObject("buttonThoat.Image")));
+            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThoat.Location = new System.Drawing.Point(696, 23);
+            this.buttonThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(116, 43);
+            this.buttonThoat.TabIndex = 10;
+            this.buttonThoat.Text = "Thoát ";
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click_1);
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonXoa.BackgroundImage")));
+            this.buttonXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonXoa.FlatAppearance.BorderSize = 0;
+            this.buttonXoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonXoa.Image = ((System.Drawing.Image)(resources.GetObject("buttonXoa.Image")));
+            this.buttonXoa.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.buttonXoa.Location = new System.Drawing.Point(560, 23);
+            this.buttonXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(101, 43);
+            this.buttonXoa.TabIndex = 9;
+            this.buttonXoa.Text = "Xóa   ";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click_1);
+            // 
+            // buttonSua
+            // 
+            this.buttonSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSua.BackgroundImage")));
+            this.buttonSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonSua.FlatAppearance.BorderSize = 0;
+            this.buttonSua.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSua.Image = ((System.Drawing.Image)(resources.GetObject("buttonSua.Image")));
+            this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSua.Location = new System.Drawing.Point(400, 23);
+            this.buttonSua.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(120, 43);
+            this.buttonSua.TabIndex = 8;
+            this.buttonSua.Text = "Sửa   ";
+            this.buttonSua.UseVisualStyleBackColor = true;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click_1);
             // 
             // groupBox1
             // 
@@ -212,101 +307,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã bộ phận";
             // 
-            // buttonMoi
-            // 
-            this.buttonMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoi.BackgroundImage")));
-            this.buttonMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonMoi.FlatAppearance.BorderSize = 0;
-            this.buttonMoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonMoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMoi.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buttonMoi.Location = new System.Drawing.Point(123, 25);
-            this.buttonMoi.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonMoi.Name = "buttonMoi";
-            this.buttonMoi.Size = new System.Drawing.Size(93, 34);
-            this.buttonMoi.TabIndex = 6;
-            this.buttonMoi.Text = "Mới   ";
-            this.buttonMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonMoi.UseVisualStyleBackColor = true;
-            this.buttonMoi.Click += new System.EventHandler(this.buttonMoi_Click);
-            // 
-            // buttonThoat
-            // 
-            this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
-            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonThoat.FlatAppearance.BorderSize = 0;
-            this.buttonThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThoat.Location = new System.Drawing.Point(603, 25);
-            this.buttonThoat.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(93, 34);
-            this.buttonThoat.TabIndex = 11;
-            this.buttonThoat.Text = "Thoát ";
-            this.buttonThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThoat.UseVisualStyleBackColor = true;
-            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
-            // 
-            // buttonXoa
-            // 
-            this.buttonXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonXoa.BackgroundImage")));
-            this.buttonXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonXoa.FlatAppearance.BorderSize = 0;
-            this.buttonXoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonXoa.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buttonXoa.Location = new System.Drawing.Point(475, 25);
-            this.buttonXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(93, 34);
-            this.buttonXoa.TabIndex = 9;
-            this.buttonXoa.Text = "Xóa   ";
-            this.buttonXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonXoa.UseVisualStyleBackColor = true;
-            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
-            // 
-            // buttonThem
-            // 
-            this.buttonThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThem.BackgroundImage")));
-            this.buttonThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonThem.FlatAppearance.BorderSize = 0;
-            this.buttonThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThem.Location = new System.Drawing.Point(240, 25);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(93, 34);
-            this.buttonThem.TabIndex = 7;
-            this.buttonThem.Text = "Thêm ";
-            this.buttonThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThem.UseVisualStyleBackColor = true;
-            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
-            // 
-            // buttonSua
-            // 
-            this.buttonSua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSua.BackgroundImage")));
-            this.buttonSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSua.FlatAppearance.BorderSize = 0;
-            this.buttonSua.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSua.Location = new System.Drawing.Point(353, 25);
-            this.buttonSua.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(93, 34);
-            this.buttonSua.TabIndex = 8;
-            this.buttonSua.Text = "Sửa   ";
-            this.buttonSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSua.UseVisualStyleBackColor = true;
-            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
-            // 
             // FrmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -315,7 +315,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPhongBan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPhongBan";
             this.Load += new System.EventHandler(this.FrmPhongBan_Load);
             this.panel1.ResumeLayout(false);
@@ -332,11 +334,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewPhongBan;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button buttonMoi;
-        private System.Windows.Forms.Button buttonThoat;
-        private System.Windows.Forms.Button buttonXoa;
-        private System.Windows.Forms.Button buttonThem;
-        private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBoxMaBoPhan;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayTL;
@@ -348,5 +345,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.Button buttonMoi;
+        private System.Windows.Forms.Button buttonThoat;
+        private System.Windows.Forms.Button buttonXoa;
+        private System.Windows.Forms.Button buttonSua;
     }
 }

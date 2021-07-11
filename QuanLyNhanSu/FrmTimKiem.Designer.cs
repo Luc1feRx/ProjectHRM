@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTimKiem));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewTimKiem = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonMoi = new System.Windows.Forms.Button();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.radChucVu = new System.Windows.Forms.RadioButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.radDanToc = new System.Windows.Forms.RadioButton();
             this.radNoiSinh = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonTim = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonThoat = new System.Windows.Forms.Button();
             this.textBoxTK = new System.Windows.Forms.TextBox();
             this.radioButtonCMTND = new System.Windows.Forms.RadioButton();
             this.radioButtonHoTen = new System.Windows.Forms.RadioButton();
@@ -78,15 +79,15 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.buttonThoat);
+            this.groupBox1.Controls.Add(this.buttonMoi);
             this.groupBox1.Controls.Add(this.linkLabel2);
             this.groupBox1.Controls.Add(this.radChucVu);
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(this.radDanToc);
             this.groupBox1.Controls.Add(this.radNoiSinh);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.buttonTim);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.buttonThoat);
             this.groupBox1.Controls.Add(this.textBoxTK);
             this.groupBox1.Controls.Add(this.radioButtonCMTND);
             this.groupBox1.Controls.Add(this.radioButtonHoTen);
@@ -101,6 +102,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm thông tin";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // buttonThoat
+            // 
+            this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
+            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThoat.FlatAppearance.BorderSize = 0;
+            this.buttonThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThoat.Image = ((System.Drawing.Image)(resources.GetObject("buttonThoat.Image")));
+            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThoat.Location = new System.Drawing.Point(644, 208);
+            this.buttonThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(116, 43);
+            this.buttonThoat.TabIndex = 17;
+            this.buttonThoat.Text = "Thoát ";
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click_1);
+            // 
+            // buttonMoi
+            // 
+            this.buttonMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoi.BackgroundImage")));
+            this.buttonMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMoi.FlatAppearance.BorderSize = 0;
+            this.buttonMoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonMoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMoi.Image = ((System.Drawing.Image)(resources.GetObject("buttonMoi.Image")));
+            this.buttonMoi.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.buttonMoi.Location = new System.Drawing.Point(339, 208);
+            this.buttonMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMoi.Name = "buttonMoi";
+            this.buttonMoi.Size = new System.Drawing.Size(112, 43);
+            this.buttonMoi.TabIndex = 16;
+            this.buttonMoi.Text = "Tìm";
+            this.buttonMoi.UseVisualStyleBackColor = true;
+            this.buttonMoi.Click += new System.EventHandler(this.buttonMoi_Click);
             // 
             // linkLabel2
             // 
@@ -170,26 +209,9 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Tìm Kiếm ";
             // 
-            // buttonTim
-            // 
-            this.buttonTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonTim.FlatAppearance.BorderSize = 0;
-            this.buttonTim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonTim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTim.Location = new System.Drawing.Point(335, 209);
-            this.buttonTim.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonTim.Name = "buttonTim";
-            this.buttonTim.Size = new System.Drawing.Size(116, 48);
-            this.buttonTim.TabIndex = 5;
-            this.buttonTim.Text = "Tìm";
-            this.buttonTim.UseVisualStyleBackColor = true;
-            this.buttonTim.Click += new System.EventHandler(this.buttonTim_Click);
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QuanLyNhanSu.Properties.Resources.Search_icon;
+            this.pictureBox1.Image = global::QuanLyNhanSu.Properties.Resources.timhopdong;
             this.pictureBox1.Location = new System.Drawing.Point(47, 38);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -197,25 +219,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // buttonThoat
-            // 
-            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonThoat.FlatAppearance.BorderSize = 0;
-            this.buttonThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThoat.Location = new System.Drawing.Point(640, 208);
-            this.buttonThoat.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(120, 51);
-            this.buttonThoat.TabIndex = 3;
-            this.buttonThoat.Text = "Thoát    ";
-            this.buttonThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonThoat.UseVisualStyleBackColor = true;
-            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
             // textBoxTK
             // 
@@ -294,12 +297,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyNhanSu.Properties.Resources.blue_moving_flowing_abstract_waves_on_white_background_blurred_smooth_graphic_motion_design_video_animation_1920x1080_vhhueydte__F0000;
             this.ClientSize = new System.Drawing.Size(962, 600);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtKQTimKiem);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTimKiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTimKiem";
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimKiem)).EndInit();
@@ -317,7 +323,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.TextBox textBoxTK;
         private System.Windows.Forms.RadioButton radioButtonCMTND;
         private System.Windows.Forms.RadioButton radioButtonHoTen;
@@ -326,10 +331,11 @@
         private System.Windows.Forms.RadioButton radChucVu;
         private System.Windows.Forms.RadioButton radDanToc;
         private System.Windows.Forms.RadioButton radNoiSinh;
-        private System.Windows.Forms.Button buttonTim;
         private System.Windows.Forms.TextBox txtKQTimKiem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button buttonMoi;
+        private System.Windows.Forms.Button buttonThoat;
     }
 }

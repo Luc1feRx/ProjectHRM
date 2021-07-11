@@ -44,6 +44,51 @@ namespace QuanLyNhanSu
         }
         private void buttonThem_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void buttonLamMoi_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridViewBoPhan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            textBoxMaBoPhan.Text = dataGridViewBoPhan.Rows[i].Cells[0].Value.ToString();
+            textBoxTenBP.Text = dataGridViewBoPhan.Rows[i].Cells[1].Value.ToString();
+            dateTimePickerTL.Text = dataGridViewBoPhan.Rows[i].Cells[2].Value.ToString();
+            textBoxGhiChu.Text = dataGridViewBoPhan.Rows[i].Cells[3].Value.ToString();
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonThoat_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonMoi_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctr in this.groupBox1.Controls)
+            {
+                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
+                {
+                    ctr.Text = "";
+                }
+            }
+        }
+
+        private void buttonThem_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 if (!cn.Exitsted(textBoxMaBoPhan.Text, "select MaBoPhan from TblBoPhan"))
@@ -64,27 +109,7 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void buttonLamMoi_Click(object sender, EventArgs e)
-        {
-            foreach (Control ctr in this.groupBox1.Controls)
-            {
-                if ((ctr is TextBox) || (ctr is DateTimePicker) || (ctr is ComboBox))
-                {
-                    ctr.Text = "";
-                }
-            }
-        }
-
-        private void dataGridViewBoPhan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i = e.RowIndex;
-            textBoxMaBoPhan.Text = dataGridViewBoPhan.Rows[i].Cells[0].Value.ToString();
-            textBoxTenBP.Text = dataGridViewBoPhan.Rows[i].Cells[1].Value.ToString();
-            dateTimePickerTL.Text = dataGridViewBoPhan.Rows[i].Cells[2].Value.ToString();
-            textBoxGhiChu.Text = dataGridViewBoPhan.Rows[i].Cells[3].Value.ToString();
-        }
-
-        private void buttonSua_Click(object sender, EventArgs e)
+        private void buttonSua_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -99,7 +124,7 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void buttonXoa_Click(object sender, EventArgs e)
+        private void buttonXoa_Click_1(object sender, EventArgs e)
         {
             string del = "delete from TblBoPhan where MaBoPhan='" + textBoxMaBoPhan.Text + "'";
             string del1 = "delete from TblPhongBan where MaBoPhan='" + textBoxMaBoPhan.Text + "'";
@@ -111,7 +136,7 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void buttonThoat_Click(object sender, EventArgs e)
+        private void buttonThoat_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             FrmMain frmMain = new FrmMain();

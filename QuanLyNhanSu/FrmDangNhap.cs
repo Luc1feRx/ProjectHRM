@@ -38,18 +38,18 @@ namespace QuanLyNhanSu
                     String LoaiDN = reader[2].ToString();//phan loai dang nhap
                     if(LoaiDN == "Admin     ")
                     {
-                        MessageBox.Show("Đăng nhập thành công!!! (Admin)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Đăng nhập thành công!!! Chào mừng " + textBoxUsername.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmMain.Quyen = "Admin     ";
                         this.Hide();
                         this.Close();
                     }else if (LoaiDN == "User      ")
                     {
-                        MessageBox.Show("Đăng nhập thành công!!! (User)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Đăng nhập thành công!!! Chào mừng " + textBoxUsername.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmMain.Quyen = "User      ";
                         this.Hide();
                         this.Close();
                     }
-                    FrmMain frm = new FrmMain();
+                    FrmMain frm = new FrmMain(textBoxUsername.Text, textBoxPass.Text);
                     frm.ShowDialog();
                     cmd.Dispose();
                     reader.Dispose();
@@ -77,8 +77,7 @@ namespace QuanLyNhanSu
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmMain frmMain = new FrmMain();
-            frmMain.ShowDialog();
+            this.Close();
         }
     }
 }
