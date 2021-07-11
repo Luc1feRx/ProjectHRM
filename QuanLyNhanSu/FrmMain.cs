@@ -13,9 +13,17 @@ namespace QuanLyNhanSu
     public partial class FrmMain : Form
     {
         public static string Quyen = "";
+        string username, password;
         public FrmMain()
         {
             InitializeComponent();
+        }
+
+        public FrmMain(string user, string pass)
+        {
+            InitializeComponent();
+            username = user;
+            password = pass;
         }
 
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -39,7 +47,7 @@ namespace QuanLyNhanSu
         private void DoiMatKhau(object sender, EventArgs e)
         {
             this.Hide();
-            FrmDoiMatKhau frmDoiMatKhau = new FrmDoiMatKhau();
+            FrmDoiMatKhau frmDoiMatKhau = new FrmDoiMatKhau(username, password);
             frmDoiMatKhau.ShowDialog();
             this.Close();
         }
@@ -48,6 +56,7 @@ namespace QuanLyNhanSu
         { 
             if (Quyen == "Admin     ")
             {
+                MenuDangNhap.Enabled = false;
                 MenuDanhMuc.Enabled = true;
                 MenuQuanLy.Enabled = true;
                 MenuTroGiup.Enabled = true;
@@ -55,10 +64,12 @@ namespace QuanLyNhanSu
             }
             else if (Quyen == "User      ")
             {
+                MenuDangNhap.Enabled = false;
                 MenuDanhMuc.Enabled = true;
                 MenuQuanLy.Enabled = true;
                 MenuTroGiup.Enabled = true;
                 MenuQLTK.Enabled = false;
+                MenuDMK.Enabled = true;
             }
         }
 
@@ -146,7 +157,7 @@ namespace QuanLyNhanSu
         private void lươngNhânViênĐiềuHànhToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmBangLuongNVCT frm = new FrmBangLuongNVCT();
+            FrmBangLuongNVCT frm = new FrmBangLuongNVCT(username, password);
             frm.ShowDialog();
         }
 
@@ -181,6 +192,19 @@ namespace QuanLyNhanSu
             this.Hide();
             FrmThaiSan frmThaiSan = new FrmThaiSan();
             frmThaiSan.ShowDialog();
+        }
+
+        private void MenuTroGiup_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Đăng xuất thành công", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                MenuDangNhap.Enabled = true;
+                MenuDanhMuc.Enabled = false;
+                MenuQuanLy.Enabled = false;
+                MenuTroGiup.Enabled = false;
+                MenuQLTK.Enabled = false;
+                MenuDMK.Enabled = false;
+            }
         }
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)

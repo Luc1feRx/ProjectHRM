@@ -14,11 +14,18 @@ namespace QuanLyNhanSu
 {
     public partial class FrmDoiMatKhau : Form
     {
+        string username, password;
         public FrmDoiMatKhau()
         {
             InitializeComponent();
         }
 
+        public FrmDoiMatKhau(string user, string pass)
+        {
+            InitializeComponent();
+            username = user;
+            password = pass;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -41,7 +48,7 @@ namespace QuanLyNhanSu
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);//khoi tao bien con de ket noi database su dung thu vien sqlClient
             con.Open();
             string query = "SELECT * FROM tbuser WHERE Username = '" + textboxTenTruycap.Text + "'";//chon ra Username ma ban muon doi pass
@@ -79,22 +86,26 @@ namespace QuanLyNhanSu
                                 }
                                 else
                                 {
-                                    if (textBoxMKMoi.Text == textBoxNhapLaiMK.Text)
+                                    if(textBoxMatKhauCu.Text == textBoxMKMoi.Text)
                                     {
-                                        string query2 = "UPDATE tbuser SET Pass = '" + textBoxMKMoi.Text + "' WHERE(Username = '" + textboxTenTruycap.Text + "' AND Pass = '" + textBoxMatKhauCu.Text + "')";
-                                        SqlCommand cmd2 = new SqlCommand(query2, con);//xac dinh thao tac can xu ly doi voi data
-                                        Connect cn = new Connect();
-                                        cn.makeConnected(query2);
-                                        MessageBox.Show("Bạn đã thay đổi mật khẩu thành công");
-                                        this.Close();
-                                        this.Hide();
-                                        FrmMain frmMain = new FrmMain();
-                                        frmMain.ShowDialog();
-
+                                        MessageBox.Show("Trùng mật khẩu cũ, mời bạn nhập lại!!!");
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Bạn nhập lại mật khẩu không đúng");
+                                        if (textBoxMKMoi.Text == textBoxNhapLaiMK.Text)
+                                        {
+                                            string query2 = "UPDATE tbuser SET Pass = '" + textBoxMKMoi.Text + "' WHERE(Username = '" + textboxTenTruycap.Text + "' AND Pass = '" + textBoxMatKhauCu.Text + "')";
+                                            SqlCommand cmd2 = new SqlCommand(query2, con);//xac dinh thao tac can xu ly doi voi data
+                                            Connect cn = new Connect();
+                                            cn.makeConnected(query2);
+                                            MessageBox.Show("Bạn đã thay đổi mật khẩu thành công");
+                                            FrmMain frm = new FrmMain(textboxTenTruycap.Text, textBoxMKMoi.Text);
+                                            frm.ShowDialog();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Bạn nhập lại mật khẩu không đúng");
+                                        }
                                     }
                                 }
                             }
@@ -102,6 +113,7 @@ namespace QuanLyNhanSu
                     }
                 }
                 reader.Close();
+                this.Hide();
             }
         }
 
@@ -116,8 +128,18 @@ namespace QuanLyNhanSu
         private void buttonThoat_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmMain frmMain = new FrmMain();
+            FrmMain frmMain = new FrmMain(textboxTenTruycap.Text, textBoxMKMoi.Text);
             frmMain.ShowDialog();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmDoiMatKhau_Load(object sender, EventArgs e)
+        {
+            textboxTenTruycap.Text = username;
         }
     }
 }

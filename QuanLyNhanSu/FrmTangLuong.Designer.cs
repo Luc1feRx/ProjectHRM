@@ -370,7 +370,9 @@
             this.Controls.Add(this.dg2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTangLuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTangLuong";
             this.Load += new System.EventHandler(this.FrmTangLuong_Load);
             this.groupBox4.ResumeLayout(false);

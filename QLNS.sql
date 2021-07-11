@@ -1,11 +1,8 @@
 ﻿CREATE DATABASE QuanLyNhanSu
-<<<<<<< HEAD
-=======
 
 go
 
 USE QuanLyNhanSu
->>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
 
 GO
 
@@ -71,8 +68,6 @@ CREATE TABLE tbTTCaNhan(
 	GhiChu nvarchar(MAX)
 )
 
-<<<<<<< HEAD
-=======
 CREATE TABLE tbChucVu(
 	MaCV INT PRIMARY KEY NOT NULL,
 	ChucVu NVARCHAR(30) NOT NULL
@@ -158,7 +153,6 @@ CREATE TABLE tbHoSoThuViec(
 	NgayTV DATETIME,
 	GhiChu NVARCHAR(MAX)
 )
->>>>>>> 8a3a2072d6ce2659002aaed88b93b435dac162ba
 
 CREATE TABLE tbBoPhan(
 	MaBoPhan NVARCHAR(10) PRIMARY KEY NOT NULL,

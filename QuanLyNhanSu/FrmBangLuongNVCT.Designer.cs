@@ -261,7 +261,6 @@
             this.groupBox4.Size = new System.Drawing.Size(1036, 197);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "ghichu";
             // 
             // label64
             // 
@@ -287,7 +286,7 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(301, 154);
+            this.label57.Location = new System.Drawing.Point(329, 156);
             this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(52, 17);
@@ -297,7 +296,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(296, 123);
+            this.label56.Location = new System.Drawing.Point(324, 125);
             this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(57, 17);
@@ -306,7 +305,7 @@
             // 
             // textBoxKyLuat
             // 
-            this.textBoxKyLuat.Location = new System.Drawing.Point(361, 151);
+            this.textBoxKyLuat.Location = new System.Drawing.Point(389, 153);
             this.textBoxKyLuat.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKyLuat.Name = "textBoxKyLuat";
             this.textBoxKyLuat.Size = new System.Drawing.Size(140, 22);
@@ -315,7 +314,7 @@
             // 
             // textBoxThuong
             // 
-            this.textBoxThuong.Location = new System.Drawing.Point(361, 118);
+            this.textBoxThuong.Location = new System.Drawing.Point(389, 120);
             this.textBoxThuong.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxThuong.Name = "textBoxThuong";
             this.textBoxThuong.Size = new System.Drawing.Size(140, 22);
@@ -403,7 +402,7 @@
             // 
             // txtPCK
             // 
-            this.txtPCK.Location = new System.Drawing.Point(361, 88);
+            this.txtPCK.Location = new System.Drawing.Point(389, 90);
             this.txtPCK.Margin = new System.Windows.Forms.Padding(4);
             this.txtPCK.Name = "txtPCK";
             this.txtPCK.Size = new System.Drawing.Size(140, 22);
@@ -432,7 +431,7 @@
             // txtPC
             // 
             this.txtPC.Enabled = false;
-            this.txtPC.Location = new System.Drawing.Point(361, 51);
+            this.txtPC.Location = new System.Drawing.Point(389, 53);
             this.txtPC.Margin = new System.Windows.Forms.Padding(4);
             this.txtPC.Name = "txtPC";
             this.txtPC.ReadOnly = true;
@@ -460,7 +459,7 @@
             // txtLCB
             // 
             this.txtLCB.Enabled = false;
-            this.txtLCB.Location = new System.Drawing.Point(361, 20);
+            this.txtLCB.Location = new System.Drawing.Point(389, 22);
             this.txtLCB.Margin = new System.Windows.Forms.Padding(4);
             this.txtLCB.Name = "txtLCB";
             this.txtLCB.ReadOnly = true;
@@ -474,6 +473,7 @@
             this.txtSoNgayNghi.Name = "txtSoNgayNghi";
             this.txtSoNgayNghi.Size = new System.Drawing.Size(117, 22);
             this.txtSoNgayNghi.TabIndex = 7;
+            this.txtSoNgayNghi.TextChanged += new System.EventHandler(this.txtSoNgayNghi_TextChanged);
             this.txtSoNgayNghi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoNgayNghi_KeyPress);
             // 
             // txtThang
@@ -483,16 +483,18 @@
             this.txtThang.Name = "txtThang";
             this.txtThang.Size = new System.Drawing.Size(117, 22);
             this.txtThang.TabIndex = 4;
+            this.txtThang.TextChanged += new System.EventHandler(this.txtThang_TextChanged);
             this.txtThang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtThang_KeyPress);
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(259, 88);
+            this.label8.Location = new System.Drawing.Point(259, 90);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 18);
             this.label8.TabIndex = 0;
             this.label8.Text = "Phụ Cấp Khác";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label12
             // 
@@ -516,7 +518,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(297, 54);
+            this.label14.Location = new System.Drawing.Point(325, 56);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 17);
@@ -547,7 +549,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(319, 20);
+            this.label17.Location = new System.Drawing.Point(347, 22);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(34, 17);
@@ -619,6 +621,7 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBangLuongNVCT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBangLuongNVCT";
             this.Load += new System.EventHandler(this.FrmBangLuongNVCT_Load);
             this.groupBox3.ResumeLayout(false);

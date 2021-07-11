@@ -12,7 +12,7 @@ namespace QuanLyNhanSu
 {
     class Connect
     {
-        string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+        string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
         SqlCommand cmd;
         SqlDataReader reader;
         SqlDataAdapter sda;
@@ -125,6 +125,18 @@ namespace QuanLyNhanSu
             while (reader.Read())
             {
                 dt.Text = reader[cot].ToString();
+            }
+            Disconnected();
+        }
+
+        public void loadtextboxText(TextBox tb, string strselect)
+        {
+            Connected();
+            cmd = new SqlCommand(strselect, con);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                tb.Text = reader[0].ToString();
             }
             Disconnected();
         }

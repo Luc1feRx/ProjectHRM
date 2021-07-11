@@ -32,6 +32,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewTimKiem = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonMoi = new System.Windows.Forms.Button();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.radChucVu = new System.Windows.Forms.RadioButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -45,8 +47,6 @@
             this.radioButtonMNV = new System.Windows.Forms.RadioButton();
             this.txtKQTimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonMoi = new System.Windows.Forms.Button();
-            this.buttonThoat = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimKiem)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -102,6 +102,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm thông tin";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // buttonThoat
+            // 
+            this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
+            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonThoat.FlatAppearance.BorderSize = 0;
+            this.buttonThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThoat.Image = ((System.Drawing.Image)(resources.GetObject("buttonThoat.Image")));
+            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThoat.Location = new System.Drawing.Point(644, 208);
+            this.buttonThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThoat.Name = "buttonThoat";
+            this.buttonThoat.Size = new System.Drawing.Size(116, 43);
+            this.buttonThoat.TabIndex = 17;
+            this.buttonThoat.Text = "Thoát ";
+            this.buttonThoat.UseVisualStyleBackColor = true;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click_1);
+            // 
+            // buttonMoi
+            // 
+            this.buttonMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoi.BackgroundImage")));
+            this.buttonMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMoi.FlatAppearance.BorderSize = 0;
+            this.buttonMoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonMoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMoi.Image = ((System.Drawing.Image)(resources.GetObject("buttonMoi.Image")));
+            this.buttonMoi.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.buttonMoi.Location = new System.Drawing.Point(339, 208);
+            this.buttonMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMoi.Name = "buttonMoi";
+            this.buttonMoi.Size = new System.Drawing.Size(112, 43);
+            this.buttonMoi.TabIndex = 16;
+            this.buttonMoi.Text = "Tìm";
+            this.buttonMoi.UseVisualStyleBackColor = true;
+            this.buttonMoi.Click += new System.EventHandler(this.buttonMoi_Click);
             // 
             // linkLabel2
             // 
@@ -255,44 +293,6 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Số KQ tìm kiếm:";
             // 
-            // buttonMoi
-            // 
-            this.buttonMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMoi.BackgroundImage")));
-            this.buttonMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonMoi.FlatAppearance.BorderSize = 0;
-            this.buttonMoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonMoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMoi.Image = ((System.Drawing.Image)(resources.GetObject("buttonMoi.Image")));
-            this.buttonMoi.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buttonMoi.Location = new System.Drawing.Point(339, 208);
-            this.buttonMoi.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonMoi.Name = "buttonMoi";
-            this.buttonMoi.Size = new System.Drawing.Size(112, 43);
-            this.buttonMoi.TabIndex = 16;
-            this.buttonMoi.Text = "Tìm";
-            this.buttonMoi.UseVisualStyleBackColor = true;
-            this.buttonMoi.Click += new System.EventHandler(this.buttonMoi_Click);
-            // 
-            // buttonThoat
-            // 
-            this.buttonThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThoat.BackgroundImage")));
-            this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonThoat.FlatAppearance.BorderSize = 0;
-            this.buttonThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThoat.Image = ((System.Drawing.Image)(resources.GetObject("buttonThoat.Image")));
-            this.buttonThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThoat.Location = new System.Drawing.Point(644, 208);
-            this.buttonThoat.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(116, 43);
-            this.buttonThoat.TabIndex = 17;
-            this.buttonThoat.Text = "Thoát ";
-            this.buttonThoat.UseVisualStyleBackColor = true;
-            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click_1);
-            // 
             // FrmTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -303,7 +303,9 @@
             this.Controls.Add(this.txtKQTimKiem);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTimKiem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTimKiem";
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimKiem)).EndInit();

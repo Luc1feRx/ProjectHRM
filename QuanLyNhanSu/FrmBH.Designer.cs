@@ -340,6 +340,7 @@ namespace QuanLyNhanSu
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBH";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmBH_Load);
             this.groupBox1.ResumeLayout(false);

@@ -31,7 +31,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.MenuTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuDangNhap = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuDMK = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.MenuQLTK = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +53,6 @@
             this.vấnĐềTăngLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuTroGiup = new System.Windows.Forms.ToolStripMenuItem();
-            this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +76,7 @@
             // 
             this.MenuTaiKhoan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuDangNhap,
-            this.openToolStripMenuItem,
+            this.MenuDMK,
             this.toolStripSeparator3,
             this.MenuQLTK});
             this.MenuTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,15 +97,16 @@
             this.MenuDangNhap.Text = "&Đăng nhập";
             this.MenuDangNhap.Click += new System.EventHandler(this.DangNhap);
             // 
-            // openToolStripMenuItem
+            // MenuDMK
             // 
-            this.openToolStripMenuItem.Image = global::QuanLyNhanSu.Properties.Resources.pw_icon;
-            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(259, 28);
-            this.openToolStripMenuItem.Text = "&Đổi mật khẩu";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.DoiMatKhau);
+            this.MenuDMK.Enabled = false;
+            this.MenuDMK.Image = global::QuanLyNhanSu.Properties.Resources.pw_icon;
+            this.MenuDMK.ImageTransparentColor = System.Drawing.Color.Black;
+            this.MenuDMK.Name = "MenuDMK";
+            this.MenuDMK.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.MenuDMK.Size = new System.Drawing.Size(259, 28);
+            this.MenuDMK.Text = "&Đổi mật khẩu";
+            this.MenuDMK.Click += new System.EventHandler(this.DoiMatKhau);
             // 
             // toolStripSeparator3
             // 
@@ -219,7 +219,7 @@
             // 
             this.bộPhậnToolStripMenuItem.Image = global::QuanLyNhanSu.Properties.Resources.choo;
             this.bộPhậnToolStripMenuItem.Name = "bộPhậnToolStripMenuItem";
-            this.bộPhậnToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.bộPhậnToolStripMenuItem.Size = new System.Drawing.Size(222, 28);
             this.bộPhậnToolStripMenuItem.Text = "Bộ phận";
             this.bộPhậnToolStripMenuItem.Click += new System.EventHandler(this.bộPhậnToolStripMenuItem_Click);
             // 
@@ -227,7 +227,7 @@
             // 
             this.phòngBanToolStripMenuItem.Image = global::QuanLyNhanSu.Properties.Resources.diadiem;
             this.phòngBanToolStripMenuItem.Name = "phòngBanToolStripMenuItem";
-            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(222, 28);
             this.phòngBanToolStripMenuItem.Text = "Phòng ban";
             this.phòngBanToolStripMenuItem.Click += new System.EventHandler(this.phòngBanToolStripMenuItem_Click);
             // 
@@ -238,7 +238,7 @@
             this.lươngNhânViênĐiềuHànhToolStripMenuItem});
             this.lươngNhânViênToolStripMenuItem.Image = global::QuanLyNhanSu.Properties.Resources.cash_icon;
             this.lươngNhânViênToolStripMenuItem.Name = "lươngNhânViênToolStripMenuItem";
-            this.lươngNhânViênToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.lươngNhânViênToolStripMenuItem.Size = new System.Drawing.Size(222, 28);
             this.lươngNhânViênToolStripMenuItem.Text = "Lương nhân viên";
             this.lươngNhânViênToolStripMenuItem.Click += new System.EventHandler(this.lươngNhânViênToolStripMenuItem_Click);
             // 
@@ -265,7 +265,7 @@
             this.vấnĐềTăngLươngToolStripMenuItem});
             this.bảngLươngToolStripMenuItem.Image = global::QuanLyNhanSu.Properties.Resources.Money_2_icon;
             this.bảngLươngToolStripMenuItem.Name = "bảngLươngToolStripMenuItem";
-            this.bảngLươngToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.bảngLươngToolStripMenuItem.Size = new System.Drawing.Size(222, 28);
             this.bảngLươngToolStripMenuItem.Text = "Bảng lương";
             // 
             // lươngCôngTyToolStripMenuItem
@@ -288,28 +288,21 @@
             // 
             this.chứcVụToolStripMenuItem.Image = global::QuanLyNhanSu.Properties.Resources.user_group_icon;
             this.chứcVụToolStripMenuItem.Name = "chứcVụToolStripMenuItem";
-            this.chứcVụToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.chứcVụToolStripMenuItem.Size = new System.Drawing.Size(222, 28);
             this.chứcVụToolStripMenuItem.Text = "Chức vụ";
             this.chứcVụToolStripMenuItem.Click += new System.EventHandler(this.chứcVụToolStripMenuItem_Click);
             // 
             // MenuTroGiup
             // 
             this.MenuTroGiup.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contentsToolStripMenuItem,
             this.toolStripSeparator8});
             this.MenuTroGiup.Enabled = false;
             this.MenuTroGiup.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuTroGiup.Image = global::QuanLyNhanSu.Properties.Resources.nhanvien2;
             this.MenuTroGiup.Name = "MenuTroGiup";
-            this.MenuTroGiup.Size = new System.Drawing.Size(107, 27);
-            this.MenuTroGiup.Text = "&Trợ giúp";
-            // 
-            // contentsToolStripMenuItem
-            // 
-            this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
-            this.contentsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(229, 28);
-            this.contentsToolStripMenuItem.Text = "&Contents";
+            this.MenuTroGiup.Size = new System.Drawing.Size(123, 27);
+            this.MenuTroGiup.Text = "&Đăng xuất";
+            this.MenuTroGiup.Click += new System.EventHandler(this.MenuTroGiup_Click);
             // 
             // toolStripSeparator8
             // 
@@ -339,13 +332,12 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem MenuTaiKhoan;
         private System.Windows.Forms.ToolStripMenuItem MenuDangNhap;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuDMK;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem MenuQLTK;
         private System.Windows.Forms.ToolStripMenuItem MenuDanhMuc;
         private System.Windows.Forms.ToolStripMenuItem MenuQuanLy;
         private System.Windows.Forms.ToolStripMenuItem MenuTroGiup;
-        private System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNhânSựToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinCáNhânToolStripMenuItem;

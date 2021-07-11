@@ -27,7 +27,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             string query = "select * from TblTTCaNhan";
@@ -76,19 +76,19 @@ namespace QuanLyNhanSu
         {
             try
             {
-                int hang = e.RowIndex;
-                comboBox1.Text = dataGridView1.Rows[hang].Cells[0].Value.ToString();
-                textBox1.Text = dataGridView1.Rows[hang].Cells[1].Value.ToString();
-                textBox2.Text = dataGridView1.Rows[hang].Cells[2].Value.ToString();
-                textBox3.Text = dataGridView1.Rows[hang].Cells[3].Value.ToString();
-                textBox4.Text = dataGridView1.Rows[hang].Cells[4].Value.ToString();
-                textBox5.Text = dataGridView1.Rows[hang].Cells[5].Value.ToString();
-                textBox6.Text = dataGridView1.Rows[hang].Cells[6].Value.ToString();
-                textBox7.Text = dataGridView1.Rows[hang].Cells[7].Value.ToString();
-                textBox8.Text = dataGridView1.Rows[hang].Cells[8].Value.ToString();
-                textBox9.Text = dataGridView1.Rows[hang].Cells[9].Value.ToString();
-                textBox12.Text = dataGridView1.Rows[hang].Cells[10].Value.ToString();
-                textBox17.Text = dataGridView1.Rows[hang].Cells[11].Value.ToString();
+                int i = e.RowIndex;
+                comboBox1.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                textBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                textBox2.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                textBox4.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                textBox5.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+                textBox6.Text = dataGridView1.Rows[i].Cells[6].Value.ToString();
+                textBox7.Text = dataGridView1.Rows[i].Cells[7].Value.ToString();
+                textBox8.Text = dataGridView1.Rows[i].Cells[8].Value.ToString();
+                textBox9.Text = dataGridView1.Rows[i].Cells[9].Value.ToString();
+                textBox12.Text = dataGridView1.Rows[i].Cells[10].Value.ToString();
+                textBox17.Text = dataGridView1.Rows[i].Cells[11].Value.ToString();
 
             }
             catch (Exception ex)
@@ -138,7 +138,7 @@ namespace QuanLyNhanSu
         {
             try
             {
-                string update = "update TblTTCaNhan set Manv=N'" + comboBox1.Text + "',Noisinh=N'" + textBox2.Text + "',NguyenQuan=N'" + textBox3.Text + "',DCThuongChu=N'" + textBox4.Text + "',DCTamChu=N'" + textBox5.Text + "',SDT=N'" + textBox6.Text + "',DanToc=N'" + textBox7.Text + "',TonGiao=N'" + textBox8.Text + "',QuocTich=N'" + textBox9.Text + "',HocVan=N'" + textBox12.Text + "',GhiChu=N'" + textBox17.Text + "' where MaNV=N'" + comboBox1.Text + "'";
+                string update = "update TblTTCaNhan set Noisinh=N'" + textBox2.Text + "',NguyenQuan=N'" + textBox3.Text + "',DCThuongChu=N'" + textBox4.Text + "',DCTamChu=N'" + textBox5.Text + "',SDT=N'" + textBox6.Text + "',DanToc=N'" + textBox7.Text + "',TonGiao=N'" + textBox8.Text + "',QuocTich=N'" + textBox9.Text + "',HocVan=N'" + textBox12.Text + "',GhiChu=N'" + textBox17.Text + "' where MaNV=N'" + comboBox1.Text + "'";
                 cn.makeConnected(update);
                 LoadDataGridView();
                 MessageBox.Show("Sửa thành công");

@@ -109,7 +109,7 @@
             this.buttonTroVe.Name = "buttonTroVe";
             this.buttonTroVe.Size = new System.Drawing.Size(288, 42);
             this.buttonTroVe.TabIndex = 8;
-            this.buttonTroVe.Text = "Trở về";
+            this.buttonTroVe.Text = "Thoát";
             this.buttonTroVe.UseVisualStyleBackColor = false;
             this.buttonTroVe.Click += new System.EventHandler(this.buttonBack_Click);
             // 
@@ -130,6 +130,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập: ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -51,13 +51,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.buttonThem = new System.Windows.Forms.Button();
             this.buttonMoi = new System.Windows.Forms.Button();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -98,6 +98,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(120, 40);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -117,6 +118,7 @@
             // 
             // dt2
             // 
+            this.dt2.Enabled = false;
             this.dt2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt2.Location = new System.Drawing.Point(307, 80);
             this.dt2.Margin = new System.Windows.Forms.Padding(4);
@@ -162,6 +164,7 @@
             // 
             // txt7
             // 
+            this.txt7.Enabled = false;
             this.txt7.Location = new System.Drawing.Point(303, 31);
             this.txt7.Margin = new System.Windows.Forms.Padding(4);
             this.txt7.Name = "txt7";
@@ -170,6 +173,7 @@
             // 
             // txt6
             // 
+            this.txt6.Enabled = false;
             this.txt6.Location = new System.Drawing.Point(120, 130);
             this.txt6.Margin = new System.Windows.Forms.Padding(4);
             this.txt6.Name = "txt6";
@@ -178,6 +182,7 @@
             // 
             // txt5
             // 
+            this.txt5.Enabled = false;
             this.txt5.Location = new System.Drawing.Point(120, 86);
             this.txt5.Margin = new System.Windows.Forms.Padding(4);
             this.txt5.Name = "txt5";
@@ -302,27 +307,6 @@
             this.groupBox3.Text = "Các chức năng";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Location = new System.Drawing.Point(13, 285);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(965, 250);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(7, 22);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(951, 221);
-            this.dataGridView2.TabIndex = 1;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            // 
             // buttonThem
             // 
             this.buttonThem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonThem.BackgroundImage")));
@@ -418,6 +402,27 @@
             this.buttonSua.UseVisualStyleBackColor = true;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.dataGridView2);
+            this.groupBox1.Location = new System.Drawing.Point(13, 285);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(965, 250);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(7, 22);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(951, 221);
+            this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
             // FrmThaiSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -429,6 +434,7 @@
             this.Controls.Add(this.groupBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmThaiSan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmThaiSan";
             this.Load += new System.EventHandler(this.FrmThaiSan_Load);
             this.groupBox4.ResumeLayout(false);

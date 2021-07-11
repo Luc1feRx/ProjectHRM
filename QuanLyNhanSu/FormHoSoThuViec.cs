@@ -15,7 +15,7 @@ namespace QuanLyNhanSu
 {
     public partial class FormHoSoThuViec : Form
     {
-        string strconnect = @"Data Source=DESKTOP-E6DDT4F\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
+        string strconnect = @"Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
         Connect cn = new Connect();
         public FormHoSoThuViec()
         {
@@ -29,7 +29,7 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             string query = "select * from TblHoSoThuViec";
@@ -218,6 +218,8 @@ namespace QuanLyNhanSu
         {
             try
             {
+                string dell = "delete from TblBangCongThuViec where MaNVTV='" + txtMaNVTV.Text + "'";
+                cn.makeConnected(dell);
                 string del = "delete from TblHoSoThuViec where MaNVTV='" + txtMaNVTV.Text + "'";
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa không", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {

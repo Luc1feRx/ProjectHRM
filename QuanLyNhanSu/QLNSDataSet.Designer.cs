@@ -10766,7 +10766,7 @@ namespace QuanLyNhanSu.QLNSDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11131,7 +11131,7 @@ SELECT MaLuong, LCB, PCChucVu, NgayNhap, LCBMoi, NgaySua, LyDo, PCCVuMoi, NgaySu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11754,7 +11754,7 @@ SELECT MaBoPhan, TenBoPhan, NgayThanhLap, GhiChu FROM TblBoPhan WHERE (MaBoPhan 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12136,7 +12136,7 @@ SELECT MaBoPhan, TenBoPhan, NgayThanhLap, GhiChu FROM TblBoPhan WHERE (MaBoPhan 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12400,7 +12400,7 @@ SELECT MaBoPhan, TenBoPhan, NgayThanhLap, GhiChu FROM TblBoPhan WHERE (MaBoPhan 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12756,7 +12756,7 @@ SELECT MaBoPhan, TenBoPhan, NgayThanhLap, GhiChu FROM TblBoPhan WHERE (MaBoPhan 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13047,7 +13047,7 @@ SELECT MaBoPhan, TenBoPhan, NgayThanhLap, GhiChu FROM TblBoPhan WHERE (MaBoPhan 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13320,7 +13320,7 @@ SELECT MaBoPhan, MaPhong, TenPhong, NgayThanhLap, GhiChu FROM TblPhongBan WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13727,7 +13727,7 @@ SELECT MaBoPhan, MaPhong, TenPhong, NgayThanhLap, GhiChu FROM TblPhongBan WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13967,7 +13967,7 @@ SELECT MaBoPhan, MaPhong, TenPhong, NgayThanhLap, GhiChu FROM TblPhongBan WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14241,7 +14241,7 @@ SELECT MaBoPhan, MaPhong, TenPhong, NgayThanhLap, GhiChu FROM TblPhongBan WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14530,7 +14530,7 @@ SELECT MaBoPhan, MaPhong, TenPhong, NgayThanhLap, GhiChu FROM TblPhongBan WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14822,7 +14822,7 @@ SELECT MaBoPhan, MaPhong, TenPhong, NgayThanhLap, GhiChu FROM TblPhongBan WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15096,7 +15096,7 @@ SELECT MaBoPhan, MaPhong, TenPhong, NgayThanhLap, GhiChu FROM TblPhongBan WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15529,7 +15529,7 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16356,7 +16356,7 @@ SELECT MaBoPhan, MaPhong, MaNV, HoTen, MaLuong, NgaySinh, GioiTinh, TTHonNhan, C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString1;
+            this._connection.ConnectionString = global::QuanLyNhanSu.Properties.Settings.Default.QLNSConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

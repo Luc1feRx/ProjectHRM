@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmQLTK));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.buttonMoi = new System.Windows.Forms.Button();
+            this.buttonThoat = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
             this.comboBoxQuyen = new System.Windows.Forms.ComboBox();
             this.a = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,11 +44,6 @@
             this.textBoxMatKhau = new System.Windows.Forms.TextBox();
             this.textBoxTen = new System.Windows.Forms.TextBox();
             this.dataGridViewTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.buttonThem = new System.Windows.Forms.Button();
-            this.buttonMoi = new System.Windows.Forms.Button();
-            this.buttonThoat = new System.Windows.Forms.Button();
-            this.buttonXoa = new System.Windows.Forms.Button();
-            this.buttonSua = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTaiKhoan)).BeginInit();
             this.SuspendLayout();
@@ -73,97 +73,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng kí tài khoản";
-            // 
-            // comboBoxQuyen
-            // 
-            this.comboBoxQuyen.FormattingEnabled = true;
-            this.comboBoxQuyen.Location = new System.Drawing.Point(229, 170);
-            this.comboBoxQuyen.Name = "comboBoxQuyen";
-            this.comboBoxQuyen.Size = new System.Drawing.Size(299, 27);
-            this.comboBoxQuyen.TabIndex = 9;
-            // 
-            // a
-            // 
-            this.a.AutoSize = true;
-            this.a.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.a.Location = new System.Drawing.Point(156, 171);
-            this.a.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(66, 22);
-            this.a.TabIndex = 0;
-            this.a.Text = "Quyền:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(139, 127);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 22);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tên thật:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(134, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mật khẩu:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên đăng nhập:";
-            // 
-            // textBoxTenThat
-            // 
-            this.textBoxTenThat.Location = new System.Drawing.Point(226, 127);
-            this.textBoxTenThat.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxTenThat.Name = "textBoxTenThat";
-            this.textBoxTenThat.Size = new System.Drawing.Size(302, 27);
-            this.textBoxTenThat.TabIndex = 3;
-            // 
-            // textBoxMatKhau
-            // 
-            this.textBoxMatKhau.Location = new System.Drawing.Point(226, 88);
-            this.textBoxMatKhau.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxMatKhau.Name = "textBoxMatKhau";
-            this.textBoxMatKhau.PasswordChar = '*';
-            this.textBoxMatKhau.Size = new System.Drawing.Size(302, 27);
-            this.textBoxMatKhau.TabIndex = 2;
-            // 
-            // textBoxTen
-            // 
-            this.textBoxTen.Location = new System.Drawing.Point(226, 46);
-            this.textBoxTen.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxTen.Name = "textBoxTen";
-            this.textBoxTen.Size = new System.Drawing.Size(302, 27);
-            this.textBoxTen.TabIndex = 1;
-            this.textBoxTen.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // dataGridViewTaiKhoan
-            // 
-            this.dataGridViewTaiKhoan.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridViewTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTaiKhoan.Location = new System.Drawing.Point(12, 362);
-            this.dataGridViewTaiKhoan.Name = "dataGridViewTaiKhoan";
-            this.dataGridViewTaiKhoan.RowHeadersWidth = 51;
-            this.dataGridViewTaiKhoan.RowTemplate.Height = 24;
-            this.dataGridViewTaiKhoan.Size = new System.Drawing.Size(1069, 242);
-            this.dataGridViewTaiKhoan.TabIndex = 2;
-            this.dataGridViewTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTaiKhoan_CellClick);
-            this.dataGridViewTaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTaiKhoan_CellContentClick);
             // 
             // buttonThem
             // 
@@ -260,6 +169,97 @@
             this.buttonSua.UseVisualStyleBackColor = true;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click_1);
             // 
+            // comboBoxQuyen
+            // 
+            this.comboBoxQuyen.FormattingEnabled = true;
+            this.comboBoxQuyen.Location = new System.Drawing.Point(229, 170);
+            this.comboBoxQuyen.Name = "comboBoxQuyen";
+            this.comboBoxQuyen.Size = new System.Drawing.Size(299, 27);
+            this.comboBoxQuyen.TabIndex = 9;
+            // 
+            // a
+            // 
+            this.a.AutoSize = true;
+            this.a.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.Location = new System.Drawing.Point(156, 171);
+            this.a.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.a.Name = "a";
+            this.a.Size = new System.Drawing.Size(66, 22);
+            this.a.TabIndex = 0;
+            this.a.Text = "Quyền:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(139, 127);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 22);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tên thật:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(134, 88);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Mật khẩu:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(92, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên đăng nhập:";
+            // 
+            // textBoxTenThat
+            // 
+            this.textBoxTenThat.Location = new System.Drawing.Point(226, 127);
+            this.textBoxTenThat.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTenThat.Name = "textBoxTenThat";
+            this.textBoxTenThat.Size = new System.Drawing.Size(302, 27);
+            this.textBoxTenThat.TabIndex = 3;
+            // 
+            // textBoxMatKhau
+            // 
+            this.textBoxMatKhau.Location = new System.Drawing.Point(226, 88);
+            this.textBoxMatKhau.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxMatKhau.Name = "textBoxMatKhau";
+            this.textBoxMatKhau.PasswordChar = '*';
+            this.textBoxMatKhau.Size = new System.Drawing.Size(302, 27);
+            this.textBoxMatKhau.TabIndex = 2;
+            // 
+            // textBoxTen
+            // 
+            this.textBoxTen.Location = new System.Drawing.Point(226, 46);
+            this.textBoxTen.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTen.Name = "textBoxTen";
+            this.textBoxTen.Size = new System.Drawing.Size(302, 27);
+            this.textBoxTen.TabIndex = 1;
+            this.textBoxTen.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // dataGridViewTaiKhoan
+            // 
+            this.dataGridViewTaiKhoan.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTaiKhoan.Location = new System.Drawing.Point(12, 362);
+            this.dataGridViewTaiKhoan.Name = "dataGridViewTaiKhoan";
+            this.dataGridViewTaiKhoan.RowHeadersWidth = 51;
+            this.dataGridViewTaiKhoan.RowTemplate.Height = 24;
+            this.dataGridViewTaiKhoan.Size = new System.Drawing.Size(1069, 242);
+            this.dataGridViewTaiKhoan.TabIndex = 2;
+            this.dataGridViewTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTaiKhoan_CellClick);
+            this.dataGridViewTaiKhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTaiKhoan_CellContentClick);
+            // 
             // FrmQLTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -270,6 +270,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmQLTK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý tài khoản";
             this.Load += new System.EventHandler(this.FrmQLTK_Load);
             this.groupBox1.ResumeLayout(false);

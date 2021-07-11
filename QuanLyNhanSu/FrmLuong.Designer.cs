@@ -43,7 +43,7 @@
             this.dateTimePickerNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.txtLCB = new System.Windows.Forms.TextBox();
-            this.txtL = new System.Windows.Forms.TextBox();
+            this.txtM = new System.Windows.Forms.TextBox();
             this.txtPCCVMoi = new System.Windows.Forms.TextBox();
             this.txtLyDo = new System.Windows.Forms.TextBox();
             this.txtPCCV = new System.Windows.Forms.TextBox();
@@ -199,6 +199,7 @@
             this.dataGridViewLuong.RowHeadersWidth = 51;
             this.dataGridViewLuong.Size = new System.Drawing.Size(945, 172);
             this.dataGridViewLuong.TabIndex = 1;
+            this.dataGridViewLuong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLuong_CellClick);
             // 
             // groupBox1
             // 
@@ -208,7 +209,7 @@
             this.groupBox1.Controls.Add(this.dateTimePickerNgayNhap);
             this.groupBox1.Controls.Add(this.txtGhiChu);
             this.groupBox1.Controls.Add(this.txtLCB);
-            this.groupBox1.Controls.Add(this.txtL);
+            this.groupBox1.Controls.Add(this.txtM);
             this.groupBox1.Controls.Add(this.txtPCCVMoi);
             this.groupBox1.Controls.Add(this.txtLyDo);
             this.groupBox1.Controls.Add(this.txtPCCV);
@@ -275,13 +276,13 @@
             this.txtLCB.Size = new System.Drawing.Size(127, 22);
             this.txtLCB.TabIndex = 2;
             // 
-            // txtL
+            // txtM
             // 
-            this.txtL.Location = new System.Drawing.Point(343, 76);
-            this.txtL.Margin = new System.Windows.Forms.Padding(4);
-            this.txtL.Name = "txtL";
-            this.txtL.Size = new System.Drawing.Size(132, 22);
-            this.txtL.TabIndex = 6;
+            this.txtM.Location = new System.Drawing.Point(343, 76);
+            this.txtM.Margin = new System.Windows.Forms.Padding(4);
+            this.txtM.Name = "txtM";
+            this.txtM.Size = new System.Drawing.Size(132, 22);
+            this.txtM.TabIndex = 6;
             // 
             // txtPCCVMoi
             // 
@@ -424,7 +425,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLuong";
             this.Load += new System.EventHandler(this.FrmLuong_Load);
             this.groupBox2.ResumeLayout(false);
@@ -450,7 +453,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayNhap;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.TextBox txtLCB;
-        private System.Windows.Forms.TextBox txtL;
+        private System.Windows.Forms.TextBox txtM;
         private System.Windows.Forms.TextBox txtPCCVMoi;
         private System.Windows.Forms.TextBox txtLyDo;
         private System.Windows.Forms.TextBox txtPCCV;

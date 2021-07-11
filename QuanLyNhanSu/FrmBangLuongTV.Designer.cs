@@ -68,6 +68,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLTV)).BeginInit();
             this.SuspendLayout();
             // 
+            // buttonTinhLuong
+            // 
+            buttonTinhLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonTinhLuong.BackgroundImage")));
+            buttonTinhLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            buttonTinhLuong.FlatAppearance.BorderSize = 0;
+            buttonTinhLuong.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            buttonTinhLuong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            buttonTinhLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonTinhLuong.Image = global::QuanLyNhanSu.Properties.Resources.payment_icon;
+            buttonTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            buttonTinhLuong.Location = new System.Drawing.Point(696, 23);
+            buttonTinhLuong.Margin = new System.Windows.Forms.Padding(4);
+            buttonTinhLuong.Name = "buttonTinhLuong";
+            buttonTinhLuong.Size = new System.Drawing.Size(127, 41);
+            buttonTinhLuong.TabIndex = 8;
+            buttonTinhLuong.Text = "Tính lương";
+            buttonTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            buttonTinhLuong.UseVisualStyleBackColor = true;
+            buttonTinhLuong.Click += new System.EventHandler(this.buttonTinhLuong_Click_1);
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
@@ -238,7 +258,7 @@
             // 
             this.cbMaNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaNV.FormattingEnabled = true;
-            this.cbMaNV.Location = new System.Drawing.Point(132, 105);
+            this.cbMaNV.Location = new System.Drawing.Point(127, 33);
             this.cbMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaNV.Name = "cbMaNV";
             this.cbMaNV.Size = new System.Drawing.Size(143, 24);
@@ -292,7 +312,7 @@
             // 
             // txtTenPhong
             // 
-            this.txtTenPhong.Location = new System.Drawing.Point(132, 70);
+            this.txtTenPhong.Location = new System.Drawing.Point(127, 110);
             this.txtTenPhong.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.ReadOnly = true;
@@ -319,7 +339,7 @@
             // 
             // txtTenBP
             // 
-            this.txtTenBP.Location = new System.Drawing.Point(132, 33);
+            this.txtTenBP.Location = new System.Drawing.Point(127, 73);
             this.txtTenBP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenBP.Name = "txtTenBP";
             this.txtTenBP.ReadOnly = true;
@@ -363,7 +383,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 113);
+            this.label3.Location = new System.Drawing.Point(16, 41);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 17);
@@ -396,7 +416,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 75);
+            this.label2.Location = new System.Drawing.Point(27, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 17);
@@ -429,7 +449,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 36);
+            this.label1.Location = new System.Drawing.Point(16, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 17);
@@ -458,26 +478,6 @@
             this.dataGridViewLTV.TabIndex = 3;
             this.dataGridViewLTV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLTV_CellClick);
             // 
-            // buttonTinhLuong
-            // 
-            buttonTinhLuong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonTinhLuong.BackgroundImage")));
-            buttonTinhLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            buttonTinhLuong.FlatAppearance.BorderSize = 0;
-            buttonTinhLuong.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            buttonTinhLuong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            buttonTinhLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            buttonTinhLuong.Image = global::QuanLyNhanSu.Properties.Resources.payment_icon;
-            buttonTinhLuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            buttonTinhLuong.Location = new System.Drawing.Point(696, 23);
-            buttonTinhLuong.Margin = new System.Windows.Forms.Padding(4);
-            buttonTinhLuong.Name = "buttonTinhLuong";
-            buttonTinhLuong.Size = new System.Drawing.Size(127, 41);
-            buttonTinhLuong.TabIndex = 8;
-            buttonTinhLuong.Text = "Tính lương";
-            buttonTinhLuong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            buttonTinhLuong.UseVisualStyleBackColor = true;
-            buttonTinhLuong.Click += new System.EventHandler(this.buttonTinhLuong_Click_1);
-            // 
             // FrmBangLuongTV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -487,7 +487,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBangLuongTV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBangLuongTV";
             this.Load += new System.EventHandler(this.FrmBangLuongTV_Load);
             this.groupBox2.ResumeLayout(false);

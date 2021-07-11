@@ -62,6 +62,7 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đổi mật khẩu";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBoxNhapLaiMK
             // 
@@ -86,9 +87,12 @@
             // 
             // textboxTenTruycap
             // 
+            this.textboxTenTruycap.Cursor = System.Windows.Forms.Cursors.No;
+            this.textboxTenTruycap.Enabled = false;
+            this.textboxTenTruycap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxTenTruycap.Location = new System.Drawing.Point(316, 39);
             this.textboxTenTruycap.Name = "textboxTenTruycap";
-            this.textboxTenTruycap.Size = new System.Drawing.Size(262, 22);
+            this.textboxTenTruycap.Size = new System.Drawing.Size(262, 30);
             this.textboxTenTruycap.TabIndex = 12;
             // 
             // label4
@@ -198,8 +202,11 @@
             this.Controls.Add(this.buttonMoi);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonThoat);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDoiMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi mật khẩu";
+            this.Load += new System.EventHandler(this.FrmDoiMatKhau_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

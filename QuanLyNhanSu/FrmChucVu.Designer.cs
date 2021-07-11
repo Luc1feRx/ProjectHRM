@@ -390,7 +390,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tblChucVuBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmChucVu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChucVu";
             this.Load += new System.EventHandler(this.FrmChucVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.qLNSDataSet)).EndInit();

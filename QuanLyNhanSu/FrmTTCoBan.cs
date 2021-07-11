@@ -18,7 +18,7 @@ namespace QuanLyNhanSu
     public partial class FrmTTCoBan : Form
     {
         Connect cn = new Connect();
-        string strconnect = @"Data Source=DESKTOP-E6DDT4F\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
+        string strconnect = @"Data Source=LAPTOP-GUMFVEKB;Initial Catalog=QLNS;User ID=sa;Password=123";
         public FrmTTCoBan()
         {
             InitializeComponent();
@@ -31,10 +31,10 @@ namespace QuanLyNhanSu
 
         public void LoadDataGridView()
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
-            string query = "SELECT * FROM TblTTNVCoBan";
+            string query = "SELECT MaBoPhan, MaPhong, MaNV,HoTen, MaLuong, GioiTinh, NgaySinh, TTHonNhan, CMTND, NoiCap, ChucVu, LoaiHD, ThoiGian, NgayKy, NgayHetHan, GhiChu, AnhNV FROM TblTTNVCoBan";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             System.Data.DataTable dt = new System.Data.DataTable();
@@ -46,8 +46,8 @@ namespace QuanLyNhanSu
             dataGridViewTTCoBan.Columns[2].HeaderText = "Mã nhân viên";
             dataGridViewTTCoBan.Columns[3].HeaderText = "Họ tên";
             dataGridViewTTCoBan.Columns[4].HeaderText = "Mã lương";
-            dataGridViewTTCoBan.Columns[5].HeaderText = "Ngày sinh";
-            dataGridViewTTCoBan.Columns[6].HeaderText = "Giới tính";
+            dataGridViewTTCoBan.Columns[5].HeaderText = "Giới tính";
+            dataGridViewTTCoBan.Columns[6].HeaderText = "Ngày sinh";
             dataGridViewTTCoBan.Columns[7].HeaderText = "TTHôn nhân";
             dataGridViewTTCoBan.Columns[8].HeaderText = "CMTND";
             dataGridViewTTCoBan.Columns[9].HeaderText = "Nơi cấp";
@@ -120,8 +120,8 @@ namespace QuanLyNhanSu
                 textBoxMaNV.Text = dataGridViewTTCoBan.Rows[i].Cells[2].Value.ToString();
                 textBoxHoTen.Text = dataGridViewTTCoBan.Rows[i].Cells[3].Value.ToString();
                 comboBoxMaLuong.Text = dataGridViewTTCoBan.Rows[i].Cells[4].Value.ToString();
-                dateTimeNgaySinh.Text = dataGridViewTTCoBan.Rows[i].Cells[5].Value.ToString();
-                comboBoxGioiTinh.Text = dataGridViewTTCoBan.Rows[i].Cells[6].Value.ToString();
+                dateTimeNgaySinh.Text = dataGridViewTTCoBan.Rows[i].Cells[6].Value.ToString();
+                comboBoxGioiTinh.Text = dataGridViewTTCoBan.Rows[i].Cells[5].Value.ToString();
                 comboBoxTTHonNhan.Text = dataGridViewTTCoBan.Rows[i].Cells[7].Value.ToString();
                 textBoxCMTND.Text = dataGridViewTTCoBan.Rows[i].Cells[8].Value.ToString();
                 textBoxNoiCap.Text = dataGridViewTTCoBan.Rows[i].Cells[9].Value.ToString();
@@ -142,10 +142,11 @@ namespace QuanLyNhanSu
 
         private void FrmTTCoBan_Load(object sender, EventArgs e)
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             FillCombobox("SELECT MaBoPhan FROM TblBoPhan", comboBoxMaBoPhan, "MaBoPhan", "MaBoPhan");
+            //cn.loadcombobox(comboBoxMaBoPhan, "SELECT MaBoPhan FROM TblBoPhan", 0);
             comboBoxMaBoPhan.SelectedIndex = -1; //set index = -1 de ko hien ma bo phan khi load form
             LoadDataGridView();
             cn.loadcombobox(comboBoxMaLuong, "Select MaLuong from TblBangLuongCTy", 0);
@@ -158,14 +159,14 @@ namespace QuanLyNhanSu
             //comboBoxChucVu.ValueMember = "MaChucVu";
 
 
-            dateTimeNgaySinh.CustomFormat = "MM / dd / yyyy";
-            dateBoxThoiGiaNgayKy.CustomFormat = "MM / dd / yyyy";
-            dateTimePickerNgayHetHan.CustomFormat = "MM / dd / yyyy";
+            dateTimeNgaySinh.CustomFormat = " MM / dd / yyyy ";
+            dateBoxThoiGiaNgayKy.CustomFormat = " MM / dd / yyyy ";
+            dateTimePickerNgayHetHan.CustomFormat = " MM / dd / yyyy ";
         }
 
         public static void FillCombobox(string query, ComboBox cb, string ma, string ten) // do du lieu vao combobox
         {
-            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString1"].ConnectionString;//goi den connection trong app.config de ket noi voi database
+            string connections = ConfigurationManager.ConnectionStrings["QuanLyNhanSu.Properties.Settings.QLNSConnectionString"].ConnectionString;//goi den connection trong app.config de ket noi voi database
             SqlConnection con = new SqlConnection(connections);
             con.Open();
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
@@ -204,7 +205,7 @@ namespace QuanLyNhanSu
             else
             {
                 dateTimePickerNgayHetHan.Enabled = true;
-                dateTimePickerNgayHetHan.CustomFormat = "MM / dd / yyyy";
+                dateTimePickerNgayHetHan.CustomFormat = " MM / dd / yyyy ";
                 textBoxThoiGian.Enabled = true;
             }
         }
@@ -228,7 +229,7 @@ namespace QuanLyNhanSu
             }
         }
 
-        private void exprotExcel(DataGridView dg, string path, string fileName)
+        private void exportExcel(DataGridView dg, string path, string fileName)
         {
             app obj = new app();
             obj.Application.Workbooks.Add(Type.Missing);
@@ -313,8 +314,8 @@ namespace QuanLyNhanSu
                         cmd.Parameters.AddWithValue("@MaNV", textBoxMaNV.Text);
                         cmd.Parameters.AddWithValue("@HoTen", textBoxHoTen.Text);
                         cmd.Parameters.AddWithValue("@MaLuong", comboBoxMaLuong.Text);
-                        cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
                         cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
+                        cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
                         cmd.Parameters.AddWithValue("@TTHonNhan", comboBoxTTHonNhan.Text);
                         cmd.Parameters.AddWithValue("@CMTND", textBoxCMTND.Text);
                         cmd.Parameters.AddWithValue("@NoiCap", textBoxNoiCap.Text);
@@ -369,7 +370,7 @@ namespace QuanLyNhanSu
             {
                 SqlConnection sqlcon = new SqlConnection(strconnect);
                 byte[] b = ConvertImageToBytes(pictureBoxAnhNV.Image);
-                string update = "update TblTTNVCoBan set MaBoPhan=@MaBoPhan,MaPhong=@MaPhong,HoTen=@HoTen,MaLuong=@MaLuong,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,TTHonNhan=@TTHonNhan,CMTND=@CMTND,NoiCap=@NoiCap,ChucVu=@ChucVu,LoaiHD=@LoaiHD,ThoiGian=@ThoiGian,NgayKy=@NgayKy,NgayHetHan=NgayHetHan,GhiChu=@GhiChu,AnhNV=@AnhNV where MaNV=@MaNV";
+                string update = "update TblTTNVCoBan set MaBoPhan=@MaBoPhan,MaPhong=@MaPhong,HoTen=@HoTen,MaLuong=@MaLuong, GioiTinh=@GioiTinh, NgaySinh=@NgaySinh,TTHonNhan=@TTHonNhan,CMTND=@CMTND,NoiCap=@NoiCap,ChucVu=@ChucVu,LoaiHD=@LoaiHD,ThoiGian=@ThoiGian,NgayKy=@NgayKy,NgayHetHan=NgayHetHan,GhiChu=@GhiChu,AnhNV=@AnhNV where MaNV=@MaNV";
                 sqlcon.Open();
                 SqlCommand cmd = new SqlCommand(update, sqlcon);
                 cmd.Parameters.AddWithValue("@MaBoPhan", comboBoxMaBoPhan.Text);
@@ -377,8 +378,8 @@ namespace QuanLyNhanSu
                 cmd.Parameters.AddWithValue("@MaNV", textBoxMaNV.Text);
                 cmd.Parameters.AddWithValue("@HoTen", textBoxHoTen.Text);
                 cmd.Parameters.AddWithValue("@MaLuong", comboBoxMaLuong.Text);
-                cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
                 cmd.Parameters.AddWithValue("@GioiTinh", comboBoxGioiTinh.Text);
+                cmd.Parameters.AddWithValue("@NgaySinh", dateTimeNgaySinh.Text);
                 cmd.Parameters.AddWithValue("@TTHonNhan", comboBoxTTHonNhan.Text);
                 cmd.Parameters.AddWithValue("@CMTND", textBoxCMTND.Text);
                 cmd.Parameters.AddWithValue("@NoiCap", textBoxNoiCap.Text);
@@ -405,6 +406,9 @@ namespace QuanLyNhanSu
             string update3 = "update TblCongKhoiDieuHanh set TenPhong = (select top(1) TenPhong from TblPhongBan a,TblTTNVCoBan b where a.MaPhong=b.MaPhong and a.MaPhong=N'" + comboBoxMaPhong.Text + "' group by TenPhong) where MaNV='" + textBoxMaNV.Text + "'";
             cn.makeConnected(update3);
             dataGridViewTTCoBan.Refresh();
+            string update4 = "update TblTTCaNhan set MaNV=N'" + textBoxMaNV.Text + "',HoTen=N'" + textBoxHoTen.Text + "' where MaNV=N'" + textBoxMaNV.Text + "'";
+            cn.makeConnected(update4);
+            dataGridViewTTCoBan.Refresh();
         }
 
         private void buttonXoa_Click_1(object sender, EventArgs e)
@@ -412,6 +416,9 @@ namespace QuanLyNhanSu
             string insTV = "insert into tblThoiViec(MaNV,HoTen,CMTND,LyDo) select MaNV,HoTen,CMTND,GhiChu from TblTTNVCoBan where MaNV='" + textBoxMaNV.Text + "'";
             cn.makeConnected(insTV);
             LoadDataGridView();
+
+            string deleteBH = "delete from TblSoBH where MaNV=N'" + textBoxMaNV.Text + "'";
+            cn.makeConnected(deleteBH);
 
             string delete = "delete from TblTTNVCoBan where MaNV=N'" + textBoxMaNV.Text + "'";
             if (MessageBox.Show("Bạn có muốn xóa không", "Xóa dữ liệu ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -424,7 +431,7 @@ namespace QuanLyNhanSu
 
         private void button3_Click(object sender, EventArgs e)
         {
-              exprotExcel(dataGridViewTTCoBan, @"D:\", "ThongTinNhanSu");
+              exportExcel(dataGridViewTTCoBan, @"D:\", "ThongTinNhanSu");
             DialogResult dialog = MessageBox.Show("Xuất thành công. Bạn có muốn mở file Exel?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
                 System.Diagnostics.Process.Start(@"D:\");
